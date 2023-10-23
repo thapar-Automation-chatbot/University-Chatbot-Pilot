@@ -1,91 +1,349 @@
 version: "3.1"
-
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: inquire_about_grade_upgradation_eligibility
+    examples: |
+      - How can I upgrade my [B]{"entity": "grade", "role": "current_grade"} to an [a](grade) grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
+      - Is there a way to improve my [RA]{"entity": "grade", "role": "current_grade"} grade to an [B](grade)
+      - I'm aiming to raise my grade from [C]{"entity": "grade", "role": "current_grade"} to [A](grade). Any suggestions
+      - Are there any courses or programs available to boost my [c]{"entity": "grade", "role": "current_grade"} to an [A](grade)
+      - Can you provide guidance on upgrading from [F]{"entity": "grade", "role": "current_grade"} to an [C](grade)
+      - What are the steps to take to upgrade from [I]{"entity": "grade", "role": "current_grade"} to [C](grade)
+      - Can I retake specific courses to improve from [B]{"entity": "grade", "role": "current_grade"} to an [A](grade)
+      - Are there scholarships or incentives for students who improve their grades from [B]{"entity": "grade", "role": "current_grade"} to [A](grade)
+      - Is it possible to upgrade my [I]{"entity": "grade", "role": "current_grade"} to [B](grade) this term
+      - How can I work on improving my [i]{"entity": "grade", "role": "current_grade"} to a [C](grade)
+      - Can you suggest strategies for upgrading from [E]{"entity": "grade", "role": "current_grade"} to [B](grade)
+      - Are there any courses or workshops aimed at improving from [I]{"entity": "grade", "role": "current_grade"} to [B](grade)
+      - Can I retake exams or assignments to upgrade from [e]{"entity": "grade", "role": "current_grade"} to [B](grade)
+      - What resources are available to help me achieve a [A](grade) from a [C]{"entity": "grade", "role": "current_grade"}
+      - Can you provide a timeline for upgrading from [C]{"entity": "grade", "role": "current_grade"} to [C](grade)
+      - Can I upgrade my [X]{"entity": "grade", "role": "current_grade"} to a passing grade this semester
+      - Is there a way to change my [E]{"entity": "grade", "role": "current_grade"} to a passing grade
+      - I want to improve my [X]{"entity": "grade", "role": "current_grade"} to a passing grade. How can I do it
+      - Are there any courses or programs available to upgrade my grade from [X]{"entity": "grade", "role": "current_grade"} to passing
+      - Can you provide guidance on upgrading my [X]{"entity": "grade", "role": "current_grade"} to a passing grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
+      - is it possible to upgrade grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
+      - Can I go for improvement of my grades in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
+      - Is it possible to upgrade my [B]{"entity": "grade", "role": "current_grade"} to [B](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - How can I work on improving to [b](grade) from a [F]{"entity": "grade", "role": "current_grade"} in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - Can you suggest strategies for upgrading from [b]{"entity": "grade", "role": "current_grade"} to [B](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - Are there any courses or workshops aimed at helping me achieve a passing grade from an [F]{"entity": "grade", "role": "current_grade"}
+      - Can I retake exams or assignments to upgrade to [F]{"entity": "grade", "role": "current_grade"} to a passing grade
+      - Can you provide a timeline for upgrading from [F]{"entity": "grade", "role": "current_grade"} to passing
+      - I have a [B]{"entity": "grade", "role": "current_grade"} in a course. Can I take another course
+      - Is it possible to upgrade a [B]{"entity": "grade", "role": "current_grade"} to an [A](grade)
+      - Can I upgrade my [grades]{"entity": "grade", "role": "current_grade"}
+      - I received a [B]{"entity": "grade", "role": "current_grade"} in my last exam. Can I go for grade improvement
+      - If I have [C]{"entity": "grade", "role": "current_grade"}, is there a way to improve it
+      - Can I upgrade my [c]{"entity": "grade", "role": "current_grade"} to a [B](grade)
+      - Can I upgrade my [c]{"entity": "grade", "role": "current_grade"} / [b]{"entity": "grade", "role": "current_grade"} / [B]{"entity": "grade", "role": "current_grade"} / [C]{"entity": "grade", "role": "current_grade"} / [X]{"entity": "grade", "role": "current_grade"} / [F]{"entity": "grade", "role": "current_grade"} to better grades
+      - Can my [grades]{"entity": "grade", "role": "current_grade"} be improved
+      - What should I do if I want to upgrade my [grades]{"entity": "grade", "role": "current_grade"}
+      - If I have an [X]{"entity": "grade", "role": "current_grade"}, can I improve my overall grades
+      - Can I upgrade my grade from [A]{"entity": "grade", "role": "current_grade"} to A (grade)
+      - Is it possible to improve my grades in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
+      - Is it possible to upgrade my [E]{"entity": "grade", "role": "current_grade"} to a passing grade this term
+      - How can I work on improving my [F]{"entity": "grade", "role": "current_grade"} to a passing grade
+      - Can you suggest strategies for upgrading from [F]{"entity": "grade", "role": "current_grade"} to a passing grade
+      - How can I work on improving to [B](grade) from a [F]{"entity": "grade", "role": "current_grade"}   in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - Can you suggest strategies for upgrading from [B]{"entity": "grade", "role": "current_grade"} to [B](grade)  in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - Can I retake exams or assignments to upgrade from [X]{"entity": "grade", "role": "current_grade"} to [B](grade)  in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - What resources are available to help me achieve a [RA](grade) from a [B]{"entity": "grade", "role": "current_grade"}  in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - Can you provide a timeline for upgrading from [C]{"entity": "grade", "role": "current_grade"} to [C](grade)  in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - How can I upgrade my [e]{"entity": "grade", "role": "current_grade"} to an [A](grade) this semester?
+      - I have a [C]{"entity": "grade", "role": "current_grade"}. Can you help me upgrade to an [A](grade)?
+      - Is it possible to improve my [grades]{"entity": "grade", "role": "current_grade"} in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can you provide guidance on upgrading from [F]{"entity": "grade", "role": "current_grade"} to a passing grade in the [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - I received a [B]{"entity": "grade", "role": "current_grade"} . Can I go for grade improvement?
+      - What are the steps to take to upgrade from [I]{"entity": "grade", "role": "current_grade"} to [C](grade)?
+      - Are there scholarships or incentives for students who improve their grades from [B]{"entity": "grade", "role": "current_grade"} to [A](grade)?
+      - How can I work on improving my [I]{"entity": "grade", "role": "current_grade"} to a [C](grade)?
+      - Can I upgrade my [X]{"entity": "grade", "role": "current_grade"} to a passing grade this semester?
+      - Can I retake specific courses to improve from [B]{"entity": "grade", "role": "current_grade"} to an [A](grade)?
+      - Can you suggest strategies for upgrading from [b]{"entity": "grade", "role": "current_grade"} to [B](grade)?
+      - Can you provide a timeline for upgrading from [c]{"entity": "grade", "role": "current_grade"} to [C](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - I want to improve my [X]{"entity": "grade", "role": "current_grade"} to a passing grade. How can I do it?
+      - Can my [grades]{"entity": "grade", "role": "current_grade"} be improved?
+      - If I have an [x]{"entity": "grade", "role": "current_grade"}, can I improve my overall grades?
+      - Can I upgrade my grade from [A]{"entity": "grade", "role": "current_grade"} to an [A](grade)?
+      - Is there a way to change my [x]{"entity": "grade", "role": "current_grade"} to a passing grade?
+      - Can I go for improvement of my grades in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Is it possible to upgrade my [F]{"entity": "grade", "role": "current_grade"} to a passing grade this term?
+      - How can I work on improving my [F]{"entity": "grade", "role": "current_grade"} to a passing grade?
+      - Are there any courses or workshops aimed at helping me achieve a passing grade from an [F]{"entity": "grade", "role": "current_grade"}?
+      - Can you provide a timeline for upgrading from [F]{"entity": "grade", "role": "current_grade"} to passing?
+      - Is it possible to improve my grades in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Is it possible to upgrade my [b]{"entity": "grade", "role": "current_grade"} to [B](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - How can I work on improving to [B](grade) from a [F]{"entity": "grade", "role": "current_grade"} in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Can you suggest strategies for upgrading from [B]{"entity": "grade", "role": "current_grade"} to [B](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Are there any courses or workshops aimed at improving from [B]{"entity": "grade", "role": "current_grade"} to [B](grade)?
+      - Can I retake exams or assignments to upgrade from [X]{"entity": "grade", "role": "current_grade"} to [B](grade) in [auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - is it possible to get a [a](grade) if i have [c]{"entity": "grade", "role": "current_grade", "value": "C"}
+      - can i upgrade my grade from [c]{"entity": "grade", "role": "current_grade", "value": "C"} to [b](grade) in [auxi]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - can i upgrade my grade ?
+  - intent: entered_grade
+    examples: |
+      - [c]{"entity": "grade", "role": "current_grade"}
+      - [x]{"entity": "grade", "role": "current_grade"}
+      - [ra]{"entity": "grade", "role": "current_grade"}
+      - [i]{"entity": "grade", "role": "current_grade"}
+      - [E]{"entity": "grade", "role": "current_grade"}
+      - [C]{"entity": "grade", "role": "current_grade"}
+      - [X]{"entity": "grade", "role": "current_grade"}
+      - [RA]{"entity": "grade", "role": "current_grade"}
+      - [I]{"entity": "grade", "role": "current_grade"}
+      - [A]{"entity": "grade", "role": "current_grade"}
+      - [b]{"entity": "grade", "role": "current_grade"}
+      - [B]{"entity": "grade", "role": "current_grade"}
+      - my grade is [E]{"entity": "grade", "role": "current_grade"}
+      - my current grade is [C]{"entity": "grade", "role": "current_grade"}
+      - i had got [I]{"entity": "grade", "role": "current_grade"}
+      - the grade i had received was [A]{"entity": "grade", "role": "current_grade"}
+  - intent: confirm_self_study_conditions
+    examples: |
+      - Can students with [E]{"entity": "grade", "value": "current_grade"} grades opt for [self-study]{"entity": "study_mode", "value": "self"}?
+      - What is the [self-study]{"entity": "study_mode", "value": "self"} option for [E]{"entity": "grade", "value": "current_grade"} grade students?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} allowed for [E]{"entity": "grade", "value": "current_grade"} grades?
+      - When can [E]{"entity": "grade", "value": "current_grade"} grade students choose [self-study]{"entity": "study_mode", "value": "self"} mode?
+      - What's the minimum marks requirement for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - How do [E]{"entity": "grade", "value": "current_grade"} grade students select [self-study]{"entity": "study_mode", "value": "self"} mode?
+      - Can [E]{"entity": "grade", "value": "current_grade"} grade students study on their own?
+      - Tell me about the [self-study]{"entity": "study_mode", "value": "self"} policy for [E]{"entity": "grade", "value": "current_grade"} grade students.
+      - Do [E]{"entity": "grade", "value": "current_grade"} grade students need to take subjects in [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - What are the conditions for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "value": "current_grade"} grades if marks are less than 25?
+      - Can students with [E]{"entity": "grade", "value": "current_grade"} grades study independently?
+      - How can [E]{"entity": "grade", "value": "current_grade"} grade students improve their grades through [self-study]{"entity": "study_mode", "value": "self"}?
+      - When is [self-study]{"entity": "study_mode", "value": "self"} mode applicable for [E]{"entity": "grade", "value": "current_grade"} grade students?
+      - Can [E]{"entity": "grade", "value": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if marks are low?
+      - Tell me more about [E]{"entity": "grade", "value": "current_grade"} grade [self-study]{"entity": "study_mode", "value": "self"} conditions.
+      - What happens if [E]{"entity": "grade", "value": "current_grade"} grade students don't meet the marks requirement for [self-study]{"entity": "study_mode", "value": "self"}?
+      - Is there a minimum marks cutoff for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Can [E]{"entity": "grade", "value": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if they scored less than 25?
+      - What's the threshold marks for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Can [E]{"entity": "grade", "value": "current_grade"} grade students switch to [regular mode]{"entity": "study_mode", "value": "regular"} if they have low marks?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "value": "current_grade"} grade students who scored below 25?
+      - can i opt for [self study]{"entity": "study_mode", "value": "self"} mode if having [E]{"entity": "grade", "value": "current_grade"} grade?
+      - when i can take [self study]{"entity": "study_mode", "value": "self"} mode in [E]{"entity": "grade", "value": "current_grade"} grade?
+      - how many marks are required to opt [self study]{"entity": "study_mode", "value": "self"} mode?
+      - Is {"entity": "study_mode", "value": "self"} allowed for subjects in summer sem
+      - Can you explain the eligibility criteria for {"entity": "study_mode", "value": "self"} mode?
+      - can I apply for {"entity": "study_mode", "value": "self"} mode?
+      - Can I improve my grades during the summer semester in {"entity": "study_mode", "value": "self"} mode?
+      - How can I check my eligibility for {"entity": "study_mode", "value": "self"} mode?
+      - Can I choose {"entity": "study_mode", "value": "self"} for all my subjects in the summer semester?
+      - Is {"entity": "study_mode", "value": "self"} mode available for all courses and subjects?
+      - Can I choose {"entity": "study_mode", "value": "self"} mode if I want to improve my grades during the summer semester?
+      - Can I work on grade improvement while studying in {"entity": "study_mode", "value": "self"} mode?
+      - How can I check if I am eligible for {"entity": "study_mode", "value": "self"} mode during the summer semester?
+      - What steps can I take to determine my eligibility for {"entity": "study_mode", "value": "self"} mode?
+      - Are there specific guidelines or criteria I should follow to assess my eligibility for {"entity": "study_mode", "value": "self"} mode?
+      - How do I verify whether I meet the requirements for {"entity": "study_mode", "value": "self"} mode?
+      - when i am eligible for self study mode?
+      - What are the criteria for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - Which mode can i take if i have [X]{"entity": "grade", "role": "current_grade"} grade?
+      - Which mode can i take if i have [F]{"entity": "grade", "role": "current_grade"} grade?
+      - Which mode can i take if i have [R.A]{"entity": "grade", "role": "current_grade"} grade?
+      - Are there any eligibility criteria for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - Can you clarify the eligibility criteria for students with B/B-/C/C- grades in the [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - Can you explain the eligibility criteria for regular-study mode?
+      - can I apply for {"entity": "regular study", "value": "regular"} mode?
+      - Can I improve my grades during the summer semester in {"entity": "regular study", "value": "regular"} mode?
+      - How can I check my eligibility for {"entity": "regular study", "value": "regular"} mode?
+      - What are the requirements for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - What are the conditions that students need to meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - What are the factors that determine whether a student is eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - What are the criteria that are used to assess a student's eligibility for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - What are the standards that a student must meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+      - What is the mode of study that is available to me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+      - What are my options for mode of study if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+      - What are the different modes of study that I can choose from if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+      - How do I choose the right mode of study for me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+      - Can I apply for {"entity": "regular study", "value": "regular"} mode?
+      - which mode can i take with grade RA
+      - am i eligible for [regular mode]{"entity": "study_mode", "value": "regular"} if having [X]{"entity": "grade", "role": "current_grade"} grade?
+      - Can you explain the difference between {"entity": "study_mode", "value": "self"} and {"entity": "regular study", "value": "regular"} modes?
+      - Can I receive academic assistance while in {"entity": "study_mode", "value": "self"} mode?
+      - How does [self study]{"entity": "study_mode", "value": "self"} mode work?
+      - What is  [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - What is [self study]{"entity": "study_mode", "value": "self"} mode?
+      - How does [regular mode]{"entity": "study_mode", "value": "regular"} work?
+      - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and reugular study mode?
+      - How is [self study]{"entity": "study_mode", "value": "self"} Mode different from [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - In what modes can i take subjects in summer sem ?
+      - modes of study i can opt in summer term?
+      - what is [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - what is [self study]{"entity": "study_mode", "value": "self"} mode?
+      - can i take [UCS410](subject) in [self study]{"entity": "study_mode", "value": "self"} mode ?
+      - is it possible to take [operating systems](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer semester]{"entity": "upgradation_mode", "value": "summer"} if have [F]{"entity": "grade", "role": "current_grade"} grade ?
+      - can i take [self study mode](study_mode) in [ucs012](subject)
+      - what are the mode of study in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+  - intent: entered_subject
+    examples: |
+      - [ucs012](subject)
+      - [ucs101](subject)
+      - [ubt201](subject)
+      - [umt05](subject)
+      - [uml301](subject)
+      - [us123](subject)
+      - [ude205](subject)
+      - [peo405](subject)
+      - [pi110](subject)
+      - [uy222](subject)
+      - [uwt307](subject)
+  - intent: deny
+    examples: |
+      - no i dont want to continue
+      - no 
+      - please abort
+      - exit
+      - i dont want to continue
+      - no i dont want to share more details 
+      - nahi 
+      - nope 
+      - continue please
+      - skip
+  - synonym: summer
+    examples: |
+      - summer semester
+      - summer sem
+      - summer term
+      - summer tenure
+      - summer studies
+      - summer time
+  - synonym: auxiliary
+    examples: |
+      - auxiliary exams
+      - auxi
+      - auxi exams
+      - axuilary exams
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - synonym: self
+    examples: |
+      - self-study
+      - self study
+      - self mode
+  - synonym: regular
+    examples: |
+      - regular mode
+      - regular-study
+      - regular study
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - regex: subject
+    examples: |
+      - ^(U|u|P|p)[A-Za-z]{2}\d{3}$
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: General_info
+    examples: |
+      - What are the [registration details]{"entity": "purpose", "value": "registration"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - How can I complete [registration]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - Explain the [registration process]{"entity": "purpose", "value": "registration"} for the summer session.
+      - Tell me about [enrolling]{"entity": "purpose", "value": "registration"} in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Provide information on [registering]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - When will the [application]{"entity": "purpose", "value": "registration"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} be available?
+      - Can you tell me the release date for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} [application]{"entity": "purpose", "value": "registration"}?
+      - What's the timeline for the [summer term]{"entity": "upgradation_mode", "value": "summer"} [application]{"entity": "purpose", "value": "registration"}?
+      - When will the [registration forms]{"entity": "purpose", "value": "registration"} be available?
+      - What's the schedule for [registration]{"entity": "purpose", "value": "registration"}?
+      - Tell me when I can start [registering]{"entity": "purpose", "value": "registration"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Can you provide details about [enrollment]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - When do I need to complete [registration]{"entity": "purpose", "value": "registration"} for the summer session?
+      - How [long]{"entity": "purpose", "value": "tenure_of_summer_term"} is the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - What is the [duration]{"entity": "purpose", "value": "tenure_of_summer_term"} of the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can you provide information about the [tenure]{"entity": "purpose", "value": "tenure_of_summer_term"} of the summer session?
+      - Tell me the [length]{"entity": "purpose", "value": "tenure_of_summer_term"} of the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - How [lon{"entity": "purpose", "value": "tenure_of_summer_term"}) does the [summer term]{"entity": "upgradation_mode", "value": "summer"} last?
+      - Explain the [timeframe]{"entity": "purpose", "value": "tenure_of_summer_term"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - What is the [period]{"entity": "purpose", "value": "tenure_of_summer_term"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Provide details about the [duration]{"entity": "purpose", "value": "tenure_of_summer_term"} of the summer session.
+      - Tell me the [time span]{"entity": "purpose", "value": "tenure_of_summer_term"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - Do you have the [summer semester]{"entity": "upgradation_mode", "value": "summer"} [timetable]{"entity": "purpose", "value": "time_table"}?
+      - I need the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} .
+      - Can you share the [schedule]{"entity": "purpose", "value": "time_table"} for the summer session?
+      - When is the [time table]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} available?
+      - What's the [schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - How can I access the [summer term]{"entity": "upgradation_mode", "value": "summer"} [timetable]{"entity": "purpose", "value": "time_table"}?
+      - Tell me about the [class schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - When will the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} be published?
+      - What's the [weekly timetable]{"entity": "purpose", "value": "time_table"} for the summer session?
+      - Can you provide information on the [session schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - When does the [class timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} become available?
+      - Can you provide me with information about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Tell me more about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - What can you tell me about the summer session?
+      - I need details regarding the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Share details about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Tell me everything you know about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - Can you give me an overview of the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Explain the key aspects of the summer session.
+      - when will the [registration forms]{"entity": "purpose", "value": "registration"} be out
+  - intent: explain_grade_improvement_process
+    examples: |
+      - Explain the process for grade improvement in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - What is the procedure for improving grades in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can you describe how to upgrade my grades during the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Walk me through the steps to improve my grades in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - How can I achieve the highest possible grade through grade improvement?
+      - What is the maximum grade that can be achieved through the grade improvement process ?
+      - If I have a [B]{"entity": "grade", "role": "current_grade"}, can I improve it to an A ?
+      - Is it possible to upgrade from a [D]{"entity": "grade", "role": "current_grade"} to a C ?
+      - What are the chances of improving my [F]{"entity": "grade", "role": "current_grade"} to a B in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can I change my [X]{"entity": "grade", "role": "current_grade"} to an A during the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - How does the grade improvement process work for students with C ?
+  - synonym: registration
+    examples: |
+      - registration details
+      - registration process
+      - enrolling
+      - registering
+      - application
+      - semester application
+      - term application
+      - registration forms
+      - enrollment
+  - synonym: tenure_of_summer_term
+    examples: |
+      - long
+      - duration
+      - tenure
+      - length
+      - timeframe
+      - period
+      - time span
+  - synonym: time_table
+    examples: |
+      - semester timetable
+      - timetable
+      - schedule
+      - time table
+      - class schedule
+      - weekly timetable
+      - session schedule
+      - class timetable

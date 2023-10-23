@@ -1,13 +1,64 @@
 version: "3.1"
 
 rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: activate grade_eligibility_form
+    steps:
+      - intent: inquire_about_grade_upgradation_eligibility
+      - action: grade_eligibility_form
+      - active_loop: grade_eligibility_form
+
+  - rule: subit grade_eligibility_form
+    condition:
+      - active_loop: grade_eligibility_form
+    steps:
+      - action: grade_eligibility_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_grade_upgrade_eligiblity
+
+  - rule: activate self_study_eligibility_form
+    steps:
+      - intent: confirm_self_study_conditions
+      - action: self_study_eligibility_form
+      - active_loop: self_study_eligibility_form
+
+  - rule: break inbetween self_study_eligibility_form
+    condition:
+      - active_loop: self_study_eligibility_form
+    steps:
+      - intent: deny
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_okay
+
+  - rule: submit self_study_eligibility_form
+    condition:
+      - active_loop: self_study_eligibility_form
+    steps:
+      - action: self_study_eligibility_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_self_study_condition
+
+  - rule: Respond to General_info
+    steps:
+      - intent: General_info
+      - action: action_general_info
+      - active_loop: null # Reset the active loop if any
+
+  - rule: Respond to the grade improvement explanation intent
+    steps:
+      - intent: explain_grade_improvement_process
+      - action: utter_explain_grade_improvement_process

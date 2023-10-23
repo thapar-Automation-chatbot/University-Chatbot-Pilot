@@ -1,34 +1,113 @@
 version: "3.1"
-
 intents:
-  - greet
-  - goodbye
-  - affirm
+  - confirm_self_study_conditions
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - entered_grade
+  - entered_subject
+  - goodbye
+  - greet
+  - inquire_about_grade_upgradation_eligibility
+
+  - General_info
+  - explain_grade_improvement_process
+
+entities:
+  - upgradation_mode
+  - grade:
+      roles:
+        - current_grade
+        - upgraded_grade
+  - subject
+  - study_mode
+  - marks
+  - purpose
+
+slots:
+  current_grade:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: grade
+        role: current_grade
+  upgraded_grade:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: grade
+        role: upgraded_grade
+  upgradation_mode:
+    type: categorical
+    values:
+      - auxilary
+      - summer
+      - backlog
+    initial_value: summer
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: upgradation_mode
+  subject:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: subject
+  marks:
+    type: float
+    min_value: 0
+    max_value: 100
+    mappings:
+      - type: from_entity
+        entity: marks
+  study_mode:
+    type: categorical
+    values:
+      - self
+      - regular
+    mappings:
+      - type: from_entity
+        entity: study_mode
+  purpose:
+    type: categorical
+    values:
+      - registration
+      - tenure_of_summer_term
+      - time_table
+    mappings:
+      - type: from_entity
+        entity: purpose
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: Hey! How can i help you today ?
+  utter_okay:
+    - text: Ok, Is there anything else you need help with
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+    - text: Bye
+  utter_ask_current_grade:
+    - text: What grade do you currently have in the subject
+  utter_ask_upgradation_mode:
+    - text: Select one auxilary exams / Summer Semester / Backlogs
+  utter_ask_self_study_eligibility_form_subject:
+    - text: There are 2 modes of study in summer semester 1. Self study mode and  2. Regular study mode , To help you better please provide me the course code for the subject you are seeking to take up in summer semester.
+  utter_ask_self_study_eligibility_form_current_grade:
+    - text: Please provide the grade you have in the {subject}
+  utter_explain_grade_improvement_process:
+    - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+forms:
+  grade_eligibility_form:
+    required_slots:
+      - current_grade
+      - upgradation_mode
+  self_study_eligibility_form:
+    required_slots:
+      - subject
+      - current_grade
+actions:
+  - action_self_study_condition
+  - validate_grade_eligibility_form
+  - action_grade_upgrade_eligiblity
+  - validate_self_study_eligibility_form
+  - action_general_info
