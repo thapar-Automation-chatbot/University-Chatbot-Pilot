@@ -1,0 +1,209 @@
+version: '3.1'
+
+stories:
+- story: User asks for general info about auxiliary examination
+  steps:
+  - user: |
+      - What are the guidelines for the auxiliary exam?
+  - action: action_provide_general_info
+  - user: |
+      - Can you tell me about the rules for the auxiliary examination?
+  - action: action_provide_general_info
+
+- story: User inquires about the process for the July exam
+  steps:
+  - user: |
+      - How can I apply for the auxiliary examination in July?
+  - action: action_provide_exam_process
+  - user: |
+      - Walk me through the steps of the auxiliary examination process in July.
+  - action: action_provide_exam_process
+
+- story: User asks for general info about the January auxiliary examination
+  steps:
+  - user: |
+      - Tell me about the auxiliary examination in January.
+  - action: action_provide_general_info
+  - user: |
+      - Explain the specifics of the auxiliary exam in January.
+  - action: action_provide_general_info
+
+- story: User inquires about the process for the January auxiliary exam
+  steps:
+  - user: |
+      - How can I apply for the auxiliary examination in January?
+  - action: action_provide_exam_process
+  - user: |
+      - Can you guide me on the steps to follow for the auxiliary exam in January?
+  - action: action_provide_exam_process
+
+- story: User checks eligibility for E Grade
+  steps:
+  - user: |
+      - Am I eligible for the auxiliary examination with an E grade?
+  - action: action_check_e_grade
+
+- story: User checks eligibility for E Grade in January
+  steps:
+  - user: |
+      - Can I appear for the auxiliary exam in January with an E grade?
+  - action: action_check_e_grade
+
+- story: User checks eligibility for E Grade in Summer
+  steps:
+  - user: |
+      - What are the eligibility criteria for the auxiliary examination in summer?
+  - action: action_check_e_grade
+
+- story: User plans for re-enrollment after auxiliary exam
+  steps:
+  - user: |
+      - Can I re-enroll after the auxiliary exam?
+  - action: action_handle_subject_re_enrollment_auxiliary_yes
+
+- story: User plans for re-enrollment after Summer Semester
+  steps:
+  - user: |
+      - Is re-enrollment allowed after the summer semester?
+  - action: action_handle_subject_re_enrollment_summer_no
+
+- story: User greets the bot
+  steps:
+  - user: |
+      - Hi
+  - action: utter_greet
+
+- story: User says goodbye
+  steps:
+  - user: |
+      - Bye
+  - action: utter_goodbye
+- story: User asks about subject limitations
+  steps:
+  - user: |
+      - Are there any limitations on the subjects I can choose for the summer semester?
+  - action: action_handle_ask_subject_limitation
+
+- story: User inquires about the exam evaluation process
+  steps:
+  - user: |
+      - How does the exam evaluation process work?
+  - action: action_exam_evaluation_process
+
+- story: User asks about eligibility for upgrading grades
+  steps:
+  - user: |
+      - What are the criteria for upgrading my grades?
+  - action: action_grade_upgrade_eligibility
+
+- story: User inquires about medal/scholarship upgradation criteria
+  steps:
+  - user: |
+      - What are the criteria for medal or scholarship upgradation?
+  - action: action_grade_upgrade_eligibility
+
+- story: User asks for fee details
+  steps:
+  - user: |
+      - Can you provide details on the fees?
+  - action: action_handle_fee_details
+
+- story: User inquires about the fee refund policy
+  steps:
+  - user: |
+      - Is there a fee refund policy?
+  - action: action_handle_fee_details
+  - user: |
+      - What is the fee refund policy?
+  - action: action_handle_fee_details
+  - user: |
+      - Can I get a refund on my fees?
+  - action: action_handle_fee_details
+
+- story: User asks about self-study conditions
+  steps:
+  - user: |
+      - What are the conditions for self-study in the summer semester?
+  - action: action_self_study_condition
+
+- story: User asks about upgrading from self-study to regular study
+  steps:
+  - user: |
+      - Can I switch from self-study to regular study mode?
+  - action: action_self_study_condition
+
+- story: User confirms self-study conditions
+  steps:
+  - user: |
+      - I confirm that I want to study in self-study mode.
+  - action: validate_self_study_eligibility_form
+  - user: |
+      - I choose self-study.
+  - action: validate_self_study_eligibility_form
+
+- story: User denies self-study conditions
+  steps:
+  - user: |
+      - I don't want to study in self-study mode.
+  - action: validate_self_study_eligibility_form
+  - user: |
+      - I prefer regular study mode.
+  - action: validate_self_study_eligibility_form
+- story: User inquires about fees for grade improvement
+  steps:
+  - user: |
+      - What are the fees for grade improvement?
+  - action: action_handle_fee_details
+
+- story: User asks about fees for backlog clearance
+  steps:
+  - user: |
+      - Can you provide information on the fees for backlog clearance?
+  - action: action_handle_fee_details
+
+- story: User inquires about fees for auxiliary examination
+  steps:
+  - user: |
+      - How much is the fee for the auxiliary examination?
+  - action: action_handle_fee_details
+
+- story: User asks about fees for thesis submission
+  steps:
+  - user: |
+      - What are the fees for thesis submission?
+  - action: action_handle_fee_details
+
+- story: User asks about the refund policy for fees
+  steps:
+  - user: |
+      - Is there a refund policy for fees?
+  - action: action_handle_fee_details
+  - user: |
+      - Tell me about the fee refund policy.
+  - action: action_handle_fee_details
+  - user: |
+      - Can I get a refund on the fees?
+  - action: action_handle_fee_details
+- story: User inquires about re-enrollment after auxiliary exams
+  steps:
+  - user: |
+      - Can I re-enroll in the same course after an auxiliary exam?
+  - action: action_handle_subject_re_enrollment_auxiliary_yes
+
+- story: User asks about re-enrollment after the summer semester
+  steps:
+  - user: |
+      - Is re-enrollment allowed for the same course after the summer semester?
+  - action: action_handle_subject_re_enrollment_summer_no
+
+- story: User inquires about re-enrollment after the auxiliary exam and summer semester
+  steps:
+  - user: |
+      - Can I re-enroll in the same course after both the auxiliary exam and the summer semester?
+  - action: action_handle_subject_re_enrollment_auxiliary_yes
+
+- story: User asks if re-enrollment is allowed after the summer semester and gets a negative response
+  steps:
+  - user: |
+      - Is re-enrollment permitted for the same course after the summer semester if I have passed?
+  - action: action_handle_subject_re_enrollment_summer_no

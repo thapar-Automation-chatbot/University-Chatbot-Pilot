@@ -33,15 +33,6 @@ rules:
       - action: self_study_eligibility_form
       - active_loop: self_study_eligibility_form
 
-  - rule: break inbetween self_study_eligibility_form
-    condition:
-      - active_loop: self_study_eligibility_form
-    steps:
-      - intent: deny
-      - action: action_deactivate_loop
-      - active_loop: null
-      - action: utter_okay
-
   - rule: submit self_study_eligibility_form
     condition:
       - active_loop: self_study_eligibility_form
@@ -63,28 +54,18 @@ rules:
       - intent: explain_grade_improvement_process
       - action: utter_explain_grade_improvement_process
 
-  # - rule: activate fee_type_form
-  #   steps:
-  #     - intent: ask_fee_details
-  #     - action: fee_type_form
-  #     - active_loop: fee_type_form
+  - rule: Break from forms
+    steps:
+      - or:
+        - intent: deny
+        - intent: goodbye
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_okay
+      - action: action_restart
 
-  # - rule: submit fee_type_form
-  #   condition:
-  #     - active_loop: fee_type_form
-  #   steps:
-  #     - action: fee_type_form
-  #     - active_loop: null
-  #     - slot_was_set:
-  #         - requested_slot: null
-  #     - action: action_handle_fee_details
+  - rule: scholarship criteria
+    steps:
+      - intent: inquire_about_medal_scholarship_upgradation_criteria
+      - action: utter_explain_criteria
 
-  # - rule: scholarship criteria
-  #   steps:
-  #     - intent: inquire_about_medal_scholarship_upgradation_criteria
-  #     - action: utter_explain_criteria
-
-  # - rule: fee refund policy
-  #   steps:
-  #    - intent: ask_fee_refund
-  #    - action: utter_inquire_about_fee_refund_policy

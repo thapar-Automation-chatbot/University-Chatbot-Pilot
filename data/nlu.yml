@@ -15,6 +15,7 @@ nlu:
       - goodmorning
       - goodevening
       - good afternoon
+      - Hlo
   - intent: goodbye
     examples: |
       - cu
@@ -108,6 +109,7 @@ nlu:
       - is it possible to get a [a](grade) if i have [c]{"entity": "grade", "role": "current_grade", "value": "C"}
       - can i upgrade my grade from [c]{"entity": "grade", "role": "current_grade", "value": "C"} to [b](grade) in [auxi]{"entity": "upgradation_mode", "value": "auxiliary"}
       - can i upgrade my grade ?
+      - hi can i upgrade my grade from [c]{"entity": "grade", "role": "current_grade", "value": "C"} to [b]{"entity": "grade", "value": "B"} in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
   - intent: entered_grade
     examples: |
       - [c]{"entity": "grade", "role": "current_grade"}
@@ -126,6 +128,8 @@ nlu:
       - my current grade is [C]{"entity": "grade", "role": "current_grade"}
       - i had got [I]{"entity": "grade", "role": "current_grade"}
       - the grade i had received was [A]{"entity": "grade", "role": "current_grade"}
+      - [i]{"entity": "grade", "role": "current_grade", "value": "I"}
+      - [E]{"entity": "grade", "role": "current_grade"}
   - intent: confirm_self_study_conditions
     examples: |
       - Can students with [E]{"entity": "grade", "role": "current_grade"} grades opt for [self-study]{"entity": "study_mode", "value": "self"}?
@@ -205,6 +209,12 @@ nlu:
       - is it possible to take [operating systems](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer semester]{"entity": "upgradation_mode", "value": "summer"} if have [F]{"entity": "grade", "role": "current_grade"} grade ?
       - can i take [self study mode](study_mode) in [ucs012](subject)
       - what are the mode of study in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+      - can i take [ucs210](subject) in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+      - can i take [ucs219](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+      - can i take [ucs016](subject) in [self mode]{"entity": "study_mode", "value": "self"}
+      - can i take [uhu012](subject) with grade [R.A]{"entity": "grade", "role": "current_grade"} in [self study]{"entity": "study_mode", "value": "self"} mode ?
+      - can i take [uhu012](subject) in [self study]{"entity": "study_mode", "value": "self"} mode , i have grade [R.a]{"entity": "grade", "role": "current_grade", "value": "R.A"}
+      - which mode can i take if i have [E]{"entity": "grade", "role": "current_grade"} grade
   - intent: entered_subject
     examples: |
       - [ucs012](subject)
@@ -218,52 +228,27 @@ nlu:
       - [pi110](subject)
       - [uy222](subject)
       - [uwt307](subject)
+      - i have the subject [ums289](subject)
+      - i have the subject [ues012](subject)
+      - i have the following subject [uhu123](subject)
+      - this is my subject [UME023](subject)
+      - my subject is [ULF010](subject)
   - intent: deny
     examples: |
       - no i dont want to continue
-      - no 
+      - no
       - please abort
       - exit
       - i dont want to continue
-      - no i dont want to share more details 
-      - nahi 
-      - nope 
+      - no i dont want to share more details
+      - nahi
+      - nope
       - continue please
       - skip
-  - synonym: summer
-    examples: |
-      - summer semester
-      - summer sem
-      - summer term
-      - summer tenure
-      - summer studies
-      - summer time
-  - synonym: auxiliary
-    examples: |
-      - auxiliary exams
-      - auxi
-      - auxi exams
-      - axuilary exams
-
-  - synonym: self
-    examples: |
-      - self-study
-      - self study
-      - self mode
-  - synonym: regular
-    examples: |
-      - regular mode
-      - regular-study
-      - regular study
-
-  - regex: subject
-    examples: |
-      - ^(U|u|P|p)[A-Za-z]{2}\d{3}$
-
   - intent: General_info
     examples: |
       - What are the [registration details]{"entity": "purpose", "value": "registration"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
-      - How can I complete [registration]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - How can I complete [registration](purpose) for the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
       - Explain the [registration process]{"entity": "purpose", "value": "registration"} for the summer session.
       - Tell me about [enrolling]{"entity": "purpose", "value": "registration"} in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
       - Provide information on [registering]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
@@ -271,10 +256,10 @@ nlu:
       - Can you tell me the release date for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} [application]{"entity": "purpose", "value": "registration"}?
       - What's the timeline for the [summer term]{"entity": "upgradation_mode", "value": "summer"} [application]{"entity": "purpose", "value": "registration"}?
       - When will the [registration forms]{"entity": "purpose", "value": "registration"} be available?
-      - What's the schedule for [registration]{"entity": "purpose", "value": "registration"}?
+      - What's the schedule for [registration](purpose)?
       - Tell me when I can start [registering]{"entity": "purpose", "value": "registration"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
       - Can you provide details about [enrollment]{"entity": "purpose", "value": "registration"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
-      - When do I need to complete [registration]{"entity": "purpose", "value": "registration"} for the summer session?
+      - When do I need to complete [registration](purpose) for the summer session?
       - How [long]{"entity": "purpose", "value": "tenure_of_summer_term"} is the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
       - What is the [duration]{"entity": "purpose", "value": "tenure_of_summer_term"} of the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
       - Can you provide information about the [tenure]{"entity": "purpose", "value": "tenure_of_summer_term"} of the summer session?
@@ -304,6 +289,7 @@ nlu:
       - Can you give me an overview of the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
       - Explain the key aspects of the summer session.
       - when will the [registration forms]{"entity": "purpose", "value": "registration"} be out
+      - hi tell me about the [summer sem]{"entity": "upgradation_mode", "value": "summer"}
   - intent: explain_grade_improvement_process
     examples: |
       - Explain the process for grade improvement in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
@@ -317,96 +303,63 @@ nlu:
       - What are the chances of improving my [F]{"entity": "grade", "role": "current_grade"} to a B in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
       - Can I change my [X]{"entity": "grade", "role": "current_grade"} to an A during the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
       - How does the grade improvement process work for students with C ?
-  - synonym: registration
-    examples: |
-      - registration details
-      - registration process
-      - enrolling
-      - registering
-      - application
-      - semester application
-      - term application
-      - registration forms
-      - enrollment
-  - synonym: tenure_of_summer_term
-    examples: |
-      - long
-      - duration
-      - tenure
-      - length
-      - timeframe
-      - period
-      - time span
-  - synonym: time_table
-    examples: |
-      - semester timetable
-      - timetable
-      - schedule
-      - time table
-      - class schedule
-      - weekly timetable
-      - session schedule
-      - class timetable
-
   - intent: ask_fee_details
     examples: |
-      - What is the fees for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the fee associated with [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the pricing for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - How much do I need to pay for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What charges apply to [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the expense for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What are the fees involved in [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - How are the fees structured for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the financial obligation for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the cost for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the expenditure for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - How much money do I need for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the fee rate for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the total fee for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
-      - What is the fee associated with [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the pricing for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - How much do I need to pay for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What charges apply to [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the expense for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What are the fees involved in [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - How are the fees structured for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the financial obligation for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the cost for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the expenditure for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - How much money do I need for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the fee rate for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the total fee for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
-      - What is the fee associated with [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the pricing for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - How much do I need to pay for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What charges apply to [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the expense for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What are the fees involved in [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - How are the fees structured for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the financial obligation for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the cost for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the expenditure for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - How much money do I need for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the fee rate for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the total fee for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
-      - What is the fee associated with [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the pricing for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - How much do I need to pay for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What charges apply to [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the expense for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What are the fees involved in [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - How are the fees structured for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the financial obligation for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the cost for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the expenditure for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - How much money do I need for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the fee rate for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
-      - What is the total fee for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the fees for [backlog clearance](fee_type) ?
+      - What is the fee associated with [backlog clearance](fee_type) ?
+      - What is the pricing for [backlog clearance](fee_type) ?
+      - How much do I need to pay for [backlog clearance](fee_type) ?
+      - What charges apply to [backlog clearance](fee_type) ?
+      - What is the expense for [backlog clearance](fee_type) ?
+      - What are the fees involved in [backlog clearance](fee_type) ?
+      - How are the fees structured for [backlog clearance](fee_type) ?
+      - What is the financial obligation for [backlog clearance](fee_type) ?
+      - What is the cost for [backlog clearance](fee_type) ?
+      - What is the expenditure for [backlog clearance](fee_type) ?
+      - How much money do I need for [backlog clearance](fee_type) ?
+      - What is the fee rate for [backlog clearance](fee_type) ?
+      - What is the total fee for [backlog clearance](fee_type) ?
+      - What is the fee associated with [grade improvement](fee_type) ?
+      - What is the pricing for [grade improvement](fee_type) ?
+      - How much do I need to pay for [grade improvement](fee_type) ?
+      - What charges apply to [grade improvement](fee_type) ?
+      - What is the expense for [grade improvement](fee_type) ?
+      - What are the fees involved in [grade improvement](fee_type) ?
+      - How are the fees structured for [grade improvement](fee_type) ?
+      - What is the financial obligation for [grade improvement](fee_type) ?
+      - What is the cost for [grade improvement](fee_type) ?
+      - What is the expenditure for [grade improvement](fee_type) ?
+      - How much money do I need for [grade improvement](fee_type) ?
+      - What is the fee rate for [grade improvement](fee_type) ?
+      - What is the total fee for [grade improvement](fee_type) ?
+      - What is the fee associated with [auxiliary examination](fee_type) ?
+      - What is the pricing for [auxiliary examination](fee_type) ?
+      - How much do I need to pay for [auxiliary examination](fee_type) ?
+      - What charges apply to [auxiliary examination](fee_type) ?
+      - What is the expense for [auxiliary examination](fee_type) ?
+      - What are the fees involved in [auxiliary examination](fee_type) ?
+      - How are the fees structured for [auxiliary examination](fee_type) ?
+      - What is the financial obligation for [auxiliary examination](fee_type) ?
+      - What is the cost for [auxiliary examination](fee_type) ?
+      - What is the expenditure for [auxiliary examination](fee_type) ?
+      - How much money do I need for [auxiliary examination](fee_type) ?
+      - What is the fee rate for [auxiliary examination](fee_type) ?
+      - What is the total fee for [auxiliary examination](fee_type) ?
+      - What is the fee associated with [thesis submission](fee_type) ?
+      - What is the pricing for [thesis submission](fee_type) ?
+      - How much do I need to pay for [thesis submission](fee_type) ?
+      - What charges apply to [thesis submission](fee_type) ?
+      - What is the expense for [thesis submission](fee_type) ?
+      - What are the fees involved in [thesis submission](fee_type) ?
+      - How are the fees structured for [thesis submission](fee_type) ?
+      - What is the financial obligation for [thesis submission](fee_type) ?
+      - What is the cost for [thesis submission](fee_type) ?
+      - What is the expenditure for [thesis submission](fee_type) ?
+      - How much money do I need for [thesis submission](fee_type) ?
+      - What is the fee rate for [thesis submission](fee_type) ?
+      - What is the total fee for [thesis submission](fee_type) ?
       - What is the fees?
       - Fees?
-      
-
   - intent: ask_fee_refund
     examples: |
       - Can I get a refund for the fees I paid?
@@ -424,6 +377,9 @@ nlu:
       - How much of the fee is refundable if I withdraw from a course?
       - Can I get my money back if I drop a course before the summer semester starts?
       - What happens to the fees if I have to withdraw due to medical reasons?
+      - I have opted a course but changed my mind. Give my fees back
+      - I dont want to continue the course can i get my money back
+      - if somone doesnt want to continue the course , can they opt out of it 
   - intent: inquire_about_medal_scholarship_upgradation_criteria
     examples: |
       - How can I qualify for a medal, scholarship, or upgradation?
@@ -455,28 +411,44 @@ nlu:
       - How can I meet the criteria for medal, scholarship, or upgradation consideration?
       - Tell me what I need to do to earn a medal, scholarship, or upgradation.
       - What are the eligibility conditions for a medal, scholarship, or upgradation?
-
+      - can i still get a scholarship if i upgrade my grade in summer sem ?
   - intent: General_info_Auxiliary
     examples: |
-      - Tell me about the auxiliary examination in July.
-      - What are the guidelines for the auxiliary exam in July?
-      - I need information regarding the auxiliary exam rules for July.
-      - Could you provide details on the July auxiliary examination?
-      - What's the latest information on the July auxiliary exam?
-      - Are there any special conditions for the auxiliary exam in July?
-      - Tell me about the eligibility criteria for the July auxiliary examination.
-      - Explain the auxiliary exam rules for the upcoming July session.
-      - Can you provide a summary of the July auxiliary exam regulations?
-      - What are the rules for the auxiliary examination in July or January?
-      - Tell me about the auxiliary examination options in July and January.
-      - Are there any differences between the auxiliary exams in July and January?
-      - Can you explain the rules for the auxiliary examination in both July and January?
+      - Tell me about the auxiliary examination in [July](month).
+      - What are the guidelines for the auxiliary exam in [July](month)?
+      - I need information regarding the auxiliary exam rules for [July](month).
+      - Could you provide details on the [July](month) auxiliary examination?
+      - What's the latest information on the [July](month) auxiliary exam?
+      - Are there any special conditions for the auxiliary exam in [July](month)?
+      - Tell me about the eligibility criteria for the [July](month) auxiliary examination.
+      - Explain the auxiliary exam rules for the upcoming [July](month) session.
+      - Can you provide a summary of the [July](month) auxiliary exam regulations?
+      - What are the rules for the auxiliary examination in [July](month) or January?
+      - Tell me about the auxiliary examination options in [July](month) and January.
+      - Are there any differences between the auxiliary exams in [July](month) and January?
+      - Can you explain the rules for the auxiliary examination in both [July](month) and January?
       - I'd like to know the guidelines for the auxiliary exam in both [July](month) and [January](month).
       - Explain the process for scheduling the auxiliary examination in either [July](month) or [January](month).
       - I'm not sure how the [July](month) auxiliary examination works. Can you clarify?
-      - when is auxiliary exam conducted
+      - What are the guidelines for the auxiliary exam in [January](month)?
+      - I need information regarding the auxiliary exam rules for [January](month).
+      - Could you provide details on the [January](month) auxiliary examination?
+      - What's the latest information on the [January](month) auxiliary exam?
+      - Are there any special conditions for the auxiliary exam in [January](month)?
+      - Tell me about the eligibility criteria for the [January](month) auxiliary examination.
+      - Explain the auxiliary exam rules for the upcoming [January](month) session.
+      - Can you provide a summary of the [January](month) auxiliary exam regulations?
+      - What are the rules for the auxiliary examination in [January](month) or January?
+      - Tell me about the auxiliary examination options in [January](month) and January.
+      - Are there any differences between the auxiliary exams in [January](month) and January?
+      - Can you explain the rules for the auxiliary examination in both [January](month) and January?
       - time for auxiliary exam
-
+      - when is auxiliary exam conducted
+      - Tell me about the rules for the auxiliary examination in [January](month).
+      - What are the guidelines for the [January](month) auxiliary examination?
+      - Can you provide information on the [January](month) auxiliary exam rules?
+      - Explain the specifics of the auxiliary exam in [January](month).
+      - what is [auxi exams](upgradation_mode)
   - intent: Auxiliary_exam_process
     examples: |
       - How can I apply for the auxiliary examination in [July](month)?
@@ -491,21 +463,10 @@ nlu:
       - What are the steps to take for the auxiliary exam in both [July](month) and [January](month)?
       - Can you provide details about the application process for the auxiliary exam in both [July](month) and [January](month)?
       - Walk me through the auxiliary examination procedure for [July](month) and [January](month) sessions.
-
-  - intent: General_info_Auxiliary_January
-    examples: |
-      - Tell me about the rules for the auxiliary examination in [January](month).
-      - What are the guidelines for the [January](month) auxiliary examination?
-      - Can you provide information on the [January](month) auxiliary exam rules?
-      - Explain the specifics of the auxiliary exam in [January](month).
-
-  - intent: Auxiliary_exam_process_January
-    examples: |
       - How can I apply for the auxiliary examination in [January](month)?
       - Walk me through the application process for the auxiliary exam in [January](month).
       - What's the procedure for taking the auxiliary exam in [January](month)?
       - Can you guide me on the steps to follow for the auxiliary exam in [January](month).
-
   - intent: subject_re_enrollment_auxiliary_yes
     examples: |
       - Can I re-enroll after taking a backlog exam?
@@ -513,13 +474,11 @@ nlu:
       - What's the process for re-enrolling after clearing a backlog in auxiliary exam?
       - Can I register for same courses in summersem after passing an auxiliary exam?
       - Can I re-enroll after a failed exam?
-
   - intent: subject_re_enrollment_summer_no
     examples: |
       - Can I re-enroll for same course after the summer semester?
       - Is re-enrollment for same course possible after the summer session?
       - Am I allowed to register for same courses again after the summer semester?
-
   - intent: ask_subject_limitation
     examples: |
       - What is the maximum number of subjects allowed for self-study and offline mode together?
@@ -542,7 +501,6 @@ nlu:
       - Are there any constraints on the number of subjects I can access, whether I'm online or offline?
       - Can I modify my subject choices for self-study and offline learning if I reach the limit?
       - Tell me about the subject allowances for both self-study and offline modes. Is there a total limit?
-
   - intent: ask_exam_evaluation_process
     examples: |
       - What is the evaluation process for MST/EST/Sessional exams?
@@ -564,7 +522,67 @@ nlu:
       - How are marks calculated for MST/EST/Sessional exams?
       - Can you provide insight into the grading process for MST/EST/Sessional exams?
       - What factors contribute to the assessment of MST/EST/Sessional exams?
-
+  - synonym: summer
+    examples: |
+      - summer semester
+      - summer sem
+      - summer term
+      - summer tenure
+      - summer studies
+      - summer time
+  - synonym: auxiliary
+    examples: |
+      - auxiliary exams
+      - auxi
+  - synonym: C
+    examples: |
+      - c
+  - synonym: B
+    examples: |
+      - b
+  - synonym: I
+    examples: |
+      - i
+  - synonym: self
+    examples: |
+      - self-study
+      - self study
+      - self mode
+  - synonym: regular
+    examples: |
+      - regular mode
+      - regular-study
+      - regular study
+  - synonym: registration
+    examples: |
+      - registration details
+      - registration process
+      - enrolling
+      - registering
+      - application
+      - registration forms
+      - enrollment
+      - semester application
+      - term application
+  - synonym: tenure_of_summer_term
+    examples: |
+      - long
+      - duration
+      - tenure
+      - length
+      - timeframe
+      - period
+      - time span
+  - synonym: time_table
+    examples: |
+      - timetable
+      - schedule
+      - time table
+      - class schedule
+      - weekly timetable
+      - session schedule
+      - class timetable
+      - semester timetable
   - synonym: backlog clearance
     examples: |
       - backlog
@@ -573,14 +591,6 @@ nlu:
       - clear overdue subjects
       - resolve backlog issues
       - catch up on missed courses
-
-  - synonym: auxiliary examination
-    examples: |
-      - auxiliary exams
-      - auxi
-      - auxi exams
-      - axuilary exams     
-
   - synonym: grade improvement
     examples: |
       - enhance grades
@@ -590,7 +600,6 @@ nlu:
       - elevate grades
       - increase marks
       - enhance GPA
-  
   - synonym: thesis submission
     examples: |
       - dissertation submission
@@ -601,3 +610,6 @@ nlu:
       - final document submission
       - project hand-in
       - thesis completion
+  - regex: subject
+    examples: |
+      - ^(U|u|P|p)[A-Za-z]{2}\d{3}$

@@ -1,0 +1,3219 @@
+[
+  {
+    "text": "Is it possible to improve my grades in the summer semester?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 35,
+        "value": "grades",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 43,
+        "end": 58,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 43,
+        "end": 58,
+        "confidence_entity": 0.9978002905845642,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "is it possible to get a a if i have c",
+    "entities": [
+      {
+        "start": 24,
+        "end": 25,
+        "value": "a",
+        "entity": "grade"
+      },
+      {
+        "start": 36,
+        "end": 37,
+        "value": "C",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How do E grade students select self-study mode?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 8,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 7,
+        "end": 8,
+        "confidence_entity": 0.9990938901901245,
+        "role": "current_grade",
+        "confidence_role": 0.9999414682388306,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 24,
+        "end": 30,
+        "confidence_entity": 0.5422834157943726,
+        "value": "select",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 31,
+        "end": 46,
+        "confidence_entity": 0.8654363751411438,
+        "value": "self-study mode",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how many marks are required to opt self study mode?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 45,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 35,
+        "end": 50,
+        "confidence_entity": 0.9165890216827393,
+        "value": "self study mode",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you clarify the eligibility criteria for students with B/B-/C/C- grades in the regular mode?",
+    "entities": [
+      {
+        "start": 83,
+        "end": 95,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 59,
+        "end": 67,
+        "confidence_entity": 0.7881196737289429,
+        "value": "B/B-/C/C",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 83,
+        "end": 95,
+        "confidence_entity": 0.9974913597106934,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain the eligibility criteria for regular-study mode?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 45,
+        "end": 63,
+        "confidence_entity": 0.5582624673843384,
+        "value": "regular-study mode",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "am i eligible for regular mode if having X grade?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 30,
+        "value": "regular",
+        "entity": "study_mode"
+      },
+      {
+        "start": 41,
+        "end": 42,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.9494037628173828,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 41,
+        "end": 42,
+        "confidence_entity": 0.9995336532592773,
+        "role": "current_grade",
+        "confidence_role": 0.9998111128807068,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "In what modes can i take subjects in summer sem ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 37,
+        "end": 47,
+        "confidence_entity": 0.9961996674537659,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "modes of study i can opt in summer term?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 28,
+        "end": 39,
+        "confidence_entity": 0.9979052543640137,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are the registration details for the summer semester?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 33,
+        "value": "registration",
+        "entity": "purpose"
+      },
+      {
+        "start": 42,
+        "end": 57,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 13,
+        "end": 25,
+        "confidence_entity": 0.5350437760353088,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 42,
+        "end": 57,
+        "confidence_entity": 0.9961134195327759,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you provide information about the tenure of the summer session?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 44,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9411540031433105,
+        "value": "tenure_of_summer_term",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 52,
+        "end": 58,
+        "confidence_entity": 0.9769827127456665,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 59,
+        "end": 66,
+        "confidence_entity": 0.6956608891487122,
+        "value": "session",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the period for the summer semester?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      },
+      {
+        "start": 27,
+        "end": 42,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 27,
+        "end": 42,
+        "confidence_entity": 0.9867514371871948,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you share the schedule for the summer session?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 26,
+        "value": "time_table",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.6633099913597107,
+        "value": "time_table",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.8661136627197266,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 42,
+        "end": 49,
+        "confidence_entity": 0.565786600112915,
+        "value": "session",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When is the time table for the summer semester available?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 22,
+        "value": "time_table",
+        "entity": "purpose"
+      },
+      {
+        "start": 31,
+        "end": 46,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.9606887102127075,
+        "value": "time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 31,
+        "end": 46,
+        "confidence_entity": 0.9982801675796509,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are the chances of improving my F to a B in the summer semester?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 38,
+        "value": "F",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 53,
+        "end": 68,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 37,
+        "end": 38,
+        "confidence_entity": 0.9987710118293762,
+        "role": "current_grade",
+        "confidence_role": 0.9998270869255066,
+        "value": "F",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 44,
+        "end": 45,
+        "confidence_entity": 0.9990641474723816,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 53,
+        "end": 68,
+        "confidence_entity": 0.997782289981842,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are the rules for the auxiliary examination in July or January?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 56,
+        "value": "July",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 52,
+        "end": 56,
+        "confidence_entity": 0.999584972858429,
+        "value": "July",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 60,
+        "end": 67,
+        "confidence_entity": 0.8341161012649536,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "time for auxiliary exam",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9067222476005554,
+        "value": "time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.6308254599571228,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "hi",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9353910088539124,
+        "role": "current_grade",
+        "confidence_role": 0.8848375678062439,
+        "value": "hi",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible to upgrade my I to B this term",
+    "entities": [
+      {
+        "start": 29,
+        "end": 30,
+        "value": "I",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 34,
+        "end": 35,
+        "value": "B",
+        "entity": "grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 34,
+        "end": 35,
+        "confidence_entity": 0.9971925616264343,
+        "role": "current_grade",
+        "confidence_role": 0.6575884819030762,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I retake exams or assignments to upgrade from e to B",
+    "entities": [
+      {
+        "start": 50,
+        "end": 51,
+        "value": "e",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 55,
+        "end": 56,
+        "value": "B",
+        "entity": "grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.5481323003768921,
+        "value": "exams",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 50,
+        "end": 51,
+        "confidence_entity": 0.9995923638343811,
+        "role": "current_grade",
+        "confidence_role": 0.9974164962768555,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 55,
+        "end": 56,
+        "confidence_entity": 0.9870741367340088,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How can I work on improving to b from a F in auxiliary exams",
+    "entities": [
+      {
+        "start": 31,
+        "end": 32,
+        "value": "b",
+        "entity": "grade"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "value": "F",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 45,
+        "end": 60,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 31,
+        "end": 32,
+        "confidence_entity": 0.9956918358802795,
+        "role": "current_grade",
+        "confidence_role": 0.696922242641449,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 40,
+        "end": 41,
+        "confidence_entity": 0.9995517134666443,
+        "role": "current_grade",
+        "confidence_role": 0.9915378093719482,
+        "value": "F",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 45,
+        "end": 60,
+        "confidence_entity": 0.9983810186386108,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can i upgrade my grade from c to b in auxi",
+    "entities": [
+      {
+        "start": 28,
+        "end": 29,
+        "value": "C",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 33,
+        "end": 34,
+        "value": "b",
+        "entity": "grade"
+      },
+      {
+        "start": 38,
+        "end": 42,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 28,
+        "end": 29,
+        "confidence_entity": 0.9989571571350098,
+        "role": "current_grade",
+        "confidence_role": 0.9972556233406067,
+        "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 33,
+        "end": 34,
+        "confidence_entity": 0.9982144832611084,
+        "role": "current_grade",
+        "confidence_role": 0.9312465190887451,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 38,
+        "end": 42,
+        "confidence_entity": 0.9904760122299194,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which mode can i take with grade RA",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 33,
+        "end": 35,
+        "confidence_entity": 0.8813451528549194,
+        "value": "RA",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are the mode of study in summer sem",
+    "entities": [
+      {
+        "start": 30,
+        "end": 40,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9783197045326233,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can i take ucs219 in self study mode in summer sem",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "ucs219",
+        "entity": "subject"
+      },
+      {
+        "start": 21,
+        "end": 31,
+        "value": "self",
+        "entity": "study_mode"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9964702129364014,
+        "value": "ucs219",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 21,
+        "end": 36,
+        "confidence_entity": 0.7778779864311218,
+        "value": "self study mode",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.991506040096283,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How can I complete registration for the summer term?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 31,
+        "value": "registration",
+        "entity": "purpose"
+      },
+      {
+        "start": 40,
+        "end": 51,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 19,
+        "end": 31,
+        "confidence_entity": 0.5334135293960571,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.9904975295066833,
+        "value": "term",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How long is the summer term?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 8,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      },
+      {
+        "start": 16,
+        "end": 27,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.8743986487388611,
+        "value": "tenure_of_summer_term",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 16,
+        "end": 27,
+        "confidence_entity": 0.987263023853302,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "If I have a B, can I improve it to an A ?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 13,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 12,
+        "end": 13,
+        "confidence_entity": 0.9995098114013672,
+        "role": "current_grade",
+        "confidence_role": 0.9893604516983032,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 19,
+        "end": 20,
+        "confidence_entity": 0.8286077976226807,
+        "role": "current_grade",
+        "confidence_role": 0.9258806109428406,
+        "value": "I",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 38,
+        "end": 39,
+        "confidence_entity": 0.9947158694267273,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the refund policy for the summer semester fees?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 34,
+        "end": 49,
+        "confidence_entity": 0.9527490735054016,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain the refund process for the summer semester fees?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 50,
+        "end": 58,
+        "confidence_entity": 0.6112640500068665,
+        "value": "semester",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can I get my money back if I drop a course before the summer semester starts?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 19,
+        "end": 23,
+        "confidence_entity": 0.7852647304534912,
+        "value": "back",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 27,
+        "end": 28,
+        "confidence_entity": 0.9945434331893921,
+        "role": "current_grade",
+        "confidence_role": 0.9953206181526184,
+        "value": "I",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 34,
+        "end": 35,
+        "confidence_entity": 0.7238614559173584,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 54,
+        "end": 69,
+        "confidence_entity": 0.9986720085144043,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about the auxiliary examination options in July and January.",
+    "entities": [
+      {
+        "start": 51,
+        "end": 55,
+        "value": "July",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 51,
+        "end": 55,
+        "confidence_entity": 0.9991695880889893,
+        "value": "July",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 60,
+        "end": 67,
+        "confidence_entity": 0.6650010943412781,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I upgrade my c / b / B / C / X / F to better grades",
+    "entities": [
+      {
+        "start": 17,
+        "end": 18,
+        "value": "c",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 21,
+        "end": 22,
+        "value": "b",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 25,
+        "end": 26,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "value": "C",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 33,
+        "end": 34,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 37,
+        "end": 38,
+        "value": "F",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 17,
+        "end": 18,
+        "confidence_entity": 0.9995593428611755,
+        "role": "current_grade",
+        "confidence_role": 0.9997835755348206,
+        "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 21,
+        "end": 22,
+        "confidence_entity": 0.9986722469329834,
+        "role": "current_grade",
+        "confidence_role": 0.9757066965103149,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 25,
+        "end": 26,
+        "confidence_entity": 0.999371349811554,
+        "role": "current_grade",
+        "confidence_role": 0.9428370594978333,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 29,
+        "end": 30,
+        "confidence_entity": 0.9883151054382324,
+        "role": "current_grade",
+        "confidence_role": 0.9737482070922852,
+        "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 33,
+        "end": 34,
+        "confidence_entity": 0.9926611185073853,
+        "role": "current_grade",
+        "confidence_role": 0.9893123507499695,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 37,
+        "end": 38,
+        "confidence_entity": 0.9992334842681885,
+        "role": "current_grade",
+        "confidence_role": 0.9991078972816467,
+        "value": "F",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 49,
+        "end": 55,
+        "confidence_entity": 0.9938836693763733,
+        "role": "current_grade",
+        "confidence_role": 0.9704013466835022,
+        "value": "grades",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is it possible to improve my grades in summer semester",
+    "entities": [
+      {
+        "start": 39,
+        "end": 54,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 29,
+        "end": 35,
+        "confidence_entity": 0.8110003471374512,
+        "role": "current_grade",
+        "confidence_role": 0.8365553617477417,
+        "value": "grades",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 39,
+        "end": 54,
+        "confidence_entity": 0.999316930770874,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How can I upgrade my e to an A this semester?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 22,
+        "value": "e",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "value": "A",
+        "entity": "grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 21,
+        "end": 22,
+        "confidence_entity": 0.9994534850120544,
+        "role": "current_grade",
+        "confidence_role": 0.9997971653938293,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 29,
+        "end": 30,
+        "confidence_entity": 0.997502863407135,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 36,
+        "end": 44,
+        "confidence_entity": 0.9974616765975952,
+        "value": "semester",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Are there scholarships or incentives for students who improve their grades from B to A?",
+    "entities": [
+      {
+        "start": 80,
+        "end": 81,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 85,
+        "end": 86,
+        "value": "A",
+        "entity": "grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 80,
+        "end": 81,
+        "confidence_entity": 0.9995781779289246,
+        "role": "current_grade",
+        "confidence_role": 0.9832178354263306,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 85,
+        "end": 86,
+        "confidence_entity": 0.9994390606880188,
+        "role": "current_grade",
+        "confidence_role": 0.7301810383796692,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can E grade students study on their own?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 5,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9991519451141357,
+        "role": "current_grade",
+        "confidence_role": 0.9997051358222961,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9956352114677429,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can students with E grades study independently?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 19,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.9990630745887756,
+        "role": "current_grade",
+        "confidence_role": 0.9997608065605164,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 27,
+        "end": 32,
+        "confidence_entity": 0.993756890296936,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "when i am eligible for self study mode?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 23,
+        "end": 33,
+        "confidence_entity": 0.9986684322357178,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is difference between self study mode and reugular study mode?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 37,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9772754311561584,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 56,
+        "end": 61,
+        "confidence_entity": 0.8088293671607971,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How is self study Mode different from regular mode?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "self",
+        "entity": "study_mode"
+      },
+      {
+        "start": 38,
+        "end": 50,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 7,
+        "end": 22,
+        "confidence_entity": 0.9141247868537903,
+        "value": "self study Mode",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.999554455280304,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can i take self study mode in ucs012",
+    "entities": [
+      {
+        "start": 11,
+        "end": 26,
+        "value": "self study mode",
+        "entity": "study_mode"
+      },
+      {
+        "start": 30,
+        "end": 36,
+        "value": "ucs012",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.9984845519065857,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "subject",
+        "start": 30,
+        "end": 36,
+        "confidence_entity": 0.9987809062004089,
+        "value": "ucs012",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no i dont want to share more details",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 18,
+        "end": 36,
+        "confidence_entity": 0.2938231825828552,
+        "value": "share more details",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Explain the registration process for the summer session.",
+    "entities": [
+      {
+        "start": 12,
+        "end": 32,
+        "value": "registration",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 12,
+        "end": 24,
+        "confidence_entity": 0.5421246290206909,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "When do I need to complete registration for the summer session?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 39,
+        "value": "registration",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 27,
+        "end": 39,
+        "confidence_entity": 0.5717369318008423,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 48,
+        "end": 54,
+        "confidence_entity": 0.9905271530151367,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me the length of the summer term.",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      },
+      {
+        "start": 26,
+        "end": 37,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 26,
+        "end": 37,
+        "confidence_entity": 0.9962922930717468,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me the time span for the summer term.",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      },
+      {
+        "start": 30,
+        "end": 41,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.9643406271934509,
+        "value": "time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 30,
+        "end": 41,
+        "confidence_entity": 0.9957666397094727,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you provide information on the session schedule for the summer semester?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 51,
+        "value": "time_table",
+        "entity": "purpose"
+      },
+      {
+        "start": 60,
+        "end": 75,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 43,
+        "end": 51,
+        "confidence_entity": 0.8506775498390198,
+        "value": "time_table",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 60,
+        "end": 75,
+        "confidence_entity": 0.8181384205818176,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Share details about the summer semester.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 39,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.7667451500892639,
+        "value": "details",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 24,
+        "end": 39,
+        "confidence_entity": 0.9846488833427429,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is it possible to upgrade from a D to a C ?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 34,
+        "value": "D",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 33,
+        "end": 34,
+        "confidence_entity": 0.999189555644989,
+        "role": "current_grade",
+        "confidence_role": 0.9979704022407532,
+        "value": "D",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 40,
+        "end": 41,
+        "confidence_entity": 0.9984820485115051,
+        "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Are there any differences between the auxiliary exams in July and January?",
+    "entities": [
+      {
+        "start": 57,
+        "end": 61,
+        "value": "July",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 57,
+        "end": 61,
+        "confidence_entity": 0.9985330104827881,
+        "value": "July",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 66,
+        "end": 73,
+        "confidence_entity": 0.8395267128944397,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain the rules for the auxiliary examination in both July and January?",
+    "entities": [
+      {
+        "start": 64,
+        "end": 68,
+        "value": "July",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 64,
+        "end": 68,
+        "confidence_entity": 0.9984250068664551,
+        "value": "July",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 73,
+        "end": 80,
+        "confidence_entity": 0.8949554562568665,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about the auxiliary examination options in January and January.",
+    "entities": [
+      {
+        "start": 51,
+        "end": 58,
+        "value": "January",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 51,
+        "end": 58,
+        "confidence_entity": 0.9237850308418274,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 63,
+        "end": 70,
+        "confidence_entity": 0.8800416588783264,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain the rules for the auxiliary examination in both January and January?",
+    "entities": [
+      {
+        "start": 64,
+        "end": 71,
+        "value": "January",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 64,
+        "end": 71,
+        "confidence_entity": 0.8491485714912415,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 76,
+        "end": 83,
+        "confidence_entity": 0.8878100514411926,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "cu",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9992068409919739,
+        "role": "current_grade",
+        "confidence_role": 0.9984622001647949,
+        "value": "cu",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How can I upgrade my B to an a grade in summer semester",
+    "entities": [
+      {
+        "start": 21,
+        "end": 22,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "value": "a",
+        "entity": "grade"
+      },
+      {
+        "start": 40,
+        "end": 55,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 21,
+        "end": 22,
+        "confidence_entity": 0.9993603825569153,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 29,
+        "end": 30,
+        "confidence_entity": 0.7215347290039062,
+        "value": "A",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 40,
+        "end": 55,
+        "confidence_entity": 0.9986478686332703,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I upgrade my grade from A to A (grade)",
+    "entities": [
+      {
+        "start": 28,
+        "end": 29,
+        "value": "A",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 28,
+        "end": 29,
+        "confidence_entity": 0.9998076558113098,
+        "role": "current_grade",
+        "confidence_role": 0.9935484528541565,
+        "value": "A",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 33,
+        "end": 34,
+        "confidence_entity": 0.9998182654380798,
+        "role": "current_grade",
+        "confidence_role": 0.960615873336792,
+        "value": "A",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you suggest strategies for upgrading from B to B in auxiliary exams?",
+    "entities": [
+      {
+        "start": 46,
+        "end": 47,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 51,
+        "end": 52,
+        "value": "B",
+        "entity": "grade"
+      },
+      {
+        "start": 56,
+        "end": 71,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 46,
+        "end": 47,
+        "confidence_entity": 0.9991637468338013,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 51,
+        "end": 52,
+        "confidence_entity": 0.9972434043884277,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 56,
+        "end": 71,
+        "confidence_entity": 0.9965533018112183,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I improve my grades during the summer semester in {\"entity\": \"regular study\", \"value\": \"regular\"} mode?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 35,
+        "end": 50,
+        "confidence_entity": 0.9648123383522034,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 66,
+        "end": 73,
+        "confidence_entity": 0.710796594619751,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 92,
+        "end": 99,
+        "confidence_entity": 0.964601993560791,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "uy222",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "uy222",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.7228478193283081,
+        "role": "current_grade",
+        "confidence_role": 0.7487825155258179,
+        "value": "uy222",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Provide information on registering for the summer term.",
+    "entities": [
+      {
+        "start": 23,
+        "end": 34,
+        "value": "registration",
+        "entity": "purpose"
+      },
+      {
+        "start": 43,
+        "end": 54,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 23,
+        "end": 34,
+        "confidence_entity": 0.9751726984977722,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 39,
+        "end": 42,
+        "confidence_entity": 0.6781032085418701,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 43,
+        "end": 54,
+        "confidence_entity": 0.8970137238502502,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What's the weekly timetable for the summer session?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 27,
+        "value": "time_table",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 18,
+        "end": 27,
+        "confidence_entity": 0.9960429668426514,
+        "value": "time_table",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need details regarding the summer semester.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 44,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 7,
+        "end": 14,
+        "confidence_entity": 0.9685995578765869,
+        "value": "details",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 29,
+        "end": 44,
+        "confidence_entity": 0.9849477410316467,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Explain the process for grade improvement in the summer semester.",
+    "entities": [
+      {
+        "start": 49,
+        "end": 64,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.9774084687232971,
+        "value": "process",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "fee_type",
+        "start": 24,
+        "end": 41,
+        "confidence_entity": 0.9965382814407349,
+        "value": "grade improvement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 49,
+        "end": 64,
+        "confidence_entity": 0.9642925262451172,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How does the grade improvement process work for students with C ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "fee_type",
+        "start": 19,
+        "end": 38,
+        "confidence_entity": 0.9712066650390625,
+        "value": "improvement process",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 62,
+        "end": 63,
+        "confidence_entity": 0.9625846743583679,
+        "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is the thesis submission fee refundable if I don't submit my thesis on time?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "fee_type",
+        "start": 7,
+        "end": 24,
+        "confidence_entity": 0.7222979664802551,
+        "value": "thesis submission",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "fee_type",
+        "start": 61,
+        "end": 67,
+        "confidence_entity": 0.840536892414093,
+        "value": "thesis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What are the rules for the auxiliary examination in January or January?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 59,
+        "value": "January",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 52,
+        "end": 59,
+        "confidence_entity": 0.9026579856872559,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 63,
+        "end": 70,
+        "confidence_entity": 0.8600344061851501,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What should I do if I want to upgrade my grades",
+    "entities": [
+      {
+        "start": 41,
+        "end": 47,
+        "value": "grades",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 20,
+        "end": 21,
+        "confidence_entity": 0.8876033425331116,
+        "role": "current_grade",
+        "confidence_role": 0.9759894609451294,
+        "value": "I",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Are there any courses or workshops aimed at improving from B to B?",
+    "entities": [
+      {
+        "start": 59,
+        "end": 60,
+        "value": "B",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 64,
+        "end": 65,
+        "value": "B",
+        "entity": "grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 59,
+        "end": 60,
+        "confidence_entity": 0.9987244009971619,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 64,
+        "end": 65,
+        "confidence_entity": 0.9936833381652832,
+        "value": "B",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Do E grade students need to take subjects in regular mode?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 4,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 45,
+        "end": 57,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 3,
+        "end": 4,
+        "confidence_entity": 0.9992977380752563,
+        "role": "current_grade",
+        "confidence_role": 0.9998025298118591,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 45,
+        "end": 52,
+        "confidence_entity": 0.5213029384613037,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "When is self-study mode applicable for E grade students?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "self",
+        "entity": "study_mode"
+      },
+      {
+        "start": 39,
+        "end": 40,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 8,
+        "end": 18,
+        "confidence_entity": 0.9986261129379272,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 24,
+        "end": 34,
+        "confidence_entity": 0.8322121500968933,
+        "value": "applicable",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 39,
+        "end": 40,
+        "confidence_entity": 0.9997807145118713,
+        "role": "current_grade",
+        "confidence_role": 0.9998910427093506,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can E grade students take subjects in regular mode if marks are low?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 5,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 38,
+        "end": 50,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9993877410888672,
+        "role": "current_grade",
+        "confidence_role": 0.999817430973053,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.9938550591468811,
+        "value": "regular",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can E grade students take subjects in regular mode if they scored less than 25?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 5,
+        "value": "E",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 38,
+        "end": 50,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9988747239112854,
+        "role": "current_grade",
+        "confidence_role": 0.99972003698349,
+        "value": "E",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the mode of study that is available to me if I have an X grade?",
+    "entities": [
+      {
+        "start": 63,
+        "end": 64,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.9754700064659119,
+        "value": "mode",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9439091086387634,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 53,
+        "end": 54,
+        "confidence_entity": 0.9262081384658813,
+        "role": "current_grade",
+        "confidence_role": 0.5694091320037842,
+        "value": "I",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 63,
+        "end": 64,
+        "confidence_entity": 0.9995946288108826,
+        "role": "current_grade",
+        "confidence_role": 0.9997261166572571,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are the different modes of study that I can choose from if I have an X grade?",
+    "entities": [
+      {
+        "start": 74,
+        "end": 75,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 32,
+        "end": 37,
+        "confidence_entity": 0.9501834511756897,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 74,
+        "end": 75,
+        "confidence_entity": 0.9995895028114319,
+        "role": "current_grade",
+        "confidence_role": 0.9997392296791077,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How do I choose the right mode of study for me if I have an X grade?",
+    "entities": [
+      {
+        "start": 60,
+        "end": 61,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.8827307820320129,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "grade",
+        "start": 60,
+        "end": 61,
+        "confidence_entity": 0.999505877494812,
+        "role": "current_grade",
+        "confidence_role": 0.9996699094772339,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can i take UCS410 in self study mode ?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "UCS410",
+        "entity": "subject"
+      },
+      {
+        "start": 21,
+        "end": 31,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9967376589775085,
+        "value": "UCS410",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 21,
+        "end": 36,
+        "confidence_entity": 0.8107234835624695,
+        "value": "self study mode",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "is it possible to take operating systems in self study mode in summer semester if have F grade ?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 40,
+        "value": "operating systems",
+        "entity": "subject"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "value": "self",
+        "entity": "study_mode"
+      },
+      {
+        "start": 63,
+        "end": 78,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      },
+      {
+        "start": 87,
+        "end": 88,
+        "value": "F",
+        "entity": "grade",
+        "role": "current_grade"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 44,
+        "end": 54,
+        "confidence_entity": 0.9307398796081543,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 63,
+        "end": 78,
+        "confidence_entity": 0.9842991828918457,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 87,
+        "end": 88,
+        "confidence_entity": 0.9994102716445923,
+        "role": "current_grade",
+        "confidence_role": 0.9997610449790955,
+        "value": "F",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "i have the subject ums289",
+    "entities": [
+      {
+        "start": 19,
+        "end": 25,
+        "value": "ums289",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What's the schedule for registration?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 36,
+        "value": "registration",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.664490282535553,
+        "value": "time_table",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 24,
+        "end": 36,
+        "confidence_entity": 0.6168141961097717,
+        "value": "registration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How lon{\"entity\": \"purpose\", \"value\": \"tenure_of_summer_term\"}) does the [summer term last?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 85,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Provide details about the duration of the summer session.",
+    "entities": [
+      {
+        "start": 26,
+        "end": 34,
+        "value": "tenure_of_summer_term",
+        "entity": "purpose"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 42,
+        "end": 48,
+        "confidence_entity": 0.9137905240058899,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 49,
+        "end": 56,
+        "confidence_entity": 0.4896075129508972,
+        "value": "session",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When will the timetable for the summer term be published?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 23,
+        "value": "time_table",
+        "entity": "purpose"
+      },
+      {
+        "start": 32,
+        "end": 43,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 14,
+        "end": 23,
+        "confidence_entity": 0.6233600974082947,
+        "value": "time_table",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 32,
+        "end": 43,
+        "confidence_entity": 0.9978540539741516,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "purpose",
+        "start": 47,
+        "end": 56,
+        "confidence_entity": 0.4834369122982025,
+        "value": "published",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can you tell me about the summer session?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.832906186580658,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I change my X to an A during the summer semester?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 17,
+        "value": "X",
+        "entity": "grade",
+        "role": "current_grade"
+      },
+      {
+        "start": 37,
+        "end": 52,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 16,
+        "end": 17,
+        "confidence_entity": 0.99832683801651,
+        "role": "current_grade",
+        "confidence_role": 0.9997588992118835,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 24,
+        "end": 25,
+        "confidence_entity": 0.969154953956604,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 37,
+        "end": 52,
+        "confidence_entity": 0.9992658495903015,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Are there any differences between the auxiliary exams in January and January?",
+    "entities": [
+      {
+        "start": 57,
+        "end": 64,
+        "value": "January",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "month",
+        "start": 57,
+        "end": 64,
+        "confidence_entity": 0.8620438575744629,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 69,
+        "end": 76,
+        "confidence_entity": 0.515910267829895,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I study more than [X] subjects in total for both self-study and offline modes?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grade",
+        "start": 23,
+        "end": 24,
+        "confidence_entity": 0.9994398951530457,
+        "role": "current_grade",
+        "confidence_role": 0.9998542070388794,
+        "value": "X",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 53,
+        "end": 63,
+        "confidence_entity": 0.9627494215965271,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Are there any restrictions on how many subjects I can study, either self-study or offline?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 68,
+        "end": 78,
+        "confidence_entity": 0.9534730315208435,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]
