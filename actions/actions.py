@@ -200,6 +200,12 @@ class ActionSelfStudyCondition(Action):
                         subject.upper()
                     )
                 )
+            elif current_grade.lower() == "a":
+                dispatcher.utter_message(
+                    "Students With grades {} / {} cannot apply for Summer semester".format(
+                        current_grade.upper(), current_grade.upper()
+                    )
+                )
             else:
                 dispatcher.utter_message(
                     "Students with a grade {} are only eligble for Regular mode of study".format(
@@ -236,7 +242,7 @@ class ActionGeneralInfo(Action):
             # Handle unknown 'purpose' values
             dispatcher.utter_message("I'm not sure how to respond to that.")
 
-        return []
+        return [SlotSet("purpose", None)]
 
 
 # arshit
@@ -416,4 +422,4 @@ class ActionHandleFeeDetails(Action):
             response = "I'm sorry, but I don't have information about that fee type."
 
         dispatcher.utter_message(response)
-        return []
+        return [SlotSet("fee_type", None)]
