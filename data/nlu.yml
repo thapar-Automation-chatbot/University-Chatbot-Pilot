@@ -303,6 +303,15 @@ nlu:
       - What are the chances of improving my [F]{"entity": "grade", "role": "current_grade"} to a B in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
       - Can I change my [X]{"entity": "grade", "role": "current_grade"} to an A during the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
       - How does the grade improvement process work for students with C ?
+      - What is the extent upto which i can improve if my current grade is B?
+      - What is the maximum grade upto which i can improve if my current grade is C?
+      - What is the threshold upto which i can improve if my current grade is C-?
+      - If I have a [C]{"entity": "grade", "role": "current_grade"}, what is the maximum grade i can achieve?
+      - If I have a [B]{"entity": "grade", "role": "current_grade"}, what is the maximum grade i can achieve?
+      - If I have a [i]{"entity": "grade", "role": "current_grade"}, what is the maximum grade i can achieve?
+      - If I have a [x]{"entity": "grade", "role": "current_grade"}, what is the maximum grade i can achieve?
+      - If I have a [ra]{"entity": "grade", "role": "current_grade"}, what is the maximum grade i can achieve?
+      
   - intent: ask_fee_details
     examples: |
       - What is the fees for [backlog clearance](fee_type) ?
