@@ -166,7 +166,7 @@ stories:
   - story: User asks about subject limitations for self-study and offline modes
     steps:
       - intent: ask_subject_limitation
-      - action: action_handle_ask_subject_limitation
+      - action: utter_max_subject_limit
 
   - story: User inquires about MST/EST/Sessional exam evaluation process
     steps:
@@ -187,7 +187,7 @@ stories:
   - story: User inquires about subject limitations and asks about re-enrollment after clearing auxiliary exam
     steps:
       - intent: ask_subject_limitation
-      - action: action_handle_ask_subject_limitation
+      - action: utter_max_subject_limit
       - intent: subject_re_enrollment_auxiliary_yes
       - action: action_handle_subject_re_enrollment_auxiliary_yes
 
@@ -363,9 +363,5 @@ stories:
           - current_grade: null
       - slot_was_set:
           - subject: null
-  - story: max subject possible in a mode 
-      steps:
-      
-        - intent: ask_subject_limitation
-        - action: utter_max_subject_limit
+
 
