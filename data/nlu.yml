@@ -128,30 +128,30 @@ nlu:
       - the grade i had received was [A]{"entity": "grade", "role": "current_grade"}
   - intent: confirm_self_study_conditions
     examples: |
-      - Can students with [E]{"entity": "grade", "value": "current_grade"} grades opt for [self-study]{"entity": "study_mode", "value": "self"}?
-      - What is the [self-study]{"entity": "study_mode", "value": "self"} option for [E]{"entity": "grade", "value": "current_grade"} grade students?
-      - Is [self-study]{"entity": "study_mode", "value": "self"} allowed for [E]{"entity": "grade", "value": "current_grade"} grades?
-      - When can [E]{"entity": "grade", "value": "current_grade"} grade students choose [self-study]{"entity": "study_mode", "value": "self"} mode?
-      - What's the minimum marks requirement for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
-      - How do [E]{"entity": "grade", "value": "current_grade"} grade students select [self-study]{"entity": "study_mode", "value": "self"} mode?
-      - Can [E]{"entity": "grade", "value": "current_grade"} grade students study on their own?
-      - Tell me about the [self-study]{"entity": "study_mode", "value": "self"} policy for [E]{"entity": "grade", "value": "current_grade"} grade students.
-      - Do [E]{"entity": "grade", "value": "current_grade"} grade students need to take subjects in [regular mode]{"entity": "study_mode", "value": "regular"}?
-      - What are the conditions for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
-      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "value": "current_grade"} grades if marks are less than 25?
-      - Can students with [E]{"entity": "grade", "value": "current_grade"} grades study independently?
-      - How can [E]{"entity": "grade", "value": "current_grade"} grade students improve their grades through [self-study]{"entity": "study_mode", "value": "self"}?
-      - When is [self-study]{"entity": "study_mode", "value": "self"} mode applicable for [E]{"entity": "grade", "value": "current_grade"} grade students?
-      - Can [E]{"entity": "grade", "value": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if marks are low?
-      - Tell me more about [E]{"entity": "grade", "value": "current_grade"} grade [self-study]{"entity": "study_mode", "value": "self"} conditions.
-      - What happens if [E]{"entity": "grade", "value": "current_grade"} grade students don't meet the marks requirement for [self-study]{"entity": "study_mode", "value": "self"}?
-      - Is there a minimum marks cutoff for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
-      - Can [E]{"entity": "grade", "value": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if they scored less than 25?
-      - What's the threshold marks for [E]{"entity": "grade", "value": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
-      - Can [E]{"entity": "grade", "value": "current_grade"} grade students switch to [regular mode]{"entity": "study_mode", "value": "regular"} if they have low marks?
-      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "value": "current_grade"} grade students who scored below 25?
-      - can i opt for [self study]{"entity": "study_mode", "value": "self"} mode if having [E]{"entity": "grade", "value": "current_grade"} grade?
-      - when i can take [self study]{"entity": "study_mode", "value": "self"} mode in [E]{"entity": "grade", "value": "current_grade"} grade?
+      - Can students with [E]{"entity": "grade", "role": "current_grade"} grades opt for [self-study]{"entity": "study_mode", "value": "self"}?
+      - What is the [self-study]{"entity": "study_mode", "value": "self"} option for [E]{"entity": "grade", "role": "current_grade"} grade students?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} allowed for [E]{"entity": "grade", "role": "current_grade"} grades?
+      - When can [E]{"entity": "grade", "role": "current_grade"} grade students choose [self-study]{"entity": "study_mode", "value": "self"} mode?
+      - What's the minimum marks requirement for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - How do [E]{"entity": "grade", "role": "current_grade"} grade students select [self-study]{"entity": "study_mode", "value": "self"} mode?
+      - Can [E]{"entity": "grade", "role": "current_grade"} grade students study on their own?
+      - Tell me about the [self-study]{"entity": "study_mode", "value": "self"} policy for [E]{"entity": "grade", "role": "current_grade"} grade students.
+      - Do [E]{"entity": "grade", "role": "current_grade"} grade students need to take subjects in [regular mode]{"entity": "study_mode", "value": "regular"}?
+      - What are the conditions for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "role": "current_grade"} grades if marks are less than 25?
+      - Can students with [E]{"entity": "grade", "role": "current_grade"} grades study independently?
+      - How can [E]{"entity": "grade", "role": "current_grade"} grade students improve their grades through [self-study]{"entity": "study_mode", "value": "self"}?
+      - When is [self-study]{"entity": "study_mode", "value": "self"} mode applicable for [E]{"entity": "grade", "role": "current_grade"} grade students?
+      - Can [E]{"entity": "grade", "role": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if marks are low?
+      - Tell me more about [E]{"entity": "grade", "role": "current_grade"} grade [self-study]{"entity": "study_mode", "value": "self"} conditions.
+      - What happens if [E]{"entity": "grade", "role": "current_grade"} grade students don't meet the marks requirement for [self-study]{"entity": "study_mode", "value": "self"}?
+      - Is there a minimum marks cutoff for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Can [E]{"entity": "grade", "role": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if they scored less than 25?
+      - What's the threshold marks for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
+      - Can [E]{"entity": "grade", "role": "current_grade"} grade students switch to [regular mode]{"entity": "study_mode", "value": "regular"} if they have low marks?
+      - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "role": "current_grade"} grade students who scored below 25?
+      - can i opt for [self study]{"entity": "study_mode", "value": "self"} mode if having [E]{"entity": "grade", "role": "current_grade"} grade?
+      - when i can take [self study]{"entity": "study_mode", "value": "self"} mode in [E]{"entity": "grade", "role": "current_grade"} grade?
       - how many marks are required to opt [self study]{"entity": "study_mode", "value": "self"} mode?
       - Is {"entity": "study_mode", "value": "self"} allowed for subjects in summer sem
       - Can you explain the eligibility criteria for {"entity": "study_mode", "value": "self"} mode?
