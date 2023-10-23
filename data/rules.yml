@@ -1,10 +1,14 @@
 version: "3.1"
 
 rules:
-  # - rule: Say goodbye anytime the user says goodbye
-  #   steps:
-  #     - intent: goodbye
-  #     - action: utter_goodbye
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_okay
+      - action: action_restart
 
   - rule: greeting
     steps:
@@ -56,9 +60,8 @@ rules:
 
   - rule: Break from forms
     steps:
-      - or:
-        - intent: deny
-        - intent: goodbye
+      
+      - intent: deny
       - action: action_deactivate_loop
       - active_loop: null
       - action: utter_okay
