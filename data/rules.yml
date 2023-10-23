@@ -62,3 +62,29 @@ rules:
     steps:
       - intent: explain_grade_improvement_process
       - action: utter_explain_grade_improvement_process
+
+  # - rule: activate fee_type_form
+  #   steps:
+  #     - intent: ask_fee_details
+  #     - action: fee_type_form
+  #     - active_loop: fee_type_form
+
+  # - rule: submit fee_type_form
+  #   condition:
+  #     - active_loop: fee_type_form
+  #   steps:
+  #     - action: fee_type_form
+  #     - active_loop: null
+  #     - slot_was_set:
+  #         - requested_slot: null
+  #     - action: action_handle_fee_details
+
+  # - rule: scholarship criteria
+  #   steps:
+  #     - intent: inquire_about_medal_scholarship_upgradation_criteria
+  #     - action: utter_explain_criteria
+
+  # - rule: fee refund policy
+  #   steps:
+  #    - intent: ask_fee_refund
+  #    - action: utter_inquire_about_fee_refund_policy

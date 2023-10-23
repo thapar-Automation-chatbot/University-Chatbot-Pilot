@@ -347,3 +347,257 @@ nlu:
       - weekly timetable
       - session schedule
       - class timetable
+
+  - intent: ask_fee_details
+    examples: |
+      - What is the fees for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the fee associated with [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the pricing for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - How much do I need to pay for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What charges apply to [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the expense for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What are the fees involved in [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - How are the fees structured for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the financial obligation for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the cost for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the expenditure for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - How much money do I need for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the fee rate for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the total fee for [backlog clearance]{"entity":"fee_type", "value":"backlog clearance"} ?
+      - What is the fee associated with [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the pricing for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - How much do I need to pay for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What charges apply to [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the expense for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What are the fees involved in [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - How are the fees structured for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the financial obligation for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the cost for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the expenditure for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - How much money do I need for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the fee rate for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the total fee for [grade improvement]{"entity":"fee_type", "value":"grade improvement"} ?
+      - What is the fee associated with [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the pricing for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - How much do I need to pay for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What charges apply to [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the expense for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What are the fees involved in [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - How are the fees structured for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the financial obligation for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the cost for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the expenditure for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - How much money do I need for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the fee rate for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the total fee for [auxiliary examination]{"entity":"fee_type", "value":"auxiliary examination"} ?
+      - What is the fee associated with [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the pricing for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - How much do I need to pay for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What charges apply to [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the expense for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What are the fees involved in [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - How are the fees structured for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the financial obligation for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the cost for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the expenditure for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - How much money do I need for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the fee rate for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the total fee for [thesis submission]{"entity":"fee_type", "value":"thesis submission"} ?
+      - What is the fees?
+      - Fees?
+      
+
+  - intent: ask_fee_refund
+    examples: |
+      - Can I get a refund for the fees I paid?
+      - What is the refund policy for the summer semester fees?
+      - How can I request a refund for my fees?
+      - Is there a deadline for fee refunds?
+      - What's the procedure for fee refunds?
+      - Can you explain the refund process for the summer semester fees?
+      - How long does it take to process a fee refund request?
+      - What percentage of the fee is refunded if I drop a course mid-semester?
+      - What's the last date to apply for a fee refund this semester?
+      - Is the thesis submission fee refundable if I don't submit my thesis on time?
+      - Can I get a partial refund if I withdraw from some but not all my courses?
+      - Is there a grace period for fee refunds after the semester starts?
+      - How much of the fee is refundable if I withdraw from a course?
+      - Can I get my money back if I drop a course before the summer semester starts?
+      - What happens to the fees if I have to withdraw due to medical reasons?
+  - intent: inquire_about_medal_scholarship_upgradation_criteria
+    examples: |
+      - How can I qualify for a medal, scholarship, or upgradation?
+      - What are the criteria for earning a medal, scholarship, or upgradation?
+      - Tell me about the requirements for receiving a medal, scholarship, or upgradation.
+      - What do I need to do to be eligible for a medal, scholarship, or upgradation?
+      - Explain the criteria for medal, scholarship, or upgradation eligibility.
+      - Can you provide information about the conditions for receiving a medal, scholarship, or upgradation?
+      - What are the guidelines for qualifying for a medal, scholarship, or upgradation?
+      - Is there a specific criteria for earning a medal, scholarship, or upgradation?
+      - How can I achieve a medal, scholarship, or upgradation?
+      - Tell me the prerequisites for obtaining a medal, scholarship, or upgradation.
+      - What's the process for becoming eligible for a medal, scholarship, or upgradation?
+      - Can you clarify the criteria for medal, scholarship, or upgradation consideration?
+      - What do I need to accomplish to be considered for a medal, scholarship, or upgradation?
+      - Are there any specific requirements for receiving a medal, scholarship, or upgradation?
+      - How do I qualify for a medal, scholarship, or upgradation?
+      - Tell me what it takes to earn a medal, scholarship, or upgradation.
+      - What are the conditions for medal, scholarship, or upgradation eligibility?
+      - Is there a set of rules for obtaining a medal, scholarship, or upgradation?
+      - Explain the eligibility criteria for a medal, scholarship, or upgradation.
+      - Can you provide details about the qualifications for earning a medal, scholarship, or upgradation?
+      - What must I achieve to be eligible for a medal, scholarship, or upgradation?
+      - Tell me about the prerequisites for being considered for a medal, scholarship, or upgradation.
+      - How do I become eligible for a medal, scholarship, or upgradation?
+      - What are the steps to qualify for a medal, scholarship, or upgradation?
+      - Is there a specific criteria for receiving a medal, scholarship, or upgradation?
+      - Can you explain the requirements for earning a medal, scholarship, or upgradation?
+      - How can I meet the criteria for medal, scholarship, or upgradation consideration?
+      - Tell me what I need to do to earn a medal, scholarship, or upgradation.
+      - What are the eligibility conditions for a medal, scholarship, or upgradation?
+
+  - intent: General_info_Auxiliary
+    examples: |
+      - Tell me about the auxiliary examination in July.
+      - What are the guidelines for the auxiliary exam in July?
+      - I need information regarding the auxiliary exam rules for July.
+      - Could you provide details on the July auxiliary examination?
+      - What's the latest information on the July auxiliary exam?
+      - Are there any special conditions for the auxiliary exam in July?
+      - Tell me about the eligibility criteria for the July auxiliary examination.
+      - Explain the auxiliary exam rules for the upcoming July session.
+      - Can you provide a summary of the July auxiliary exam regulations?
+      - What are the rules for the auxiliary examination in July or January?
+      - Tell me about the auxiliary examination options in July and January.
+      - Are there any differences between the auxiliary exams in July and January?
+      - Can you explain the rules for the auxiliary examination in both July and January?
+      - I'd like to know the guidelines for the auxiliary exam in both [July](month) and [January](month).
+      - Explain the process for scheduling the auxiliary examination in either [July](month) or [January](month).
+      - I'm not sure how the [July](month) auxiliary examination works. Can you clarify?
+      - when is auxiliary exam conducted
+      - time for auxiliary exam
+
+  - intent: Auxiliary_exam_process
+    examples: |
+      - How can I apply for the auxiliary examination in [July](month)?
+      - Walk me through the steps of the auxiliary examination process in [July](month).
+      - Explain the procedure for taking the auxiliary exam in [July](month).
+      - I want to understand how to register for the [July](month) auxiliary examination.
+      - Walk me through the application process for the auxiliary exam in [July](month).
+      - What's the timeline for the [July](month) auxiliary examination procedure?
+      - How do I schedule my auxiliary exam for the upcoming [July](month) session?
+      - Can you guide me on the steps to follow for the auxiliary exam in [July](month)?
+      - How does the auxiliary examination process work in [July](month) and [January](month)?
+      - What are the steps to take for the auxiliary exam in both [July](month) and [January](month)?
+      - Can you provide details about the application process for the auxiliary exam in both [July](month) and [January](month)?
+      - Walk me through the auxiliary examination procedure for [July](month) and [January](month) sessions.
+
+  - intent: General_info_Auxiliary_January
+    examples: |
+      - Tell me about the rules for the auxiliary examination in [January](month).
+      - What are the guidelines for the [January](month) auxiliary examination?
+      - Can you provide information on the [January](month) auxiliary exam rules?
+      - Explain the specifics of the auxiliary exam in [January](month).
+
+  - intent: Auxiliary_exam_process_January
+    examples: |
+      - How can I apply for the auxiliary examination in [January](month)?
+      - Walk me through the application process for the auxiliary exam in [January](month).
+      - What's the procedure for taking the auxiliary exam in [January](month)?
+      - Can you guide me on the steps to follow for the auxiliary exam in [January](month).
+
+  - intent: subject_re_enrollment_auxiliary_yes
+    examples: |
+      - Can I re-enroll after taking a backlog exam?
+      - Is it possible to re-enroll after auxiliary for an improvement exam?
+      - What's the process for re-enrolling after clearing a backlog in auxiliary exam?
+      - Can I register for same courses in summersem after passing an auxiliary exam?
+      - Can I re-enroll after a failed exam?
+
+  - intent: subject_re_enrollment_summer_no
+    examples: |
+      - Can I re-enroll for same course after the summer semester?
+      - Is re-enrollment for same course possible after the summer session?
+      - Am I allowed to register for same courses again after the summer semester?
+
+  - intent: ask_subject_limitation
+    examples: |
+      - What is the maximum number of subjects allowed for self-study and offline mode together?
+      - Is there a combined limit on the subjects I can study in self-study and offline modes?
+      - How many subjects can I have in total for self-study and offline learning?
+      - Can I study more than [X] subjects in total for both self-study and offline modes?
+      - Tell me about the subject limit for self-study and offline modes.
+      - What's the maximum number of subjects I can enroll in self-study and offline modes?
+      - Is there a cap on the total number of topics I can learn for self-study and offline learning combined?
+      - Tell me about any restrictions on the quantity of subjects I can choose for self-study and offline learning.
+      - What's the upper limit for subjects in both self-study and offline modes?
+      - Can I exceed the subject limit in self-study and offline modes?
+      - Are there any restrictions on how many subjects I can study, either self-study or offline?
+      - What's the maximum workload for subjects when doing both self-study and offline learning?
+      - Can I choose as many subjects as I want for self-study and offline mode, or is there a limit?
+      - Is there a difference in the subject limits between self-study and offline modes?
+      - How does the subject limit work when I'm learning both online and offline?
+      - Do I have to adhere to a specific number of subjects for self-study and offline, or is it flexible?
+      - What's the policy for managing subjects for self-study and offline modes?
+      - Are there any constraints on the number of subjects I can access, whether I'm online or offline?
+      - Can I modify my subject choices for self-study and offline learning if I reach the limit?
+      - Tell me about the subject allowances for both self-study and offline modes. Is there a total limit?
+
+  - intent: ask_exam_evaluation_process
+    examples: |
+      - What is the evaluation process for MST/EST/Sessional exams?
+      - How are MST/EST/Sessional exams evaluated?
+      - Can you explain the evaluation criteria for MST/EST/Sessional exams?
+      - Tell me about the grading system for MST/EST/Sessional exams.
+      - What's the procedure for evaluating MST/EST/Sessional exam papers?
+      - Explain the MST/EST/Sessional exam assessment process.
+      - How are final grades determined for MST/EST/Sessional exams?
+      - Describe the evaluation methods for MST/EST/Sessional exams.
+      - Are there any specific rules for grading MST/EST/Sessional exams?
+      - Can you clarify how MST/EST/Sessional exams are marked?
+      - Tell me about the grading scale for MST/EST/Sessional exams.
+      - What are the criteria for assessing MST/EST/Sessional exam performance?
+      - Explain the steps involved in evaluating MST/EST/Sessional exams.
+      - What determines the final results of MST/EST/Sessional exams?
+      - How do instructors evaluate MST/EST/Sessional exams?
+      - Describe the process of assigning grades for MST/EST/Sessional exams.
+      - How are marks calculated for MST/EST/Sessional exams?
+      - Can you provide insight into the grading process for MST/EST/Sessional exams?
+      - What factors contribute to the assessment of MST/EST/Sessional exams?
+
+  - synonym: backlog clearance
+    examples: |
+      - backlog
+      - clear backlogs
+      - complete pending courses
+      - clear overdue subjects
+      - resolve backlog issues
+      - catch up on missed courses
+
+  - synonym: auxiliary examination
+    examples: |
+      - auxiliary exams
+      - auxi
+      - auxi exams
+      - axuilary exams     
+
+  - synonym: grade improvement
+    examples: |
+      - enhance grades
+      - improve marks
+      - boost GPA
+      - raise academic performance
+      - elevate grades
+      - increase marks
+      - enhance GPA
+  
+  - synonym: thesis submission
+    examples: |
+      - dissertation submission
+      - final paper submission
+      - project submission
+      - thesis hand-in
+      - dissertation handover
+      - final document submission
+      - project hand-in
+      - thesis completion

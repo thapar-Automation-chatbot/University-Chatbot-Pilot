@@ -1,15 +1,28 @@
 version: "3.1"
 intents:
-  - confirm_self_study_conditions
+  - greet
+  - goodbye
   - deny
   - entered_grade
   - entered_subject
-  - goodbye
-  - greet
+  - confirm_self_study_conditions
   - inquire_about_grade_upgradation_eligibility
-
+  # khushi
   - General_info
   - explain_grade_improvement_process
+  # himanshu
+  - ask_fee_details
+  - ask_fee_refund
+  - inquire_about_medal_scholarship_upgradation_criteria
+  # arshit
+  - General_info_Auxiliary
+  - Auxiliary_exam_process
+  - General_info_Auxiliary_January
+  - Auxiliary_exam_process_January
+  - subject_re_enrollment_auxiliary_yes
+  - subject_re_enrollment_summer_no
+  - ask_subject_limitation
+  - ask_exam_evaluation_process
 
 entities:
   - upgradation_mode
@@ -21,6 +34,8 @@ entities:
   - study_mode
   - marks
   - purpose
+  - fee_type
+  - month
 
 slots:
   current_grade:
@@ -75,6 +90,43 @@ slots:
     mappings:
       - type: from_entity
         entity: purpose
+  fee_type:
+    type: categorical
+    mappings:
+      - type: from_entity
+        entity: fee_type
+    values:
+      - grade improvement
+      - backlog clearance
+      - auxiliary examination
+      - thesis submission
+
+  month:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: month
+  grade:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: grade
+
+actions:
+  - action_self_study_condition
+  - validate_grade_eligibility_form
+  - action_grade_upgrade_eligiblity
+  - validate_self_study_eligibility_form
+  - action_general_info
+  # himanshu
+  - action_handle_fee_details
+  #arshit
+  - action_provide_general_info
+  - action_provide_exam_process
+  - action_handle_subject_re_enrollment_auxiliary_yes
+  - action_handle_subject_re_enrollment_summer_no
+  - action_handle_ask_subject_limitation
+  - action_exam_evaluation_process
 
 responses:
   utter_greet:
@@ -93,9 +145,18 @@ responses:
     - text: Please provide the grade you have in the {subject}
   utter_explain_grade_improvement_process:
     - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_ask_fee_type:
+    - text: Sure, could you please specify the type of fee you are inquiring about? (e.g., grade improvement, backlog clearance, auxiliary examination, thesis submission)
+  utter_inquire_about_fee_refund_policy:
+    - text: Fee is non-refundable once summer semester has started.
+    - text: Please note that fees cannot be refunded once the summer semester has begun.
+    - text: Refunds for fees are not possible once the summer semester is in progress.
+    - text: Keep in mind that once the summer semester has started, fees are non-refundable.
+  utter_fee_type_not_found:
+    - text: Fee type not found.
+  utter_explain_criteria:
+    - text: Student who has improved his/her grades during summer semester will not be considered for medal / scholarship / upgradation on the basis of improved grades. Marks / grades obtained only in/during 1st attempt of the course will only be considered for medal / scholarship / upgradation.
+
 forms:
   grade_eligibility_form:
     required_slots:
@@ -105,9 +166,7 @@ forms:
     required_slots:
       - subject
       - current_grade
-actions:
-  - action_self_study_condition
-  - validate_grade_eligibility_form
-  - action_grade_upgrade_eligiblity
-  - validate_self_study_eligibility_form
-  - action_general_info
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
