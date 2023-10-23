@@ -5,7 +5,7 @@ rules:
     steps:
       - intent: goodbye
       - action: utter_goodbye
-      - action: action_deactivate_loop
+      - actiion: action_deactivate_loop
       - active_loop: null
       - action: utter_okay
       - action: action_restart
