@@ -19,15 +19,15 @@ intents:
 - subject_re_enrollment_auxiliary_yes
 - subject_re_enrollment_summer_no
 entities:
-- subject
+- study_mode
 - grade:
     roles:
     - current_grade
     - upgraded_grade
-- upgradation_mode
-- study_mode
-- marks
 - purpose
+- upgradation_mode
+- subject
+- marks
 - fee_type
 - month
 slots:
@@ -105,11 +105,11 @@ slots:
       entity: grade
 actions:
 - action_self_study_condition
+- action_grade_upgrade_eligiblity
+- action_general_info
+- utter_greet
 - action_provide_general_info
 - validate_self_study_eligibility_form
-- utter_greet
-- action_general_info
-- action_grade_upgrade_eligiblity
 - validate_grade_eligibility_form
 - action_handle_fee_details
 - action_provide_exam_process
@@ -145,7 +145,7 @@ responses:
   utter_explain_criteria:
   - text: Student who has improved his/her grades during summer semester will not be considered for medal / scholarship / upgradation on the basis of improved grades. Marks / grades obtained only in/during 1st attempt of the course will only be considered for medal / scholarship / upgradation.
   utter_max_subject_limit:
-  - text : students can take a maximum of 3 subjects in Self mode(Provided they are eligible) and 3 in regular mode
+  - text: students can take a maximum of 3 subjects in Self mode(Provided they are eligible) and 3 in regular mode
 forms:
   grade_eligibility_form:
     required_slots:
