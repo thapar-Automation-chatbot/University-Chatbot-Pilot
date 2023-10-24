@@ -133,7 +133,7 @@ stories:
       - intent: ask_fee_refund
       - action: utter_inquire_about_fee_refund_policy
 
-  # #arshit
+  ##arshit
 
   - story: User greets and asks about auxiliary exam in July
     steps:
@@ -168,10 +168,19 @@ stories:
       - intent: ask_subject_limitation
       - action: utter_max_subject_limit
 
-  - story: User inquires about MST/EST/Sessional exam evaluation process
+  - story: User inquires about MST/EST/Sessional exam evaluation process in summer sem
     steps:
       - intent: ask_exam_evaluation_process
-      - action: action_exam_evaluation_process
+        entities:
+          - exam_type: "summer semester"
+      - action: action_provide_exam_process
+  
+  - story: User inquires about MST/EST/Sessional exam evaluation process in auxiliary
+    steps:
+      - intent: ask_exam_evaluation_process
+        entities:
+          - exam_type: "auxiliary examination"
+      - action: action_provide_exam_process
 
   - story: User greets, asks about auxiliary exam in July, and then asks for evaluation process
     steps:

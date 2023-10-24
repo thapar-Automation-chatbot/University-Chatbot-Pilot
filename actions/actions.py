@@ -362,17 +362,23 @@ class ActionHandleSubjectReEnrollmentSummerNo(Action):
 class ActionExamEvaluationProcess(Action):
     def name(self) -> Text:
         return "action_exam_evaluation_process"
-
+    
     def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        response = "The evaluation process for MST/EST/Sessional exams typically involves a combination of factors, including written exams, assignments, and class participation. Grading is based on a scale from similar to normal sem [A] to [F], with [A] representing the highest grade. The specific evaluation criteria may vary depending on the course and instructor. If you need more detailed information, please reach out to your course instructor."
+        exam_type = tracker.get_slot("exam_type")
+
+        # Your logic to handle different month types goes here
+        if exam_type == "summer semester":
+            response = "The evaluation process for MST/EST/Sessional exams typically involves a combination of factors, including written exams, assignments, and class participation. Grading is based on a scale from similar to normal sem [A] to [F], with [A] representing the highest grade. The specific evaluation criteria may vary depending on the course and instructor. If you need more detailed information, please reach out to your course instructor."
+        elif exam_type == "auxiliary exam":
+            response = "The auxiliary exam is being re-conducted concurrently with the students taking the summer semester. The maximum attainable grade for this exam is 'C'."
+
         dispatcher.utter_message(response)
         return []
-
 
 # Himanshu
 class ActionHandleFeeDetails(Action):

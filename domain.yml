@@ -30,6 +30,7 @@ entities:
 - marks
 - fee_type
 - month
+- exam_type
 slots:
   current_grade:
     type: text
@@ -102,7 +103,13 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: grade
+      entity: grade 
+  exam_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: exam_type
+
 actions:
 - action_self_study_condition
 - action_grade_upgrade_eligiblity

@@ -106,7 +106,7 @@
     - upgradation_mode: summer
   - action: action_general_info
 
-- story: interactive_story_1
+- story: interactive_story_5
   steps:
   - intent: greet
   - action: utter_greet
