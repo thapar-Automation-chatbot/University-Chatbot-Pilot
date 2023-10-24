@@ -153,70 +153,70 @@ nlu:
     - Is there a minimum marks cutoff for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
     - Can [E]{"entity": "grade", "role": "current_grade"} grade students take subjects in [regular mode]{"entity": "study_mode", "value": "regular"} if they scored less than 25?
     - What's the threshold marks for [E]{"entity": "grade", "role": "current_grade"} grade students to choose [self-study]{"entity": "study_mode", "value": "self"}?
-    - Can [E]{"entity": "grade", "role": "current_grade"} grade students switch to [regular mode]{"entity": "study_mode", "value": "regular"} if they have low marks?
-    - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "role": "current_grade"} grade students who scored below 25?
-    - can i opt for [self study]{"entity": "study_mode", "value": "self"} mode if having [E]{"entity": "grade", "role": "current_grade"} grade?
-    - when i can take [self study]{"entity": "study_mode", "value": "self"} mode in [E]{"entity": "grade", "role": "current_grade"} grade?
-    - how many marks are required to opt [self study]{"entity": "study_mode", "value": "self"} mode?
-    - Is {"entity": "study_mode", "value": "self"} allowed for subjects in summer sem
-    - Can you explain the eligibility criteria for {"entity": "study_mode", "value": "self"} mode?
-    - can I apply for {"entity": "study_mode", "value": "self"} mode?
-    - Can I improve my grades during the summer semester in {"entity": "study_mode", "value": "self"} mode?
-    - How can I check my eligibility for {"entity": "study_mode", "value": "self"} mode?
-    - Can I choose {"entity": "study_mode", "value": "self"} for all my subjects in the summer semester?
-    - Is {"entity": "study_mode", "value": "self"} mode available for all courses and subjects?
-    - Can I choose {"entity": "study_mode", "value": "self"} mode if I want to improve my grades during the summer semester?
-    - Can I work on grade improvement while studying in {"entity": "study_mode", "value": "self"} mode?
-    - How can I check if I am eligible for {"entity": "study_mode", "value": "self"} mode during the summer semester?
-    - What steps can I take to determine my eligibility for {"entity": "study_mode", "value": "self"} mode?
-    - Are there specific guidelines or criteria I should follow to assess my eligibility for {"entity": "study_mode", "value": "self"} mode?
-    - How do I verify whether I meet the requirements for {"entity": "study_mode", "value": "self"} mode?
-    - when i am eligible for self study mode?
-    - What are the criteria for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - Which mode can i take if i have [X]{"entity": "grade", "role": "current_grade"} grade?
-    - Which mode can i take if i have [F]{"entity": "grade", "role": "current_grade"} grade?
-    - Which mode can i take if i have [R.A]{"entity": "grade", "role": "current_grade"} grade?
-    - Are there any eligibility criteria for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - Can you clarify the eligibility criteria for students with B/B-/C/C- grades in the [regular mode]{"entity": "study_mode", "value": "regular"}?
-    - Can you explain the eligibility criteria for regular-study mode?
-    - can I apply for {"entity": "regular study", "value": "regular"} mode?
-    - Can I improve my grades during the summer semester in {"entity": "regular study", "value": "regular"} mode?
-    - How can I check my eligibility for {"entity": "regular study", "value": "regular"} mode?
-    - What are the requirements for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - What are the conditions that students need to meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - What are the factors that determine whether a student is eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - What are the criteria that are used to assess a student's eligibility for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - What are the standards that a student must meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    - What is the mode of study that is available to me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    - What are my options for mode of study if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    - What are the different modes of study that I can choose from if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    - How do I choose the right mode of study for me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    - Can I apply for {"entity": "regular study", "value": "regular"} mode?
-    - which mode can i take with grade RA
-    - am i eligible for [regular mode]{"entity": "study_mode", "value": "regular"} if having [X]{"entity": "grade", "role": "current_grade"} grade?
-    - Can you explain the difference between {"entity": "study_mode", "value": "self"} and {"entity": "regular study", "value": "regular"} modes?
-    - Can I receive academic assistance while in {"entity": "study_mode", "value": "self"} mode?
-    - How does [self study]{"entity": "study_mode", "value": "self"} mode work?
-    - What is  [regular mode]{"entity": "study_mode", "value": "regular"}?
-    - What is [self study]{"entity": "study_mode", "value": "self"} mode?
-    - How does [regular mode]{"entity": "study_mode", "value": "regular"} work?
-    - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and reugular study mode?
-    - How is [self study]{"entity": "study_mode", "value": "self"} Mode different from [regular mode]{"entity": "study_mode", "value": "regular"}?
-    - In what modes can i take subjects in summer sem ?
-    - modes of study i can opt in summer term?
-    - what is [regular mode]{"entity": "study_mode", "value": "regular"}?
-    - what is [self study]{"entity": "study_mode", "value": "self"} mode?
-    - can i take [UCS410](subject) in [self study]{"entity": "study_mode", "value": "self"} mode ?
-    - is it possible to take [operating systems](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer semester]{"entity": "upgradation_mode", "value": "summer"} if have [F]{"entity": "grade", "role": "current_grade"} grade ?
-    - can i take [self study mode](study_mode) in [ucs012](subject)
-    - what are the mode of study in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - can i take [ucs210](subject) in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - can i take [ucs219](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - can i take [ucs016](subject) in [self mode]{"entity": "study_mode", "value": "self"}
-    - can i take [uhu012](subject) with grade [R.A]{"entity": "grade", "role": "current_grade"} in [self study]{"entity": "study_mode", "value": "self"} mode ?
-    - can i take [uhu012](subject) in [self study]{"entity": "study_mode", "value": "self"} mode , i have grade [R.a]{"entity": "grade", "role": "current_grade", "value": "R.A"}
-    - which mode can i take if i have [E]{"entity": "grade", "role": "current_grade"} grade
-    - is it possible to take [uta016](subject) in [self study]{"entity": "study_mode", "value": "self"} mode
+    # - Can [E]{"entity": "grade", "role": "current_grade"} grade students switch to [regular mode]{"entity": "study_mode", "value": "regular"} if they have low marks?
+    # - Is [self-study]{"entity": "study_mode", "value": "self"} available for [E]{"entity": "grade", "role": "current_grade"} grade students who scored below 25?
+    # - can i opt for [self study]{"entity": "study_mode", "value": "self"} mode if having [E]{"entity": "grade", "role": "current_grade"} grade?
+    # - when i can take [self study]{"entity": "study_mode", "value": "self"} mode in [E]{"entity": "grade", "role": "current_grade"} grade?
+    # - how many marks are required to opt [self study]{"entity": "study_mode", "value": "self"} mode?
+    # - Is {"entity": "study_mode", "value": "self"} allowed for subjects in summer sem
+    # - Can you explain the eligibility criteria for {"entity": "study_mode", "value": "self"} mode?
+    # - can I apply for {"entity": "study_mode", "value": "self"} mode?
+    # - Can I improve my grades during the summer semester in {"entity": "study_mode", "value": "self"} mode?
+    # - How can I check my eligibility for {"entity": "study_mode", "value": "self"} mode?
+    # - Can I choose {"entity": "study_mode", "value": "self"} for all my subjects in the summer semester?
+    # - Is {"entity": "study_mode", "value": "self"} mode available for all courses and subjects?
+    # - Can I choose {"entity": "study_mode", "value": "self"} mode if I want to improve my grades during the summer semester?
+    # - Can I work on grade improvement while studying in {"entity": "study_mode", "value": "self"} mode?
+    # - How can I check if I am eligible for {"entity": "study_mode", "value": "self"} mode during the summer semester?
+    # - What steps can I take to determine my eligibility for {"entity": "study_mode", "value": "self"} mode?
+    # - Are there specific guidelines or criteria I should follow to assess my eligibility for {"entity": "study_mode", "value": "self"} mode?
+    # - How do I verify whether I meet the requirements for {"entity": "study_mode", "value": "self"} mode?
+    # - when i am eligible for self study mode?
+    # - What are the criteria for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - Which mode can i take if i have [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - Which mode can i take if i have [F]{"entity": "grade", "role": "current_grade"} grade?
+    # - Which mode can i take if i have [R.A]{"entity": "grade", "role": "current_grade"} grade?
+    # - Are there any eligibility criteria for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - Can you clarify the eligibility criteria for students with B/B-/C/C- grades in the [regular mode]{"entity": "study_mode", "value": "regular"}?
+    # - Can you explain the eligibility criteria for regular-study mode?
+    # - can I apply for {"entity": "regular study", "value": "regular"} mode?
+    # - Can I improve my grades during the summer semester in {"entity": "regular study", "value": "regular"} mode?
+    # - How can I check my eligibility for {"entity": "regular study", "value": "regular"} mode?
+    # - What are the requirements for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - What are the conditions that students need to meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - What are the factors that determine whether a student is eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - What are the criteria that are used to assess a student's eligibility for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - What are the standards that a student must meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
+    # - What is the mode of study that is available to me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - What are my options for mode of study if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - What are the different modes of study that I can choose from if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - How do I choose the right mode of study for me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - Can I apply for {"entity": "regular study", "value": "regular"} mode?
+    # - which mode can i take with grade RA
+    # - am i eligible for [regular mode]{"entity": "study_mode", "value": "regular"} if having [X]{"entity": "grade", "role": "current_grade"} grade?
+    # - Can you explain the difference between {"entity": "study_mode", "value": "self"} and {"entity": "regular study", "value": "regular"} modes?
+    # - Can I receive academic assistance while in {"entity": "study_mode", "value": "self"} mode?
+    # - How does [self study]{"entity": "study_mode", "value": "self"} mode work?
+    # - What is  [regular mode]{"entity": "study_mode", "value": "regular"}?
+    # - What is [self study]{"entity": "study_mode", "value": "self"} mode?
+    # - How does [regular mode]{"entity": "study_mode", "value": "regular"} work?
+    # - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and reugular study mode?
+    # - How is [self study]{"entity": "study_mode", "value": "self"} Mode different from [regular mode]{"entity": "study_mode", "value": "regular"}?
+    # - In what modes can i take subjects in summer sem ?
+    # - modes of study i can opt in summer term?
+    # - what is [regular mode]{"entity": "study_mode", "value": "regular"}?
+    # - what is [self study]{"entity": "study_mode", "value": "self"} mode?
+    # - can i take [UCS410](subject) in [self study]{"entity": "study_mode", "value": "self"} mode ?
+    # - is it possible to take [operating systems](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer semester]{"entity": "upgradation_mode", "value": "summer"} if have [F]{"entity": "grade", "role": "current_grade"} grade ?
+    # - can i take [self study mode](study_mode) in [ucs012](subject)
+    # - what are the mode of study in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - can i take [ucs210](subject) in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - can i take [ucs219](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - can i take [ucs016](subject) in [self mode]{"entity": "study_mode", "value": "self"}
+    # - can i take [uhu012](subject) with grade [R.A]{"entity": "grade", "role": "current_grade"} in [self study]{"entity": "study_mode", "value": "self"} mode ?
+    # - can i take [uhu012](subject) in [self study]{"entity": "study_mode", "value": "self"} mode , i have grade [R.a]{"entity": "grade", "role": "current_grade", "value": "R.A"}
+    # - which mode can i take if i have [E]{"entity": "grade", "role": "current_grade"} grade
+    # - is it possible to take [uta016](subject) in [self study]{"entity": "study_mode", "value": "self"} mode
 - intent: entered_subject
   examples: |
     - [ucs012](subject)
@@ -272,31 +272,31 @@ nlu:
     - Provide details about the [duration]{"entity": "purpose", "value": "tenure_of_summer_term"} of the summer session.
     - Tell me the [time span]{"entity": "purpose", "value": "tenure_of_summer_term"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
     - Do you have the [summer semester]{"entity": "upgradation_mode", "value": "summer"} [timetable]{"entity": "purpose", "value": "time_table"}?
-    - I need the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} .
-    - Can you share the [schedule]{"entity": "purpose", "value": "time_table"} for the summer session?
-    - When is the [time table]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} available?
-    - What's the [schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
-    - How can I access the [summer term]{"entity": "upgradation_mode", "value": "summer"} [timetable]{"entity": "purpose", "value": "time_table"}?
-    - Tell me about the [class schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
-    - When will the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} be published?
-    - What's the [weekly timetable]{"entity": "purpose", "value": "time_table"} for the summer session?
-    - Can you provide information on the [session schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
-    - When does the [class timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} become available?
-    - Can you provide me with information about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
-    - Tell me more about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
-    - What can you tell me about the summer session?
-    - I need details regarding the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
-    - Share details about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
-    - Tell me everything you know about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
-    - Can you give me an overview of the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
-    - Explain the key aspects of the summer session.
-    - when will the [registration forms]{"entity": "purpose", "value": "registration"} be out
-    - hi tell me about the [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - what is [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - when will the [registration](purpose) for [summer term]{"entity": "upgradation_mode", "value": "summer"} begin ?
-    - tell me about [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - give me [time table]{"entity": "purpose", "value": "time_table"} of [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    - when can i [register]{"entity": "purpose", "value": "registration"} for [summer term]{"entity": "upgradation_mode", "value": "summer"}
+    # - I need the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} .
+    # - Can you share the [schedule]{"entity": "purpose", "value": "time_table"} for the summer session?
+    # - When is the [time table]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"} available?
+    # - What's the [schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+    # - How can I access the [summer term]{"entity": "upgradation_mode", "value": "summer"} [timetable]{"entity": "purpose", "value": "time_table"}?
+    # - Tell me about the [class schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+    # - When will the [timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} be published?
+    # - What's the [weekly timetable]{"entity": "purpose", "value": "time_table"} for the summer session?
+    # - Can you provide information on the [session schedule]{"entity": "purpose", "value": "time_table"} for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+    # - When does the [class timetable]{"entity": "purpose", "value": "time_table"} for the [summer term]{"entity": "upgradation_mode", "value": "summer"} become available?
+    # - Can you provide me with information about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+    # - Tell me more about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+    # - What can you tell me about the summer session?
+    # - I need details regarding the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+    # - Share details about the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+    # - Tell me everything you know about the [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+    # - Can you give me an overview of the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+    # - Explain the key aspects of the summer session.
+    # - when will the [registration forms]{"entity": "purpose", "value": "registration"} be out
+    # - hi tell me about the [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - what is [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - when will the [registration](purpose) for [summer term]{"entity": "upgradation_mode", "value": "summer"} begin ?
+    # - tell me about [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - give me [time table]{"entity": "purpose", "value": "time_table"} of [summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    # - when can i [register]{"entity": "purpose", "value": "registration"} for [summer term]{"entity": "upgradation_mode", "value": "summer"}
 - intent: explain_grade_improvement_process
   examples: |
     - Explain the process for grade improvement in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
@@ -456,6 +456,11 @@ nlu:
     - Can you provide information on the [January](month) auxiliary exam rules?
     - Explain the specifics of the auxiliary exam in [January](month).
     - what is [auxi exams](upgradation_mode)
+    - when is auxiliary exam
+    - when is december auxi exam
+    - when is december [auxi]{"entity": "upgradation_mode", "value": "auxiliary"}
+    - Will auxi happen in december this time?
+    - when is june auxi exam?
     
 - intent: Auxiliary_exam_process
   examples: |
@@ -482,7 +487,6 @@ nlu:
     - What's the process for re-enrolling after clearing a backlog in auxiliary exam?
     - Can I register for same courses in summersem after passing an auxiliary exam?
     - Can I re-enroll after a failed exam?
-
 
 - intent: subject_re_enrollment_summer_no
   examples: |
@@ -513,6 +517,27 @@ nlu:
     - Are there any constraints on the number of subjects I can access, whether I'm online or offline?
     - Can I modify my subject choices for self-study and offline learning if I reach the limit?
     - Tell me about the subject allowances for both self-study and offline modes. Is there a total limit?
+    - What are the limitations on the number of subjects I can study in both self-study and offline modes?
+    - Can you provide details about the maximum subject count for self-study and offline learning combined?
+    - Is there a set maximum number of subjects that I can take in self-study and offline modes?
+    - How flexible is the subject limit for students studying in self-study and offline modes?
+    - Are there any specific guidelines regarding the total number of subjects allowed in self-study and offline learning?
+    - Can I choose a different number of subjects for self-study and offline modes, or is the limit the same for both?
+    - What happens if I exceed the subject limit in self-study and offline modes?
+    - Can I request an extension on the subject limit for self-study and offline learning?
+    - Is there a possibility of increasing the subject limit for self-study and offline modes under special circumstances?
+    - How is the subject limit calculated for students enrolled in both self-study and offline modes?
+    - Can you explain the rationale behind the subject limit in self-study and offline learning?
+    - Are there any penalties or consequences if I exceed the allowed subject count in self-study and offline modes?
+    - Is the subject limit the same for all courses, or does it vary based on the program of study?
+    - Can students in self-study and offline modes apply for an exemption from the subject limit?
+    - What steps should I take if I need to study more subjects than the allowed limit in self-study and offline modes?
+    - Is there a possibility of changing the selected subjects after the limit has been reached in self-study and offline modes?
+    - Are there any considerations for students with exceptional circumstances regarding the subject limit in self-study and offline learning?
+    - Can you provide information about the process of evaluating requests for exceeding the subject limit in self-study and offline modes?
+    - What support or resources are available for students who wish to study additional subjects beyond the limit in self-study and offline modes?
+    - How often is the subject limit reviewed, and are there plans to update it in the future for self-study and offline modes? 
+
 - intent: ask_exam_evaluation_process
   examples: |
     - What is the evaluation process for MST/EST/Sessional exams?
@@ -539,7 +564,6 @@ nlu:
     - summer semester
     - summer sem
     - summer term
-    - lon{"entity": "purpose", "value": "tenure_of_summer_term"}) does the [summer term
     - summer tenure
     - summer studies
     - summer time
