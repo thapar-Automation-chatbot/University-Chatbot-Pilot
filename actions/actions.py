@@ -17,8 +17,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 import re
 
-#
-#
+
 # class ActionHelloWorld(Action):
 #
 #     def name(self) -> Text:
@@ -264,7 +263,7 @@ class ActionProvideGeneralInfo(Action):
         elif month == "July":
             response = "The auxiliary examination is a special opportunity for students to again re-appear in exam either during july(summer sem) or during january for est to clear backlogs with max of c grade ."
         else:
-            response = "NO auxiliary examination during this month"
+            response = "No auxiliary examination during this month"
 
         dispatcher.utter_message(response)
         return []

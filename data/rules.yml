@@ -5,7 +5,7 @@ rules:
     steps:
       - intent: goodbye
       - action: utter_goodbye
-      - actiion: action_deactivate_loop
+      - action: action_deactivate_loop
       - active_loop: null
       - action: utter_okay
       - action: action_restart
@@ -47,11 +47,11 @@ rules:
           - requested_slot: null
       - action: action_self_study_condition
 
-  - rule: Respond to General_info
-    steps:
-      - intent: General_info
-      - action: action_general_info
-      - active_loop: null # Reset the active loop if any
+  # - rule: Respond to General_info
+  #   steps:
+  #     - intent: General_info
+  #     - action: action_general_info
+  #     - active_loop: null # Reset the active loop if any
 
   - rule: Respond to the grade improvement explanation intent
     steps:

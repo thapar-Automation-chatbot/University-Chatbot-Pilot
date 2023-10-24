@@ -449,13 +449,14 @@ nlu:
     - Tell me about the auxiliary examination options in [January](month) and January.
     - Are there any differences between the auxiliary exams in [January](month) and January?
     - Can you explain the rules for the auxiliary examination in both [January](month) and January?
-    - time for auxiliary exam
-    - when is auxiliary exam conducted
+    - Time for auxiliary exam?
+    - When is auxiliary exam conducted?
     - Tell me about the rules for the auxiliary examination in [January](month).
     - What are the guidelines for the [January](month) auxiliary examination?
     - Can you provide information on the [January](month) auxiliary exam rules?
     - Explain the specifics of the auxiliary exam in [January](month).
     - what is [auxi exams](upgradation_mode)
+    
 - intent: Auxiliary_exam_process
   examples: |
     - How can I apply for the auxiliary examination in [July](month)?
@@ -481,11 +482,15 @@ nlu:
     - What's the process for re-enrolling after clearing a backlog in auxiliary exam?
     - Can I register for same courses in summersem after passing an auxiliary exam?
     - Can I re-enroll after a failed exam?
+
+
 - intent: subject_re_enrollment_summer_no
   examples: |
     - Can I re-enroll for same course after the summer semester?
     - Is re-enrollment for same course possible after the summer session?
     - Am I allowed to register for same courses again after the summer semester?
+    
+
 - intent: ask_subject_limitation
   examples: |
     - What is the maximum number of subjects allowed for self-study and offline mode together?
