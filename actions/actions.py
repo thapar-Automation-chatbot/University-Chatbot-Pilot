@@ -406,6 +406,7 @@ class ActionHandleFeeDetails(Action):
             "enhance grade": "grade improvement",
             "improve marks": "grade improvement",
             "auxiliary exam": "auxiliary examination",
+            "auxiliary": "auxiliary examination",
             "supplementary exam": "auxiliary examination",
             "additional exam": "auxiliary examination",
             "thesis": "thesis submission",
@@ -422,6 +423,9 @@ class ActionHandleFeeDetails(Action):
     ) -> List[Dict[Text, Any]]:
         fee_type = tracker.get_slot("fee_type")
         mapped_fee_type = self.map_fee_type(fee_type)
+
+        print(fee_type)
+        print(mapped_fee_type)
 
         # Your logic to handle different fee types goes here
         if mapped_fee_type == "grade improvement":

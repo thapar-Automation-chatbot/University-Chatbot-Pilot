@@ -325,6 +325,19 @@ nlu:
       - What is the total fee for [thesis submission](fee_type) ?
       - What is the fees?
       - Fees?
+      - What is the fees for taking 2 subjects in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - What is the fees for taking 2 subjects in [auxiliary exams]{"entity": "fee_type", "value": "auxiliary"}?
+      - What is the fees for [auxiliary exams]{"entity": "fee_type", "value": "auxiliary"}
+      - What is the fees for [self study]{"entity": "study_mode", "value": "self"} mode ?
+      - What is the fees for [regular study]{"entity": "study_mode", "value": "regular"} mode ?
+      - What is the fees for [summer semester]{"entity": "upgradation_mode", "value": "summer"} ? 
+      - What is fees for taking 2 subjects in [summer semester]{"entity": "upgradation_mode", "value": "summer"} ? 
+      - How much do i need to pay for a course in [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
+      - Fees structure for [auxiliary exams]{"entity": "fee_type", "value": "auxiliary"}?
+      - Fees structure for [self study]{"entity": "study_mode", "value": "self"} mode?
+      - Fees structure for [regular study]{"entity": "study_mode", "value": "regular"} mode?
+      - Fees structure for [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+
   - intent: ask_fee_refund
     examples: |
       - Can I get a refund for the fees I paid?
