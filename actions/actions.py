@@ -193,7 +193,7 @@ class ActionSelfStudyCondition(Action):
                 )
             else:
                 dispatcher.utter_message(
-                    "The project based courses such as Engineering Design-1, Engineering Design-2, Capstone Project, etc. cannot be offered as self-study mode. And will only be offered in regular mode."
+                    "The project based courses such as Engineering Design-1, Engineering Design-2, Capstone Project, etc. will only be offered in regular mode in Summer Sem"
                 )
         else:
             if current_grade.lower() in {"c", "b"}:

@@ -98,11 +98,6 @@ slots:
     mappings:
     - type: from_entity
       entity: month
-  grade:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: grade
 actions:
 - utter_greet
 - action_self_study_condition
@@ -117,6 +112,10 @@ actions:
 - action_handle_subject_re_enrollment_auxiliary_yes
 - action_exam_evaluation_process
 responses:
+  utter_default:
+  - text: Sorry i didn't get that.
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_greet:
   - text: Hey! How can i help you today ?
   utter_okay:

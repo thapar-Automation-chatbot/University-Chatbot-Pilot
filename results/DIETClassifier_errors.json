@@ -1,35 +1,35 @@
 [
   {
-    "text": "Can I upgrade my grade from A to A (grade)",
+    "text": "When is the time table for the summer semester available?",
     "entities": [
       {
-        "start": 28,
-        "end": 29,
-        "value": "A",
-        "entity": "grade",
-        "role": "current_grade"
+        "start": 12,
+        "end": 22,
+        "value": "time_table",
+        "entity": "purpose"
+      },
+      {
+        "start": 31,
+        "end": 46,
+        "value": "summer",
+        "entity": "upgradation_mode"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "grade",
-        "start": 28,
-        "end": 29,
-        "confidence_entity": 0.9960340857505798,
-        "role": "current_grade",
-        "confidence_role": 0.971693754196167,
-        "value": "a",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "entity": "purpose",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.9825071692466736,
+        "value": "time",
+        "extractor": "DIETClassifier"
       },
       {
-        "entity": "grade",
-        "start": 33,
-        "end": 34,
-        "confidence_entity": 0.8632923364639282,
-        "value": "a",
+        "entity": "upgradation_mode",
+        "start": 31,
+        "end": 46,
+        "confidence_entity": 0.9977568984031677,
+        "value": "summer",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -38,18 +38,17 @@
     ]
   },
   {
-    "text": "Is it possible to improve my grades in the summer semester?",
+    "text": "What's the schedule for the summer semester?",
     "entities": [
       {
-        "start": 29,
-        "end": 35,
-        "value": "grades",
-        "entity": "grade",
-        "role": "current_grade"
+        "start": 11,
+        "end": 19,
+        "value": "time_table",
+        "entity": "purpose"
       },
       {
-        "start": 43,
-        "end": 58,
+        "start": 28,
+        "end": 43,
         "value": "summer",
         "entity": "upgradation_mode"
       }
@@ -57,9 +56,47 @@
     "predicted_entities": [
       {
         "entity": "upgradation_mode",
-        "start": 43,
-        "end": 58,
-        "confidence_entity": 0.9995349645614624,
+        "start": 28,
+        "end": 43,
+        "confidence_entity": 0.9991138577461243,
+        "value": "summer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me time table of summer sem",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "time_table",
+        "entity": "purpose"
+      },
+      {
+        "start": 22,
+        "end": 32,
+        "value": "summer",
+        "entity": "upgradation_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "purpose",
+        "start": 8,
+        "end": 12,
+        "confidence_entity": 0.9623528122901917,
+        "value": "time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 22,
+        "end": 32,
+        "confidence_entity": 0.999288022518158,
         "value": "summer",
         "extractor": "DIETClassifier",
         "processors": [
@@ -75,7 +112,8 @@
         "start": 24,
         "end": 25,
         "value": "a",
-        "entity": "grade"
+        "entity": "grade",
+        "role": "upgraded_grade"
       },
       {
         "start": 36,
@@ -88,162 +126,38 @@
     "predicted_entities": [
       {
         "entity": "grade",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.7128745317459106,
+        "role": "upgraded_grade",
+        "confidence_role": 0.912939727306366,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
+        "start": 24,
+        "end": 25,
+        "confidence_entity": 0.9224935173988342,
+        "role": "upgraded_grade",
+        "confidence_role": 0.9709648489952087,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
         "start": 36,
         "end": 37,
-        "confidence_entity": 0.9992368221282959,
+        "confidence_entity": 0.9755412340164185,
         "role": "current_grade",
-        "confidence_role": 0.9502984881401062,
+        "confidence_role": 0.9667286276817322,
         "value": "C",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "What are the rules for the auxiliary examination in July or January?",
-    "entities": [
-      {
-        "start": 27,
-        "end": 48,
-        "value": "auxiliary",
-        "entity": "upgradation_mode"
-      },
-      {
-        "start": 52,
-        "end": 56,
-        "value": "July",
-        "entity": "month"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "upgradation_mode",
-        "start": 27,
-        "end": 48,
-        "confidence_entity": 0.999576985836029,
-        "value": "auxiliary",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "month",
-        "start": 52,
-        "end": 56,
-        "confidence_entity": 0.9994908571243286,
-        "value": "July",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "month",
-        "start": 60,
-        "end": 67,
-        "confidence_entity": 0.5215876698493958,
-        "value": "January",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "What are the rules for the auxiliary examination in January or January?",
-    "entities": [
-      {
-        "start": 27,
-        "end": 48,
-        "value": "auxiliary",
-        "entity": "upgradation_mode"
-      },
-      {
-        "start": 52,
-        "end": 59,
-        "value": "January",
-        "entity": "month"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "upgradation_mode",
-        "start": 27,
-        "end": 48,
-        "confidence_entity": 0.99952232837677,
-        "value": "auxiliary",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "month",
-        "start": 52,
-        "end": 59,
-        "confidence_entity": 0.9910699129104614,
-        "value": "January",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "month",
-        "start": 63,
-        "end": 70,
-        "confidence_entity": 0.6052548289299011,
-        "value": "January",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "i had improved from E to b . can i take summer sem again to improve my grade again.",
-    "entities": [
-      {
-        "start": 20,
-        "end": 21,
-        "value": "E",
-        "entity": "grade",
-        "role": "current_grade"
-      },
-      {
-        "start": 25,
-        "end": 26,
-        "value": "B",
-        "entity": "grade"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "grade",
-        "start": 20,
-        "end": 21,
-        "confidence_entity": 0.9998328685760498,
-        "role": "current_grade",
-        "confidence_role": 0.9998511075973511,
-        "value": "E",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
-        "start": 25,
-        "end": 26,
-        "confidence_entity": 0.9989056587219238,
-        "role": "current_grade",
-        "confidence_role": 0.8727285861968994,
-        "value": "B",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"

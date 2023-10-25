@@ -21,7 +21,7 @@ rules:
       - action: grade_eligibility_form
       - active_loop: grade_eligibility_form
 
-  - rule: subit grade_eligibility_form
+  - rule: submit grade_eligibility_form
     condition:
       - active_loop: grade_eligibility_form
     steps:
@@ -47,12 +47,6 @@ rules:
           - requested_slot: null
       - action: action_self_study_condition
 
-  # - rule: Respond to General_info
-  #   steps:
-  #     - intent: General_info
-  #     - action: action_general_info
-  #     - active_loop: null # Reset the active loop if any
-
   - rule: Respond to the grade improvement explanation intent
     steps:
       - intent: explain_grade_improvement_process
@@ -60,7 +54,6 @@ rules:
 
   - rule: Break from forms
     steps:
-      
       - intent: deny
       - action: action_deactivate_loop
       - active_loop: null
@@ -72,3 +65,8 @@ rules:
       - intent: inquire_about_medal_scholarship_upgradation_criteria
       - action: utter_explain_criteria
 
+  - rule: Implementation of the Two-Stage-Fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_two_stage_fallback
+      - active_loop: action_two_stage_fallback

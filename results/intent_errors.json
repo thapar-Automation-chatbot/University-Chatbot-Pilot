@@ -1,42 +1,10 @@
 [
   {
-    "text": "if i have improved my grade from c to b in summer semester , will i be eligible to take that subject again",
-    "intent": "subject_re_enrollment_summer_no",
+    "text": "Can I upgrade my grade from ra to A",
+    "intent": "explain_grade_improvement_process",
     "intent_prediction": {
       "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9998908042907715
-    }
-  },
-  {
-    "text": "can i take subject again after improving in summer sem",
-    "intent": "subject_re_enrollment_summer_no",
-    "intent_prediction": {
-      "name": "explain_grade_improvement_process",
-      "confidence": 0.6942977905273438
-    }
-  },
-  {
-    "text": "is it possible to retake the subject after improving",
-    "intent": "subject_re_enrollment_summer_no",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9670917391777039
-    }
-  },
-  {
-    "text": "upon improving is it possible to retake the subject again",
-    "intent": "subject_re_enrollment_summer_no",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9929297566413879
-    }
-  },
-  {
-    "text": "i had improved from E to b . can i take summer sem again to improve my grade again.",
-    "intent": "subject_re_enrollment_summer_no",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9993680119514465
+      "confidence": 0.6238278150558472
     }
   }
 ]

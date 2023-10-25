@@ -60,10 +60,14 @@ stories:
   steps:
   - user: |-
       - What are the guidelines for the auxiliary exam?
-  - action: action_provide_general_info  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: General_info_Auxiliary
+  - action: action_provide_general_info  # predicted: action_default_fallback after action_unlikely_intent
   - user: |-
       - Can you tell me about the rules for the auxiliary examination?
-  - action: action_provide_general_info  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: General_info_Auxiliary
+  - action: action_provide_general_info  # predicted: action_default_fallback after action_unlikely_intent
 - story: User confirms self-study conditions (.\tests\test_stories.yml)
   steps:
   - user: |-
@@ -130,10 +134,14 @@ stories:
   steps:
   - user: |-
       - How can I apply for the auxiliary examination in July?
-  - action: action_provide_exam_process  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: Auxiliary_exam_process
+  - action: action_provide_exam_process  # predicted: action_unlikely_intent
   - user: |-
       - Walk me through the steps of the auxiliary examination process in July.
-  - action: action_provide_exam_process  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: Auxiliary_exam_process
+  - action: action_provide_exam_process  # predicted: action_unlikely_intent
 - story: User asks if re-enrollment is allowed after the summer semester and gets a negative response (.\tests\test_stories.yml)
   steps:
   - user: |-

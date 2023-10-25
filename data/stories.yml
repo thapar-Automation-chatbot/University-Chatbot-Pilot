@@ -1,480 +1,418 @@
 version: "3.1"
 
 stories:
-  # - story: grade upgrade eligibility
-  #   steps:
-  #   - intent: greet
-  #   - action: utter_greet
-  #   - intent: inquire_about_grade_upgradation_eligibility
-  #   - action: grade_eligibility_form
-  #   - active_loop : grade_eligibility_form
 
-  #Himanshu
-- story: Greet and Ask Fee Type
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: null
-    - action: utter_ask_fee_type
+  - story: Greet and Ask Fee Type
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: null
+      - action: utter_ask_fee_type
 
-- story: Handle Fee Type - Grade Improvement
-  steps:
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: "grade improvement"
-    - action: action_handle_fee_details
+  - story: Handle Fee Type - Grade Improvement
+    steps:
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: "grade improvement"
+      - action: action_handle_fee_details
 
-- story: Handle Fee Type - Backlog Clearance
-  steps:
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: "backlog clearance"
-    - action: action_handle_fee_details
+  - story: Handle Fee Type - Backlog Clearance
+    steps:
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: "backlog clearance"
+      - action: action_handle_fee_details
 
-- story: Handle Fee Type - Auxiliary Examination
-  steps:
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: "auxiliary examination"
-    - action: action_handle_fee_details
+  - story: Handle Fee Type - Auxiliary Examination
+    steps:
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: "auxiliary examination"
+      - action: action_handle_fee_details
 
-- story: Handle Fee Type - Thesis Submission
-  steps:
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: "thesis submission"
-    - action: action_handle_fee_details
+  - story: Handle Fee Type - Thesis Submission
+    steps:
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: "thesis submission"
+      - action: action_handle_fee_details
 
-- story: Fallback - Unrecognized Fee Type
-  steps:
-    - intent: ask_fee_details
-    - slot_was_set:
-        - fee_type: "unknown fee type"
-    - action: action_handle_fee_details
+  - story: Fallback - Unrecognized Fee Type
+    steps:
+      - intent: ask_fee_details
+      - slot_was_set:
+          - fee_type: "unknown fee type"
+      - action: action_handle_fee_details
 
-- story: User greets and asks about fee refund policy
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
+  - story: User greets and asks about fee refund policy
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
 
-- story: User asks about fee refund policy before asking for fee details
-  steps:
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "backlog clearance"
-    - action: action_handle_fee_details
+  - story: User asks about fee refund policy before asking for fee details
+    steps:
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "backlog clearance"
+      - action: action_handle_fee_details
 
-- story: User asks about fee details for auxiliary examination and then asks for refund policy
-  steps:
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "auxiliary examination"
-    - action: action_handle_fee_details
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
+  - story: User asks about fee details for auxiliary examination and then asks for refund policy
+    steps:
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "auxiliary examination"
+      - action: action_handle_fee_details
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
 
-- story: User directly asks about fee details for thesis submission
-  steps:
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "thesis submission"
-    - action: action_handle_fee_details
+  - story: User directly asks about fee details for thesis submission
+    steps:
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "thesis submission"
+      - action: action_handle_fee_details
 
-- story: User asks for fee details for grade improvement, then asks for backlog clearance, and finally asks for refund policy
-  steps:
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "grade improvement"
-    - action: action_handle_fee_details
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "backlog clearance"
-    - action: action_handle_fee_details
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
+  - story: User asks for fee details for grade improvement, then asks for backlog clearance, and finally asks for refund policy
+    steps:
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "grade improvement"
+      - action: action_handle_fee_details
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "backlog clearance"
+      - action: action_handle_fee_details
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
 
-- story: User greets and asks for fee refund policy, then asks for fee details for thesis submission
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "thesis submission"
-    - action: action_handle_fee_details
+  - story: User greets and asks for fee refund policy, then asks for fee details for thesis submission
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "thesis submission"
+      - action: action_handle_fee_details
 
-- story: User inquires about medal, scholarship, or upgradation criteria
-  steps:
-    - intent: inquire_about_medal_scholarship_upgradation_criteria
-    - action: utter_explain_criteria
+  - story: User inquires about medal, scholarship, or upgradation criteria
+    steps:
+      - intent: inquire_about_medal_scholarship_upgradation_criteria
+      - action: utter_explain_criteria
 
-- story: User greets and then asks about medal criteria
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: inquire_about_medal_scholarship_upgradation_criteria
-    - action: utter_explain_criteria
+  - story: User greets and then asks about medal criteria
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: inquire_about_medal_scholarship_upgradation_criteria
+      - action: utter_explain_criteria
 
-- story: User asks about medal criteria, then fee details, and finally asks for refund policy
-  steps:
-    - intent: inquire_about_medal_scholarship_upgradation_criteria
-    - action: utter_explain_criteria
-    - intent: ask_fee_details
-      entities:
-        - fee_type: "auxiliary examination"
-    - action: action_handle_fee_details
-    - intent: ask_fee_refund
-    - action: utter_inquire_about_fee_refund_policy
+  - story: User asks about medal criteria, then fee details, and finally asks for refund policy
+    steps:
+      - intent: inquire_about_medal_scholarship_upgradation_criteria
+      - action: utter_explain_criteria
+      - intent: ask_fee_details
+        entities:
+          - fee_type: "auxiliary examination"
+      - action: action_handle_fee_details
+      - intent: ask_fee_refund
+      - action: utter_inquire_about_fee_refund_policy
 
-##arshit
+  ##arshit
 
-- story: User greets and asks about auxiliary exam in July
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: General_info_Auxiliary
-      entities:
-        - month: "July"
-    - action: action_provide_general_info
+  - story: User greets and asks about auxiliary exam in July
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: General_info_Auxiliary
+        entities:
+          - month: "July"
+      - action: action_provide_general_info
 
-- story: User inquires about auxiliary exam process in January
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: Auxiliary_exam_process
-      entities:
-        - month: "January"
-    - action: action_provide_exam_process
+  - story: User inquires about auxiliary exam process in January
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: Auxiliary_exam_process
+        entities:
+          - month: "January"
+      - action: action_provide_exam_process
 
-- story: User asks about re-enrollment after clearing auxiliary exam
-  steps:
-    - intent: subject_re_enrollment_auxiliary_yes
-    - action: action_handle_subject_re_enrollment_auxiliary_yes
+  - story: User asks about re-enrollment after clearing auxiliary exam
+    steps:
+      - intent: subject_re_enrollment_auxiliary_yes
+      - action: action_handle_subject_re_enrollment_auxiliary_yes
 
-- story: User asks about re-enrollment after summer semester
-  steps:
-    - intent: subject_re_enrollment_summer_no
-    - action: action_handle_subject_re_enrollment_summer_no
+  - story: User asks about re-enrollment after summer semester
+    steps:
+      - intent: subject_re_enrollment_summer_no
+      - action: action_handle_subject_re_enrollment_summer_no
 
-- story: User asks about subject limitations for self-study and offline modes
-  steps:
-    - intent: ask_subject_limitation
-    - action: utter_max_subject_limit
+  - story: User asks about subject limitations for self-study and offline modes
+    steps:
+      - intent: ask_subject_limitation
+      - action: utter_max_subject_limit
 
-- story: User inquires about MST/EST/Sessional exam evaluation process in summer sem
-  steps:
-    - intent: ask_exam_evaluation_process
-      entities:
-        - upgradation_mode: "summer"
-    - action: action_provide_exam_process
+  - story: User inquires about MST/EST/Sessional exam evaluation process in summer sem
+    steps:
+      - intent: ask_exam_evaluation_process
+        entities:
+          - upgradation_mode: "summer"
+      - action: action_provide_exam_process
 
-- story: User inquires about MST/EST/Sessional exam evaluation process in auxiliary
-  steps:
-    - intent: ask_exam_evaluation_process
-      entities:
-        - upgradation_mode: "auxiliary"
-    - action: action_provide_exam_process
+  - story: User inquires about MST/EST/Sessional exam evaluation process in auxiliary
+    steps:
+      - intent: ask_exam_evaluation_process
+        entities:
+          - upgradation_mode: "auxiliary"
+      - action: action_provide_exam_process
 
-- story: User greets, asks about auxiliary exam in July, and then asks for evaluation process
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: General_info_Auxiliary
-      entities:
-        - month: "July"
-    - action: action_provide_general_info
-    - intent: ask_exam_evaluation_process
-    - action: action_exam_evaluation_process
+  - story: User greets, asks about auxiliary exam in July, and then asks for evaluation process
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: General_info_Auxiliary
+        entities:
+          - month: "July"
+      - action: action_provide_general_info
+      - intent: ask_exam_evaluation_process
+      - action: action_exam_evaluation_process
 
-- story: User inquires about subject limitations and asks about re-enrollment after clearing auxiliary exam
-  steps:
-    - intent: ask_subject_limitation
-    - action: utter_max_subject_limit
-    - intent: subject_re_enrollment_auxiliary_yes
-    - action: action_handle_subject_re_enrollment_auxiliary_yes
+  - story: User inquires about subject limitations and asks about re-enrollment after clearing auxiliary exam
+    steps:
+      - intent: ask_subject_limitation
+      - action: utter_max_subject_limit
+      - intent: subject_re_enrollment_auxiliary_yes
+      - action: action_handle_subject_re_enrollment_auxiliary_yes
 
-# - story: Auxiliary Exam
-#   steps:
-#     - intent: General_info_Auxiliary
-#     - action: action_provide_general_info
+  - story: interactive_story_1
+    steps:
+      - intent: ask_fee_details
+      - action: utter_ask_fee_type
+      - intent: ask_fee_refund
+      - intent: ask_fee_details
+      - action: utter_ask_fee_type
 
-# - story: Process for July Exam
-#   steps:
-#     - intent: Auxiliary_exam_process
-#     - action: action_provide_exam_process
+  
 
-# - story: Re-enrollment after Auxiliary Exam
-#   steps:
-#     - intent: subject_re_enrollment_auxiliary_yes
-#     - action: action_handle_subject_re_enrollment_auxiliary_yes
+  - story: self study condition
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: confirm_self_study_conditions
+        entities:
+          - subject: ucs219
+          - study_mode: self
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - subject: ucs219
+      - slot_was_set:
+          - study_mode: self
+      - action: self_study_eligibility_form
+      - active_loop: self_study_eligibility_form
+      - slot_was_set:
+          - subject: ucs219
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - study_mode: self
+      - slot_was_set:
+          - requested_slot: current_grade
+      - intent: entered_grade
+        entities:
+          - grade: X
+      - slot_was_set:
+          - current_grade: X
+      - action: self_study_eligibility_form
+      - slot_was_set:
+          - current_grade: x
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_self_study_condition
+      - slot_was_set:
+          - current_grade: null
+      - slot_was_set:
+          - subject: null
 
-# - story: Re-enrollment after Summer Semester
-#   steps:
-#     - intent: subject_re_enrollment_summer_no
-#     - action: action_handle_subject_re_enrollment_summer_no
+  - story: self study path1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: confirm_self_study_conditions
+        entities:
+          - subject: ucs016
+          - study_mode: self
+      - slot_was_set:
+          - subject: ucs016
+      - slot_was_set:
+          - study_mode: self
+      - action: self_study_eligibility_form
+      - active_loop: self_study_eligibility_form
+      - slot_was_set:
+          - subject: ucs016
+      - slot_was_set:
+          - study_mode: self
+      - slot_was_set:
+          - requested_slot: current_grade
+      - intent: entered_grade
+        entities:
+          - grade: E
+      - slot_was_set:
+          - current_grade: E
+      - action: self_study_eligibility_form
+      - slot_was_set:
+          - current_grade: e
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_self_study_condition
+      - slot_was_set:
+          - current_grade: null
+      - slot_was_set:
+          - subject: null
 
-# - story: Subject Limitation Inquiry
-#   steps:
-#     - intent: ask_subject_limitation
-#     - action: action_handle_ask_subject_limitation
+  - story: self study path 2
+    steps:
+      - intent: confirm_self_study_conditions
+        entities:
+          - subject: uhu012
+          - study_mode: self
+          - grade: R.A
+      - slot_was_set:
+          - current_grade: R.A
+      - slot_was_set:
+          - subject: uhu012
+      - slot_was_set:
+          - study_mode: self
+      - action: self_study_eligibility_form
+      - active_loop: self_study_eligibility_form
+      - slot_was_set:
+          - subject: uhu012
+      - slot_was_set:
+          - current_grade: r.a
+      - slot_was_set:
+          - study_mode: self
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_self_study_condition
+      - slot_was_set:
+          - current_grade: null
+      - slot_was_set:
+          - subject: null
+  - story: grade upgrade
+    steps:
+      - intent: inquire_about_grade_upgradation_eligibility
+        entities:
+          - grade: E
+      - slot_was_set:
+          - current_grade: E
+      - action: grade_eligibility_form
+      - active_loop: grade_eligibility_form
+      - slot_was_set:
+          - current_grade: e
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_grade_upgrade_eligiblity
 
-# - story: Exam Evaluation Process Inquiry
-#   steps:
-#     - intent: ask_exam_evaluation_process
-#     - action: action_exam_evaluation_process
+  - story: general info
+    steps:
+      - intent: General_info
+        entities:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - action: action_general_info
+      - intent: General_info
+        entities:
+          - purpose: registration
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - purpose: registration
+      - action: action_general_info
+      - intent: General_info
+        entities:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - intent: General_info
+        entities:
+          - upgradation_mode: summer
+      - action: action_general_info
+      - intent: General_info
+        entities:
+          - purpose: time_table
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - purpose: time_table
+      - action: action_general_info
 
-- story: interactive_story_1
-  steps:
-    - intent: ask_fee_details
-    - action: utter_ask_fee_type
-    - intent: ask_fee_refund
-    - intent: ask_fee_details
-    - action: utter_ask_fee_type
+  - story: general info register
+    steps:
+      - intent: General_info
+        entities:
+          - purpose: register
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - purpose: register
+      - intent: General_info
+        entities:
+          - purpose: registration
+          - upgradation_mode: summer
+      - action: action_general_info
 
-- story: grade upgrade eligibility path
-  steps:
-    - intent: inquire_about_grade_upgradation_eligibility
-      entities:
-        - grade: C
-        - grade: B
-        - upgradation_mode: summer
-    - slot_was_set:
-        - current_grade: C
-    - slot_was_set:
-        - upgradation_mode: summer
-    - slot_was_set:
-        - grade: B
-    - action: grade_eligibility_form
-    - active_loop: grade_eligibility_form
-    - slot_was_set:
-        - current_grade: c
-    - slot_was_set:
-        - upgradation_mode: summer
-    - slot_was_set:
-        - grade: B
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_grade_upgrade_eligiblity
-
-- story: self study condition
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: confirm_self_study_conditions
-      entities:
-        - subject: ucs219
-        - study_mode: self
-        - upgradation_mode: summer
-    - slot_was_set:
-        - upgradation_mode: summer
-    - slot_was_set:
-        - subject: ucs219
-    - slot_was_set:
-        - study_mode: self
-    - action: self_study_eligibility_form
-    - active_loop: self_study_eligibility_form
-    - slot_was_set:
-        - subject: ucs219
-    - slot_was_set:
-        - upgradation_mode: summer
-    - slot_was_set:
-        - study_mode: self
-    - slot_was_set:
-        - requested_slot: current_grade
-    - intent: entered_grade
-      entities:
-        - grade: X
-    - slot_was_set:
-        - current_grade: X
-    - action: self_study_eligibility_form
-    - slot_was_set:
-        - current_grade: x
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_self_study_condition
-    - slot_was_set:
-        - current_grade: null
-    - slot_was_set:
-        - subject: null
-
-- story: self study path1
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: confirm_self_study_conditions
-      entities:
-        - subject: ucs016
-        - study_mode: self
-    - slot_was_set:
-        - subject: ucs016
-    - slot_was_set:
-        - study_mode: self
-    - action: self_study_eligibility_form
-    - active_loop: self_study_eligibility_form
-    - slot_was_set:
-        - subject: ucs016
-    - slot_was_set:
-        - study_mode: self
-    - slot_was_set:
-        - requested_slot: current_grade
-    - intent: entered_grade
-      entities:
-        - grade: E
-    - slot_was_set:
-        - current_grade: E
-    - action: self_study_eligibility_form
-    - slot_was_set:
-        - current_grade: e
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_self_study_condition
-    - slot_was_set:
-        - current_grade: null
-    - slot_was_set:
-        - subject: null
-
-- story: self study path 2
-  steps:
-    - intent: confirm_self_study_conditions
-      entities:
-        - subject: uhu012
-        - study_mode: self
-        - grade: R.A
-    - slot_was_set:
-        - current_grade: R.A
-    - slot_was_set:
-        - subject: uhu012
-    - slot_was_set:
-        - study_mode: self
-    - action: self_study_eligibility_form
-    - active_loop: self_study_eligibility_form
-    - slot_was_set:
-        - subject: uhu012
-    - slot_was_set:
-        - current_grade: r.a
-    - slot_was_set:
-        - study_mode: self
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_self_study_condition
-    - slot_was_set:
-        - current_grade: null
-    - slot_was_set:
-        - subject: null
-- story: grade upgrade
-  steps:
-  - intent: inquire_about_grade_upgradation_eligibility
-    entities:
-    - grade: E
-  - slot_was_set:
-    - current_grade: E
-  - action: grade_eligibility_form
-  - active_loop: grade_eligibility_form
-  - slot_was_set:
-    - current_grade: e
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_grade_upgrade_eligiblity
-
-- story: general info
-  steps:
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - purpose: registration
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: registration
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - purpose: time_table
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: time_table
-  - action: action_general_info
-
-- story: general info register
-  steps:
-  - intent: General_info
-    entities:
-    - purpose: register
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: register
-  - intent: General_info
-    entities:
-    - purpose: registration
-    - upgradation_mode: summer
-  - action: action_general_info
-
-- story: project based course in grade elgigbility
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: General_info
-    entities:
-    - subject: UTA016
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - subject: UTA016
-  - action: self_study_eligibility_form
-  - active_loop: self_study_eligibility_form
-  - slot_was_set:
-    - subject: uta016
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - requested_slot: current_grade
-  - intent: entered_grade
-    entities:
-    - grade: C
-  - slot_was_set:
-    - current_grade: C
-  - action: self_study_eligibility_form
-  - slot_was_set:
-    - current_grade: c
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_self_study_condition
-  - slot_was_set:
-    - current_grade: null
-  - slot_was_set:
-    - subject: null
+  - story: project based course in grade elgigbility
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: General_info
+        entities:
+          - subject: UTA016
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - subject: UTA016
+      - action: self_study_eligibility_form
+      - active_loop: self_study_eligibility_form
+      - slot_was_set:
+          - subject: uta016
+      - slot_was_set:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - requested_slot: current_grade
+      - intent: entered_grade
+        entities:
+          - grade: C
+      - slot_was_set:
+          - current_grade: C
+      - action: self_study_eligibility_form
+      - slot_was_set:
+          - current_grade: c
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_self_study_condition
+      - slot_was_set:
+          - current_grade: null
+      - slot_was_set:
+          - subject: null

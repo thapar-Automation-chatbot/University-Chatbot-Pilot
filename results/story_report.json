@@ -1,27 +1,15 @@
 {
-  "action_self_study_condition": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
   "": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 40
   },
-  "None": {
+  "action_handle_ask_subject_limitation": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 36
-  },
-  "action_grade_upgrade_eligibility": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
+    "support": 1
   },
   "action_exam_evaluation_process": {
     "precision": 0.0,
@@ -29,11 +17,11 @@
     "f1-score": 0.0,
     "support": 1
   },
-  "utter_greet": {
+  "action_check_e_grade": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1
+    "support": 3
   },
   "action_handle_subject_re_enrollment_auxiliary_yes": {
     "precision": 0.0,
@@ -41,11 +29,11 @@
     "f1-score": 0.0,
     "support": 3
   },
-  "action_handle_ask_subject_limitation": {
+  "validate_self_study_eligibility_form": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1
+    "support": 4
   },
   "action_handle_subject_re_enrollment_summer_no": {
     "precision": 0.0,
@@ -54,9 +42,9 @@
     "support": 3
   },
   "action_provide_exam_process": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
     "support": 4
   },
   "utter_goodbye": {
@@ -65,11 +53,53 @@
     "f1-score": 0.0,
     "support": 1
   },
+  "action_grade_upgrade_eligibility": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "General_info_Auxiliary": {
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1-score": 0.4,
+    "support": 2
+  },
+  "Auxiliary_exam_process": {
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.5,
+    "support": 2
+  },
+  "None": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 39
+  },
+  "action_self_study_condition": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 44
+  },
   "action_handle_fee_details": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 11
+  },
+  "utter_greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
   },
   "action_provide_general_info": {
     "precision": 0.0,
@@ -77,43 +107,25 @@
     "f1-score": 0.0,
     "support": 4
   },
-  "validate_self_study_eligibility_form": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 4
-  },
-  "action_check_e_grade": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3
-  },
-  "action_listen": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 40
-  },
   "micro avg": {
-    "precision": 1.0,
-    "recall": 0.2564102564102564,
-    "f1-score": 0.4081632653061224,
-    "support": 156
+    "precision": 0.8214285714285714,
+    "recall": 0.2754491017964072,
+    "f1-score": 0.4125560538116592,
+    "support": 167
   },
   "macro avg": {
-    "precision": 0.0625,
-    "recall": 0.0625,
-    "f1-score": 0.0625,
-    "support": 156
+    "precision": 0.1435185185185185,
+    "recall": 0.1893939393939394,
+    "f1-score": 0.13994708994708993,
+    "support": 167
   },
   "weighted avg": {
-    "precision": 0.2564102564102564,
-    "recall": 0.2564102564102564,
-    "f1-score": 0.2564102564102564,
-    "support": 156
+    "precision": 0.2944111776447106,
+    "recall": 0.2754491017964072,
+    "f1-score": 0.2776732249786142,
+    "support": 167
   },
-  "accuracy": 0.2564102564102564,
+  "accuracy": 0.2754491017964072,
   "conversation_accuracy": {
     "accuracy": 0.0,
     "correct": 0,

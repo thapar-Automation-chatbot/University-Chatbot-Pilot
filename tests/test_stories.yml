@@ -5,18 +5,22 @@ stories:
   steps:
   - user: |
       - What are the guidelines for the auxiliary exam?
+  - intent: General_info_Auxiliary
   - action: action_provide_general_info
   - user: |
       - Can you tell me about the rules for the auxiliary examination?
+  - intent: General_info_Auxiliary    
   - action: action_provide_general_info
 
 - story: User inquires about the process for the July exam
   steps:
   - user: |
       - How can I apply for the auxiliary examination in July?
+  - intent: Auxiliary_exam_process
   - action: action_provide_exam_process
   - user: |
       - Walk me through the steps of the auxiliary examination process in July.
+  - intent: Auxiliary_exam_process    
   - action: action_provide_exam_process
 
 - story: User asks for general info about the January auxiliary examination
