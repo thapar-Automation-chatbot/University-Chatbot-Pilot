@@ -1,10 +1,18 @@
 [
   {
-    "text": "Can I upgrade my grade from ra to A",
-    "intent": "explain_grade_improvement_process",
+    "text": "Is it possible to re-enroll after auxiliary for an improvement exam?",
+    "intent": "subject_re_enrollment_auxiliary_yes",
     "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.6238278150558472
+      "name": "explain_grade_improvement_process",
+      "confidence": 0.6970706582069397
+    }
+  },
+  {
+    "text": "What's the process for re-enrolling after clearing a backlog in auxiliary exam?",
+    "intent": "subject_re_enrollment_auxiliary_yes",
+    "intent_prediction": {
+      "name": "explain_grade_improvement_process",
+      "confidence": 0.3243864178657532
     }
   }
 ]

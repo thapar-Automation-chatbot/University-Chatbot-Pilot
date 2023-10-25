@@ -19,16 +19,16 @@ intents:
 - subject_re_enrollment_auxiliary_yes
 - subject_re_enrollment_summer_no
 entities:
-- subject
+- upgradation_mode
 - grade:
     roles:
     - current_grade
     - upgraded_grade
-- upgradation_mode
+- fee_type
 - study_mode
+- subject
 - purpose
 - marks
-- fee_type
 - month
 slots:
   current_grade:
@@ -99,15 +99,15 @@ slots:
     - type: from_entity
       entity: month
 actions:
+- action_grade_upgrade_eligiblity
+- action_handle_fee_details
 - utter_greet
 - action_self_study_condition
 - action_handle_subject_re_enrollment_summer_no
-- action_grade_upgrade_eligiblity
 - action_general_info
 - action_provide_general_info
 - validate_self_study_eligibility_form
 - validate_grade_eligibility_form
-- action_handle_fee_details
 - action_provide_exam_process
 - action_handle_subject_re_enrollment_auxiliary_yes
 - action_exam_evaluation_process

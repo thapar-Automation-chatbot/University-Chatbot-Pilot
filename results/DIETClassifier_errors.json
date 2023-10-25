@@ -1,111 +1,5 @@
 [
   {
-    "text": "When is the time table for the summer semester available?",
-    "entities": [
-      {
-        "start": 12,
-        "end": 22,
-        "value": "time_table",
-        "entity": "purpose"
-      },
-      {
-        "start": 31,
-        "end": 46,
-        "value": "summer",
-        "entity": "upgradation_mode"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "purpose",
-        "start": 12,
-        "end": 16,
-        "confidence_entity": 0.9825071692466736,
-        "value": "time",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "upgradation_mode",
-        "start": 31,
-        "end": 46,
-        "confidence_entity": 0.9977568984031677,
-        "value": "summer",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "What's the schedule for the summer semester?",
-    "entities": [
-      {
-        "start": 11,
-        "end": 19,
-        "value": "time_table",
-        "entity": "purpose"
-      },
-      {
-        "start": 28,
-        "end": 43,
-        "value": "summer",
-        "entity": "upgradation_mode"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "upgradation_mode",
-        "start": 28,
-        "end": 43,
-        "confidence_entity": 0.9991138577461243,
-        "value": "summer",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "give me time table of summer sem",
-    "entities": [
-      {
-        "start": 8,
-        "end": 18,
-        "value": "time_table",
-        "entity": "purpose"
-      },
-      {
-        "start": 22,
-        "end": 32,
-        "value": "summer",
-        "entity": "upgradation_mode"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "purpose",
-        "start": 8,
-        "end": 12,
-        "confidence_entity": 0.9623528122901917,
-        "value": "time",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "upgradation_mode",
-        "start": 22,
-        "end": 32,
-        "confidence_entity": 0.999288022518158,
-        "value": "summer",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
     "text": "is it possible to get a a if i have c",
     "entities": [
       {
@@ -126,38 +20,140 @@
     "predicted_entities": [
       {
         "entity": "grade",
-        "start": 22,
-        "end": 23,
-        "confidence_entity": 0.7128745317459106,
-        "role": "upgraded_grade",
-        "confidence_role": 0.912939727306366,
-        "value": "a",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
-        "start": 24,
-        "end": 25,
-        "confidence_entity": 0.9224935173988342,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9709648489952087,
-        "value": "a",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
         "start": 36,
         "end": 37,
-        "confidence_entity": 0.9755412340164185,
+        "confidence_entity": 0.9846022129058838,
         "role": "current_grade",
-        "confidence_role": 0.9667286276817322,
+        "confidence_role": 0.914696455001831,
         "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the fees for taking 2 subjects in auxiliary exams?",
+    "entities": [
+      {
+        "start": 42,
+        "end": 57,
+        "value": "auxiliary",
+        "entity": "fee_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 42,
+        "end": 57,
+        "confidence_entity": 0.8497630953788757,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are the rules for the auxiliary examination in July or January?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 48,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
+      },
+      {
+        "start": 52,
+        "end": 56,
+        "value": "July",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 27,
+        "end": 48,
+        "confidence_entity": 0.9996670484542847,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 52,
+        "end": 56,
+        "confidence_entity": 0.9993738532066345,
+        "value": "July",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 60,
+        "end": 67,
+        "confidence_entity": 0.961717963218689,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain the rules for the auxiliary examination in both January and January?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 55,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
+      },
+      {
+        "start": 64,
+        "end": 71,
+        "value": "January",
+        "entity": "month"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upgradation_mode",
+        "start": 34,
+        "end": 55,
+        "confidence_entity": 0.9995724558830261,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 64,
+        "end": 71,
+        "confidence_entity": 0.917079508304596,
+        "value": "January",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "month",
+        "start": 76,
+        "end": 83,
+        "confidence_entity": 0.6659106016159058,
+        "value": "January",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"

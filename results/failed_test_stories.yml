@@ -42,10 +42,10 @@ stories:
   - action: action_handle_fee_details  # predicted: action_default_fallback
   - user: |-
       - What is the fee refund policy?
-  - action: action_handle_fee_details  # predicted: action_default_fallback
+  - action: action_handle_fee_details  # predicted: utter_inquire_about_fee_refund_policy
   - user: |-
       - Can I get a refund on my fees?
-  - action: action_handle_fee_details  # predicted: action_default_fallback
+  - action: action_handle_fee_details  # predicted: utter_inquire_about_fee_refund_policy
 - story: User asks about self-study conditions (.\tests\test_stories.yml)
   steps:
   - user: |-
@@ -62,12 +62,12 @@ stories:
       - What are the guidelines for the auxiliary exam?
   - action: action_listen  # predicted: action_default_fallback
   - intent: General_info_Auxiliary
-  - action: action_provide_general_info  # predicted: action_default_fallback after action_unlikely_intent
+  - action: action_provide_general_info  # predicted: utter_ask_fee_type after action_unlikely_intent
   - user: |-
       - Can you tell me about the rules for the auxiliary examination?
   - action: action_listen  # predicted: action_default_fallback
   - intent: General_info_Auxiliary
-  - action: action_provide_general_info  # predicted: action_default_fallback after action_unlikely_intent
+  - action: action_provide_general_info  # predicted: action_unlikely_intent
 - story: User confirms self-study conditions (.\tests\test_stories.yml)
   steps:
   - user: |-
@@ -111,10 +111,10 @@ stories:
   - action: action_handle_fee_details  # predicted: action_default_fallback
   - user: |-
       - Tell me about the fee refund policy.
-  - action: action_handle_fee_details  # predicted: action_default_fallback
+  - action: action_handle_fee_details  # predicted: utter_inquire_about_fee_refund_policy
   - user: |-
       - Can I get a refund on the fees?
-  - action: action_handle_fee_details  # predicted: action_default_fallback
+  - action: action_handle_fee_details  # predicted: utter_inquire_about_fee_refund_policy
 - story: User inquires about re-enrollment after auxiliary exams (.\tests\test_stories.yml)
   steps:
   - user: |-
@@ -141,7 +141,7 @@ stories:
       - Walk me through the steps of the auxiliary examination process in July.
   - action: action_listen  # predicted: action_default_fallback
   - intent: Auxiliary_exam_process
-  - action: action_provide_exam_process  # predicted: action_unlikely_intent
+  - action: action_provide_exam_process  # predicted: utter_greet after action_unlikely_intent
 - story: User asks if re-enrollment is allowed after the summer semester and gets a negative response (.\tests\test_stories.yml)
   steps:
   - user: |-

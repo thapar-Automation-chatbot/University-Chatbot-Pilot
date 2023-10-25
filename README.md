@@ -1,23 +1,36 @@
 # botV1
 
-# Intents 
-  1. confirm_self_study_conditions 
-  2. deny
-  3. entered_grade
-  4. entered_subject
-  5. goodbye
-  6.  greet
-  7. inquire_about_grade_upgradation_eligibility
-  8. General_info
-  9. explain_grade_improvement_process
+# Intents
 
-# Entities 
-  - upgradation_mode ( auxilary/summer/backlog)
-  - grade:
-      - roles:
-        - current_grade
-        - upgraded_grade(Not used anywhere right now)
-  - subject (subject code )
-  - study_mode (self / regular)
-  - marks (not used anywhere right now)
-  - purpose (registration / tenure_of_summer_term / time_table)
+- greet
+- goodbye
+- Auxiliary_exam_process
+- General_info
+- General_info_Auxiliary
+- ask_exam_evaluation_process
+- ask_fee_details
+- ask_fee_refund
+- ask_subject_limitation
+- confirm_self_study_conditions
+- deny
+- entered_grade
+- entered_subject
+- explain_grade_improvement_process
+- inquire_about_grade_upgradation_eligibility
+- inquire_about_medal_scholarship_upgradation_criteria
+- subject_re_enrollment_auxiliary_yes
+- subject_re_enrollment_summer_no
+
+# Entities
+
+- upgradation_mode ( auxilary/summer/backlog)
+- grade:
+  - roles:
+    - current_grade
+    - upgraded_grade(Not used anywhere right now)
+- subject (subject code )
+- study_mode (self / regular)
+- marks (not used anywhere right now)
+- purpose (registration / tenure_of_summer_term / time_table)
+- month
+- fee \_type

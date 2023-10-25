@@ -422,14 +422,17 @@ class ActionHandleFeeDetails(Action):
     ) -> List[Dict[Text, Any]]:
         fee_type = tracker.get_slot("fee_type")
         mapped_fee_type = self.map_fee_type(fee_type)
+        study_mode = tracker.get_slot('study_mode')
+        if fee_type == None and study_mode != None:
+             response = "The fee for grade improvement in {} mode is Rs. 15000 per subject.".format(study_mode)
 
         # Your logic to handle different fee types goes here
         if mapped_fee_type == "grade improvement":
-            response = "The fee for grade improvement is Rs. 15000."
+            response = "The fee for grade improvement is Rs. 15000 per subject"
         elif mapped_fee_type == "backlog clearance":
-            response = "The fee for clearing backlog subjects is Rs. 15000."
-        elif mapped_fee_type == "auxiliary examination":
-            response = "The fee for the auxiliary examination is Rs. 2000."
+            response = "The fee for clearing backlog subjects is Rs. 15000 per backlog."
+        elif mapped_fee_type == "auxiliary":
+            response = "The fee for the auxiliary examination is Rs. 2000 per Exam."
         elif mapped_fee_type == "thesis submission":
             response = "The fee for thesis submission for PG students is Rs. 1000."
         else:
