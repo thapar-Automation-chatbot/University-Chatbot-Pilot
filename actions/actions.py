@@ -208,7 +208,7 @@ class ActionSelfStudyCondition(Action):
                 )
             elif current_grade.lower() == "a":
                 dispatcher.utter_message(
-                    "Students With grades {} / {} cannot apply for Summer semester".format(
+                    "Students With grades {} / {} - cannot apply for Summer semester".format(
                         current_grade.upper(), current_grade.upper()
                     )
                 )

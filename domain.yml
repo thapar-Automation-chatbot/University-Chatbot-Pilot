@@ -132,8 +132,20 @@ responses:
   - text: Please provide the grade you have in the {subject}
   utter_explain_grade_improvement_process:
   - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
+  # utter_ask_fee_type:
+  # - text: Sure, could you please specify the type of fee you are inquiring about? (e.g., grade improvement, backlog clearance, auxiliary examination, thesis submission)
   utter_ask_fee_type:
-  - text: Sure, could you please specify the type of fee you are inquiring about? (e.g., grade improvement, backlog clearance, auxiliary examination, thesis submission)
+  - text: "Sure, could you please specify the type of fee you are inquiring about? "
+    buttons:
+    - title: "Grade Improvement"
+      payload: '/ask_fee_details{{"fee_type" : "grade improvement"}}'
+    - title: "backlog clearance"
+      payload: '/ask_fee_details{{"fee_type" : "backlog clearance"}}'
+    - title: "thesis submission"
+      payload: '/ask_fee_details{{"fee_type" : "thesis submission"}}'
+    - title: "auxiliary Examination"
+      payload: '/ask_fee_details{{"fee_type" : "auxiliary"}}'
+  
   utter_inquire_about_fee_refund_policy:
   - text: Fee is non-refundable once summer semester has started.
   - text: Please note that fees cannot be refunded once the summer semester has begun.
