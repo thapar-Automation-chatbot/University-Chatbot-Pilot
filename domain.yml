@@ -12,6 +12,9 @@ intents:
 - greet
 - inquire_about_grade_upgradation_eligibility
 - inquire_about_medal_scholarship_upgradation_criteria
+- ask_about_registration
+- ask_about_tenure
+- ask_about_timetable
 entities:
 - upgradation_mode
 - grade:
@@ -21,8 +24,6 @@ entities:
 - fee_type
 - study_mode
 - subject
-- purpose
-- marks
 - month
 slots:
   current_grade:
@@ -68,15 +69,6 @@ slots:
     mappings:
     - type: from_entity
       entity: study_mode
-  purpose:
-    type: categorical
-    values:
-    - registration
-    - tenure_of_summer_term
-    - time_table
-    mappings:
-    - type: from_entity
-      entity: purpose
   fee_type:
     type: categorical
     mappings:
@@ -97,14 +89,12 @@ actions:
 - action_handle_fee_details
 - utter_greet
 - action_self_study_condition
-- action_handle_subject_re_enrollment_summer_no
-- action_general_info
-- action_provide_general_info
 - validate_self_study_eligibility_form
 - validate_grade_eligibility_form
-- action_provide_exam_process
-- action_handle_subject_re_enrollment_auxiliary_yes
 - action_exam_evaluation_process
+- action_handle_registration_inquiry
+- action_respond_to_timetable_inquiry
+- action_respond_to_tenure_inquiry
 responses:
   utter_default:
   - text: Sorry i didn't get that.
@@ -126,8 +116,6 @@ responses:
   - text: Please provide the grade you have in the {subject}
   utter_explain_grade_improvement_process:
   - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
-  # utter_ask_fee_type:
-  # - text: Sure, could you please specify the type of fee you are inquiring about? (e.g., grade improvement, backlog clearance, auxiliary examination, thesis submission)
   utter_ask_fee_type:
   - text: "Sure, could you please specify the type of fee you are inquiring about? "
     buttons:

@@ -1,37 +1,37 @@
 {
-  "deny": {
+  "ask_subject_limitation": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 17,
-    "confused_with": {}
-  },
-  "General_info": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 27,
-    "confused_with": {}
-  },
-  "entered_grade": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 18,
+    "support": 40,
     "confused_with": {}
   },
   "explain_grade_improvement_process": {
-    "precision": 0.8947368421052632,
-    "recall": 1.0,
-    "f1-score": 0.9444444444444444,
-    "support": 17,
-    "confused_with": {}
-  },
-  "ask_fee_refund": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 18,
+    "support": 17,
+    "confused_with": {}
+  },
+  "ask_fee_details": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 67,
+    "confused_with": {}
+  },
+  "ask_about_timetable": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "ask_about_tenure": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
     "confused_with": {}
   },
   "confirm_self_study_conditions": {
@@ -48,32 +48,32 @@
     "support": 30,
     "confused_with": {}
   },
-  "General_info_Auxiliary": {
+  "inquire_about_grade_upgradation_eligibility": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 40,
+    "support": 85,
     "confused_with": {}
   },
-  "entered_subject": {
+  "deny": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 16,
+    "support": 17,
     "confused_with": {}
   },
-  "ask_exam_evaluation_process": {
+  "entered_grade": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 36,
+    "support": 18,
     "confused_with": {}
   },
-  "ask_fee_details": {
+  "ask_fee_refund": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 67,
+    "support": 18,
     "confused_with": {}
   },
   "goodbye": {
@@ -83,6 +83,20 @@
     "support": 10,
     "confused_with": {}
   },
+  "entered_subject": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "ask_about_registration": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
   "greet": {
     "precision": 1.0,
     "recall": 1.0,
@@ -90,60 +104,23 @@
     "support": 14,
     "confused_with": {}
   },
-  "subject_re_enrollment_auxiliary_yes": {
-    "precision": 1.0,
-    "recall": 0.6,
-    "f1-score": 0.7499999999999999,
-    "support": 5,
-    "confused_with": {
-      "explain_grade_improvement_process": 2
-    }
-  },
-  "ask_subject_limitation": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 40,
-    "confused_with": {}
-  },
-  "Auxiliary_exam_process": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 16,
-    "confused_with": {}
-  },
-  "inquire_about_grade_upgradation_eligibility": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 85,
-    "confused_with": {}
-  },
-  "subject_re_enrollment_summer_no": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "accuracy": 0.9960707269155207,
+  "accuracy": 1.0,
   "macro avg": {
-    "precision": 0.9941520467836258,
-    "recall": 0.9777777777777779,
-    "f1-score": 0.9830246913580246,
-    "support": 509
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 427
   },
   "weighted avg": {
-    "precision": 0.9964843346086237,
-    "recall": 0.9960707269155207,
-    "f1-score": 0.9956887142545295,
-    "support": 509
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 427
   },
   "micro avg": {
-    "precision": 0.9960707269155207,
-    "recall": 0.9960707269155207,
-    "f1-score": 0.9960707269155207,
-    "support": 509
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 427
   }
 }

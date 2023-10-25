@@ -70,3 +70,18 @@ rules:
       - intent: nlu_fallback
       - action: action_two_stage_fallback
       - active_loop: action_two_stage_fallback
+
+  - rule: Handle Registration Inquiry
+    steps:
+      - intent: ask_about_registration
+      - action: action_handle_registration_inquiry
+
+  - rule: Respond to Timetable Inquiry
+    steps:
+      - intent: ask_about_timetable
+      - action: action_respond_to_timetable_inquiry
+
+  - rule: Respond to Tenure Inquiry
+    steps:
+      - intent: ask_about_tenure
+      - action: action_respond_to_tenure_inquiry

@@ -275,3 +275,76 @@ class ActionHandleFeeDetails(Action):
 
         dispatcher.utter_message(response)
         return [SlotSet("fee_type", None)]
+
+
+class ActionHandleRegistrationInquiry(Action):
+    def name(self) -> Text:
+        return "action_handle_registration_inquiry"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        # Get the detected entity value
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        if upgradation_mode == "summer":
+            # Respond to summer registration inquiry
+            response = "You can find the Information about registration for summer semester at the link below [Registation Link](https://thapar.edu/pages/event/summer-semester-list)"
+
+        elif upgradation_mode == "auxiliary":
+            # Respond to auxiliary registration inquiry
+            dispatcher.utter_message(
+                "Auxiliary registration information: can be found here [Registration Link]()"
+            )
+
+        else:
+            dispatcher.utter_message("No info")
+
+        return []
+
+
+class ActionRespondToTimetableInquiry(Action):
+    def name(self):
+        return "action_respond_to_timetable_inquiry"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        if not upgradation_mode:
+            upgradation_mode = "summer"
+
+        if upgradation_mode == "auxiliary":
+            response = "Time table for Auxiliary Exams can be found here "
+        elif upgradation_mode == "summer":
+            response = "The timetable for the summer semester can be found [here](https://thapar.edu/pages/event/time-table-of-summer-semester-2023)"
+        else:
+            response = "I'm not sure about the timetable for that program. Please specify if you're asking about auxiliary or summer semester."
+
+        dispatcher.utter_message(response)
+
+        return []
+
+
+class ActionRespondToTenureInquiry(Action):
+    def name(self):
+        return "action_respond_to_tenure_inquiry"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        if not upgradation_mode:
+            upgradation_mode = "summer"
+
+        if upgradation_mode == "auxiliary":
+            response = "The tenure for the auxiliary program varies depending on the specific course. "
+        elif upgradation_mode == "summer":
+            response = "The duration of the summer semester typically lasts for [X weeks/months]."
+        else:
+            response = "I'm not sure about the tenure for that program."
+
+        dispatcher.utter_message(response)
+
+        return []

@@ -404,6 +404,64 @@ nlu:
       - Can you provide information about the process of evaluating requests for exceeding the subject limit in self-study and offline modes?
       - What support or resources are available for students who wish to study additional subjects beyond the limit in self-study and offline modes?
       - How often is the subject limit reviewed, and are there plans to update it in the future for self-study and offline modes?
+  - intent: ask_about_registration
+    examples: |
+      - What are the registration details for [summer sem]{"entity": "upgradation_mode", "value": "summer"}?
+      - How can I complete registration for [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - Explain the registration process for the [summer session]{"entity": "upgradation_mode", "value": "summer"}.
+      - Tell me about enrolling in [summer sem]{"entity": "upgradation_mode", "value": "summer"}.
+      - Provide information on registering for [summer term]{"entity": "upgradation_mode", "value": "summer"}.
+      - When can I register for [auxiliary]{"entity": "upgradation_mode", "value": "auxiliary"} in the upcoming session?
+      - Explain the registration process for [auxi]{"entity": "upgradation_mode", "value": "auxiliary"}.
+      - What are the important dates for registering for [auxiliary exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - When does registration open for [auxi exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Can you provide details about the registration timeline for [auxillary exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - How do I enroll in [auxiliary]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - What's the deadline for registering for [auxi]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Tell me about any prerequisites for registering in [auxiliary]{"entity": "upgradation_mode", "value": "auxiliary"}.
+      - Is there a specific registration fee for [auxiliary]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - When does registration close for [auxi exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
+
+  - intent: ask_about_tenure
+    examples: |
+      - What is the duration of the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Tell me about the tenure for the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Explain the length of the [auxiliary course]{"entity": "upgradation_mode", "value": "auxiliary"}.
+      - How long does the [summer term]{"entity": "upgradation_mode", "value": "summer"} typically last?
+      - What's the expected time frame for the [auxiliary semester]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Can you provide information about the period for the [summer upgrade]{"entity": "upgradation_mode", "value": "summer"}?
+      - What's the length of the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - How many weeks does the [summer semester]{"entity": "upgradation_mode", "value": "summer"} typically run for?
+      - What is the usual duration of the [summer term]{"entity": "upgradation_mode", "value": "summer"}?
+      - How many months is the [summer upgrade]{"entity": "upgradation_mode", "value": "summer"} supposed to be?
+      - How many months does the [summer semester]{"entity": "upgradation_mode", "value": "summer"} last?
+      - What's the standard time commitment for the [auxiliary course]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Tell me about the typical duration of the [summer program]{"entity": "upgradation_mode", "value": "summer"}.
+      - How long does the [auxiliary semester]{"entity": "upgradation_mode", "value": "auxiliary"} usually last?
+      - What is the expected timeframe for the [summer upgrade]{"entity": "upgradation_mode", "value": "summer"}?
+
+  - intent: ask_about_timetable
+    examples: |
+      - What's the class schedule for the [summer semester]{"entity": "upgradation_mode", "value": "summer semester"}?
+      - Can you provide me with the timetable for the [summer term]{"entity": "upgradation_mode", "value": "summer term"}?
+      - When are the classes for the [auxiliary exam]{"entity": "upgradation_mode", "value": "auxiliary exam"}?
+      - Tell me about the class timings for the [summer semester]{"entity": "upgradation_mode", "value": "summer semester"}.
+      - What's the class schedule for [summer school]{"entity": "upgradation_mode", "value": "summer school"}?
+      - Can you provide me with the timetable for the [summer upgrade]{"entity": "upgradation_mode", "value": "summer upgrade"}?
+      - When do the classes start for the [auxiliary exam]{"entity": "upgradation_mode", "value": "auxiliary exam"}?
+      - Tell me about the class timings for [summer term]{"entity": "upgradation_mode", "value": "summer term"}.
+      - What's the class schedule for the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary program"}?
+      - Can you provide me with the timetable for the [auxiliary semester]{"entity": "upgradation_mode", "value": "auxiliary semester"}?
+      - When are the classes for [summer courses]{"entity": "upgradation_mode", "value": "summer courses"}?
+      - Tell me about the class timings for the [summer sessions]{"entity": "upgradation_mode", "value": "summer sessions"}.
+      - What's the class schedule for [summer classes]{"entity": "upgradation_mode", "value": "summer classes"}?
+      - Can you provide me with the timetable for [summer terms]{"entity": "upgradation_mode", "value": "summer terms"}?
+      - When do the classes start for [auxiliary exam]{"entity": "upgradation_mode", "value": "auxiliary exam"}?
+      - Tell me about the class timings for the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary program"}.
+      - What's the class schedule for the [summer upgrade]{"entity": "upgradation_mode", "value": "summer upgrade"}?
+      - Can you provide me with the timetable for the [auxiliary upgrade]{"entity": "upgradation_mode", "value": "auxiliary upgrade"}?
+      - When are the classes for [summer sessions]{"entity": "upgradation_mode", "value": "summer sessions"}?
+      - Tell me about the class timings for [summer courses]{"entity": "upgradation_mode", "value": "summer courses"}.
   - synonym: summer
     examples: |
       - summer semester
