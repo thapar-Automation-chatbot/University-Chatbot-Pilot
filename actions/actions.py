@@ -222,173 +222,6 @@ class ActionSelfStudyCondition(Action):
         return [SlotSet("current_grade", None), SlotSet("subject", None)]
 
 
-# khushi
-class ActionGeneralInfo(Action):
-    def name(self):
-        return "action_general_info"
-
-    def run(self, dispatcher, tracker, domain):
-        # Get the value of the 'purpose' slot
-        purpose = tracker.get_slot("purpose")
-        print(purpose)
-        if purpose == "registration":
-            # Provide a response related to registration details
-            dispatcher.utter_message(
-                "Here's some information about registration details for the summer semester."
-            )
-        elif purpose == "tenure_of_summer_term":
-            # Provide a response related to the tenure of the summer term
-            dispatcher.utter_message("The summer term typically lasts for X weeks.")
-        elif purpose == "time_table":
-            # Provide a response related to the timetable
-            dispatcher.utter_message(
-                "You can access the summer semester timetable from our website."
-            )
-        else:
-            # Handle unknown 'purpose' values
-            dispatcher.utter_message("I'm not sure how to respond to that.")
-
-        return [SlotSet("purpose", None)]
-
-
-# arshit
-class ActionProvideGeneralInfo(Action):
-    def name(self) -> Text:
-        return "action_provide_general_info"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        month = tracker.get_slot("month")
-        if month == None:
-            response = "The Auxiliary exams are conducted in January and July"
-        # Your logic to handle different fee types goes here
-        if month == "January":
-            response = "The auxiliary examination in January follows a similar pattern to the July exam,reapperaing in auxi exam and clearing backlog with max of c grade ."
-        elif month == "July":
-            response = "The auxiliary examination is a special opportunity for students to again re-appear in exam either during july(summer sem) or during january for est to clear backlogs with max of c grade ."
-        else:
-            response = "No auxiliary examination during this month"
-
-        dispatcher.utter_message(response)
-        return [SlotSet("month", None)]
-
-    # def run(
-    #     self,
-    #     dispatcher: CollectingDispatcher,
-    #     tracker: Tracker,
-    #     domain: Dict[Text, Any],
-    # ) -> List[Dict[Text, Any]]:
-    #     intent = tracker.latest_message["intent"].get("name")
-    #     if intent == "General_info_Auxiliary":
-    #         dispatcher.utter_message(
-    #             "The auxiliary examination is a special opportunity for students to again re-appear in exam either during july(summer sem) or during january for est to clear backlogs with max of c grade ."
-    #         )
-    #     elif intent == "General_info_Auxiliary_January":
-    #         dispatcher.utter_message(
-    #             "The auxiliary examination in January follows a similar pattern to the July exam,reapperaing in auxi exam and clearing backlog with max of c grade ."
-    #         )
-    #     return []
-
-
-class ActionProvideExamProcess(Action):
-    def name(self) -> Text:
-        return "action_provide_exam_process"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        month = tracker.get_slot("month")
-
-        # Your logic to handle different month types goes here
-        if month == "January":
-            response = "To proceed with the auxiliary exam procedure for january, please visit the following website: https://www.thapar.edu/aboutus/pages/university."
-        elif month == "July":
-            response = "To proceed with the auxiliary exam procedure for july, please visit the following website: https://www.thapar.edu/aboutus/pages/university."
-        else:
-            response = "No auxiliary examination during this month"
-
-        dispatcher.utter_message(response)
-        return []
-
-    # def run(
-    #     self,
-    #     dispatcher: CollectingDispatcher,
-    #     tracker: Tracker,
-    #     domain: Dict[Text, Any],
-    # ) -> List[Dict[Text, Any]]:
-    #     intent = tracker.latest_message["intent"].get("name")
-    #     if intent == "Auxiliary_exam_process":
-    #         dispatcher.utter_message(
-    #             "To proceed with the auxiliary exam procedure, please visit the following website: https://www.thapar.edu/aboutus/pages/university."
-    #         )
-    #     elif intent == "Auxiliary_exam_process_January":
-    #         dispatcher.utter_message(
-    #             "To apply for the January auxiliary examination,please visit the following website: https://www.thapar.edu/aboutus/pages/university."
-    #         )
-    #     return []
-
-
-class ActionHandleSubjectReEnrollmentAuxiliaryYes(Action):
-    def name(self) -> Text:
-        return "action_handle_subject_re_enrollment_auxiliary_yes"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(
-            "Yes, you can re-enroll after auxiliary exam,for summer summer sem."
-        )
-        return []
-
-
-class ActionHandleSubjectReEnrollmentSummerNo(Action):
-    def name(self) -> Text:
-        return "action_handle_subject_re_enrollment_summer_no"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(
-            "No, re-enrollment after the summer semester is not allowed for same course if improved once during summer sem."
-        )
-        return []
-
-
-class ActionExamEvaluationProcess(Action):
-    def name(self) -> Text:
-        return "action_exam_evaluation_process"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        upgradation_mode = tracker.get_slot("upgradation_mode")
-
-        # Your logic to handle different month types goes here
-        if upgradation_mode == "summer":
-            response = "The evaluation process for MST/EST/Sessional exams typically involves a combination of factors, including written exams, assignments, and class participation. Grading is based on a scale from similar to normal sem [A] to [F], with [A] representing the highest grade. The specific evaluation criteria may vary depending on the course and instructor. If you need more detailed information, please reach out to your course instructor."
-        elif upgradation_mode == "auxiliary":
-            response = "The auxiliary exam is being re-conducted concurrently with the students taking the summer semester. The maximum attainable grade for this exam is 'C'."
-
-        dispatcher.utter_message(response)
-        return []
-
-
 # Himanshu
 class ActionHandleFeeDetails(Action):
     def name(self) -> Text:
@@ -422,9 +255,11 @@ class ActionHandleFeeDetails(Action):
     ) -> List[Dict[Text, Any]]:
         fee_type = tracker.get_slot("fee_type")
         mapped_fee_type = self.map_fee_type(fee_type)
-        study_mode = tracker.get_slot('study_mode')
+        study_mode = tracker.get_slot("study_mode")
         if fee_type == None and study_mode != None:
-             response = "The fee for grade improvement in {} mode is Rs. 15000 per subject.".format(study_mode)
+            response = "The fee for grade improvement in {} mode is Rs. 15000 per subject.".format(
+                study_mode
+            )
 
         # Your logic to handle different fee types goes here
         if mapped_fee_type == "grade improvement":

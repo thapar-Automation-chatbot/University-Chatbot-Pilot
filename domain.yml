@@ -1,9 +1,5 @@
 version: '3.1'
 intents:
-- Auxiliary_exam_process
-- General_info
-- General_info_Auxiliary
-- ask_exam_evaluation_process
 - ask_fee_details
 - ask_fee_refund
 - ask_subject_limitation
@@ -16,8 +12,6 @@ intents:
 - greet
 - inquire_about_grade_upgradation_eligibility
 - inquire_about_medal_scholarship_upgradation_criteria
-- subject_re_enrollment_auxiliary_yes
-- subject_re_enrollment_summer_no
 entities:
 - upgradation_mode
 - grade:
