@@ -1,266 +1,42 @@
 [
   {
-    "text": "let's go",
-    "intent": "greet",
+    "text": "if i have improved my grade from c to b in summer semester , will i be eligible to take that subject again",
+    "intent": "subject_re_enrollment_summer_no",
     "intent_prediction": {
       "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.40673011541366577
+      "confidence": 0.9998908042907715
     }
   },
   {
-    "text": "good night",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.8284847736358643
-    }
-  },
-  {
-    "text": "have a nice day",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "entered_subject",
-      "confidence": 0.2239227592945099
-    }
-  },
-  {
-    "text": "is it possible to get a a if i have c",
-    "intent": "inquire_about_grade_upgradation_eligibility",
+    "text": "can i take subject again after improving in summer sem",
+    "intent": "subject_re_enrollment_summer_no",
     "intent_prediction": {
       "name": "explain_grade_improvement_process",
-      "confidence": 0.6912426948547363
+      "confidence": 0.6942977905273438
     }
   },
   {
-    "text": "my grade is E",
-    "intent": "entered_grade",
+    "text": "is it possible to retake the subject after improving",
+    "intent": "subject_re_enrollment_summer_no",
     "intent_prediction": {
       "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9987878203392029
+      "confidence": 0.9670917391777039
     }
   },
   {
-    "text": "the grade i had received was A",
-    "intent": "entered_grade",
+    "text": "upon improving is it possible to retake the subject again",
+    "intent": "subject_re_enrollment_summer_no",
     "intent_prediction": {
       "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.8464338183403015
+      "confidence": 0.9929297566413879
     }
   },
   {
-    "text": "What is the procedure for improving grades in the summer semester?",
-    "intent": "explain_grade_improvement_process",
+    "text": "i had improved from E to b . can i take summer sem again to improve my grade again.",
+    "intent": "subject_re_enrollment_summer_no",
     "intent_prediction": {
       "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.5049619674682617
-    }
-  },
-  {
-    "text": "What are the chances of improving my F to a B in the summer semester?",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9992881417274475
-    }
-  },
-  {
-    "text": "Explain the process for scheduling the auxiliary examination in either July or January.",
-    "intent": "General_info_Auxiliary",
-    "intent_prediction": {
-      "name": "Auxiliary_exam_process",
-      "confidence": 0.8091382384300232
-    }
-  },
-  {
-    "text": "Can you guide me on the steps to follow for the auxiliary exam in January.",
-    "intent": "Auxiliary_exam_process",
-    "intent_prediction": {
-      "name": "General_info_Auxiliary",
-      "confidence": 0.7872617244720459
-    }
-  },
-  {
-    "text": "hi",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.5027183294296265
-    }
-  },
-  {
-    "text": "bye",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.5078074336051941
-    }
-  },
-  {
-    "text": "exit",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.9024369120597839
-    }
-  },
-  {
-    "text": "nahi",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.8969055414199829
-    }
-  },
-  {
-    "text": "Can you describe how to upgrade my grades during the summer semester?",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.7976793050765991
-    }
-  },
-  {
-    "text": "If I have a B, can I improve it to an A ?",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9999988079071045
-    }
-  },
-  {
-    "text": "Can I get my money back if I drop a course before the summer semester starts?",
-    "intent": "ask_fee_refund",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9908439517021179
-    }
-  },
-  {
-    "text": "How do I schedule my auxiliary exam for the upcoming July session?",
-    "intent": "Auxiliary_exam_process",
-    "intent_prediction": {
-      "name": "General_info_Auxiliary",
-      "confidence": 0.959056556224823
-    }
-  },
-  {
-    "text": "How does the auxiliary examination process work in July and January?",
-    "intent": "Auxiliary_exam_process",
-    "intent_prediction": {
-      "name": "General_info_Auxiliary",
-      "confidence": 0.575813889503479
-    }
-  },
-  {
-    "text": "I have a B in a course. Can I take another course",
-    "intent": "inquire_about_grade_upgradation_eligibility",
-    "intent_prediction": {
-      "name": "ask_fee_refund",
-      "confidence": 0.5137140154838562
-    }
-  },
-  {
-    "text": "If I have C, is there a way to improve it",
-    "intent": "inquire_about_grade_upgradation_eligibility",
-    "intent_prediction": {
-      "name": "explain_grade_improvement_process",
-      "confidence": 0.759380042552948
-    }
-  },
-  {
-    "text": "no i dont want to share more details",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "General_info",
-      "confidence": 0.5833410620689392
-    }
-  },
-  {
-    "text": "skip",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.9089232683181763
-    }
-  },
-  {
-    "text": "Is it possible to upgrade from a D to a C ?",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "cu",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.9872617125511169
-    }
-  },
-  {
-    "text": "How does the grade improvement process work for students with C ?",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "confirm_self_study_conditions",
-      "confidence": 0.9981393814086914
-    }
-  },
-  {
-    "text": "Is the thesis submission fee refundable if I don't submit my thesis on time?",
-    "intent": "ask_fee_refund",
-    "intent_prediction": {
-      "name": "ask_fee_details",
-      "confidence": 0.9844975471496582
-    }
-  },
-  {
-    "text": "moin",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "entered_grade",
-      "confidence": 0.5333163738250732
-    }
-  },
-  {
-    "text": "see you around",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "ask_fee_refund",
-      "confidence": 0.4753821790218353
-    }
-  },
-  {
-    "text": "Walk me through the steps to improve my grades in the summer semester.",
-    "intent": "explain_grade_improvement_process",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.739425539970398
-    }
-  },
-  {
-    "text": "I'm not sure how the July auxiliary examination works. Can you clarify?",
-    "intent": "General_info_Auxiliary",
-    "intent_prediction": {
-      "name": "Auxiliary_exam_process",
-      "confidence": 0.9918899536132812
-    }
-  },
-  {
-    "text": "what is auxi exams",
-    "intent": "General_info_Auxiliary",
-    "intent_prediction": {
-      "name": "ask_fee_details",
-      "confidence": 0.9937264919281006
-    }
-  },
-  {
-    "text": "Can I register for same courses in summersem after passing an auxiliary exam?",
-    "intent": "subject_re_enrollment_auxiliary_yes",
-    "intent_prediction": {
-      "name": "inquire_about_grade_upgradation_eligibility",
-      "confidence": 0.9991180300712585
+      "confidence": 0.9993680119514465
     }
   }
 ]

@@ -1,136 +1,28 @@
-
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: confirm_self_study_conditions
-    entities:
-    - subject: uta016
-    - study_mode: self
-  - slot_was_set:
-    - subject: uta016
-  - slot_was_set:
-    - study_mode: self
-  - action: self_study_eligibility_form
-  - active_loop: self_study_eligibility_form
-  - slot_was_set:
-    - subject: uta016
-  - slot_was_set:
-    - study_mode: self
-  - slot_was_set:
-    - requested_slot: current_grade
-  - intent: entered_grade
-    entities:
-    - grade: a
-  - slot_was_set:
-    - current_grade: a
-  - action: self_study_eligibility_form
-  - slot_was_set:
-    - current_grade: a
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_self_study_condition
-  - slot_was_set:
-    - current_grade: null
-  - slot_was_set:
-    - subject: null
-
-- story: interactive_story_2
-  steps:
-  - intent: inquire_about_grade_upgradation_eligibility
-    entities:
-    - grade: E
-  - slot_was_set:
-    - current_grade: E
-  - action: grade_eligibility_form
-  - active_loop: grade_eligibility_form
-  - slot_was_set:
-    - current_grade: e
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_grade_upgrade_eligiblity
-
-- story: interactive_story_3
-  steps:
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - purpose: registration
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: registration
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - intent: General_info
-    entities:
-    - upgradation_mode: summer
-  - action: action_general_info
-  - intent: General_info
-    entities:
-    - purpose: time_table
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: time_table
-  - action: action_general_info
-
-- story: interactive_story_4
-  steps:
-  - intent: General_info
-    entities:
-    - purpose: register
-    - upgradation_mode: summer
-  - slot_was_set:
-    - upgradation_mode: summer
-  - slot_was_set:
-    - purpose: register
-  - intent: General_info
-    entities:
-    - purpose: registration
-    - upgradation_mode: summer
-  - action: action_general_info
-
 - story: interactive_story_5
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: General_info_Auxiliary
-  - action: action_provide_general_info
-  - intent: General_info_Auxiliary
-  - intent: General_info_Auxiliary
-    entities:
-    - upgradation_mode: auxiliary
-  - slot_was_set:
-    - upgradation_mode: auxiliary
-  - action: action_provide_general_info
-  - intent: General_info_Auxiliary
-  - action: action_provide_general_info
-  - intent: General_info_Auxiliary
-  - action: action_provide_general_info
-  - intent: General_info_Auxiliary
-    entities:
-    - upgradation_mode: auxiliary
-    - grade: feb
-  - slot_was_set:
-    - upgradation_mode: auxiliary
-  - slot_was_set:
-    - grade: feb
-  - action: action_provide_general_info
-  - intent: General_info_Auxiliary
-  - action: action_default_fallback
+    - intent: greet
+    - action: utter_greet
+    - intent: General_info_Auxiliary
+    - action: action_provide_general_info
+    - intent: General_info_Auxiliary
+    - intent: General_info_Auxiliary
+      entities:
+        - upgradation_mode: auxiliary
+    - slot_was_set:
+        - upgradation_mode: auxiliary
+    - action: action_provide_general_info
+    - intent: General_info_Auxiliary
+    - action: action_provide_general_info
+    - intent: General_info_Auxiliary
+    - action: action_provide_general_info
+    - intent: General_info_Auxiliary
+      entities:
+        - upgradation_mode: auxiliary
+        - grade: feb
+    - slot_was_set:
+        - upgradation_mode: auxiliary
+    - slot_was_set:
+        - grade: feb
+    - action: action_provide_general_info
+    - intent: General_info_Auxiliary
+    - action: action_default_fallback

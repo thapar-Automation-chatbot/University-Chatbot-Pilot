@@ -1,167 +1,150 @@
 {
-  "General_info_Auxiliary": {
-    "precision": 0.9142857142857143,
-    "recall": 0.9142857142857143,
-    "f1-score": 0.9142857142857143,
-    "support": 35,
-    "confused_with": {
-      "Auxiliary_exam_process": 2,
-      "ask_fee_details": 1
-    }
-  },
-  "subject_re_enrollment_auxiliary_yes": {
+  "Auxiliary_exam_process": {
     "precision": 1.0,
-    "recall": 0.8,
-    "f1-score": 0.888888888888889,
-    "support": 5,
-    "confused_with": {
-      "inquire_about_grade_upgradation_eligibility": 1
-    }
-  },
-  "entered_subject": {
-    "precision": 0.9411764705882353,
     "recall": 1.0,
-    "f1-score": 0.9696969696969697,
+    "f1-score": 1.0,
     "support": 16,
     "confused_with": {}
   },
   "ask_fee_details": {
-    "precision": 0.9649122807017544,
-    "recall": 1.0,
-    "f1-score": 0.9821428571428572,
-    "support": 55,
-    "confused_with": {}
-  },
-  "ask_fee_refund": {
-    "precision": 0.8666666666666667,
-    "recall": 0.8666666666666667,
-    "f1-score": 0.8666666666666667,
-    "support": 15,
-    "confused_with": {
-      "inquire_about_grade_upgradation_eligibility": 1,
-      "ask_fee_details": 1
-    }
-  },
-  "ask_subject_limitation": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 20,
+    "support": 55,
     "confused_with": {}
   },
-  "explain_grade_improvement_process": {
-    "precision": 0.6666666666666666,
-    "recall": 0.36363636363636365,
-    "f1-score": 0.4705882352941177,
-    "support": 11,
-    "confused_with": {
-      "inquire_about_grade_upgradation_eligibility": 6,
-      "confirm_self_study_conditions": 1
-    }
+  "subject_re_enrollment_auxiliary_yes": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "confirm_self_study_conditions": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 45,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
   },
   "inquire_about_grade_upgradation_eligibility": {
-    "precision": 0.875,
-    "recall": 0.9625,
-    "f1-score": 0.9166666666666667,
-    "support": 80,
-    "confused_with": {
-      "explain_grade_improvement_process": 2,
-      "ask_fee_refund": 1
-    }
+    "precision": 0.9555555555555556,
+    "recall": 1.0,
+    "f1-score": 0.9772727272727273,
+    "support": 86,
+    "confused_with": {}
   },
   "deny": {
     "precision": 1.0,
-    "recall": 0.6,
-    "f1-score": 0.7499999999999999,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 10,
-    "confused_with": {
-      "entered_grade": 3,
-      "General_info": 1
-    }
+    "confused_with": {}
+  },
+  "General_info": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24,
+    "confused_with": {}
   },
   "inquire_about_medal_scholarship_upgradation_criteria": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 29,
+    "support": 30,
     "confused_with": {}
   },
-  "Auxiliary_exam_process": {
-    "precision": 0.8666666666666667,
-    "recall": 0.8125,
-    "f1-score": 0.8387096774193549,
-    "support": 16,
-    "confused_with": {
-      "General_info_Auxiliary": 3
-    }
-  },
-  "General_info": {
-    "precision": 0.9772727272727273,
-    "recall": 1.0,
-    "f1-score": 0.9885057471264368,
-    "support": 43,
-    "confused_with": {}
-  },
-  "goodbye": {
+  "subject_re_enrollment_summer_no": {
     "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 10,
+    "recall": 0.375,
+    "f1-score": 0.5454545454545454,
+    "support": 8,
     "confused_with": {
-      "entered_grade": 2,
-      "ask_fee_refund": 1
+      "inquire_about_grade_upgradation_eligibility": 4,
+      "explain_grade_improvement_process": 1
     }
-  },
-  "greet": {
-    "precision": 0.9166666666666666,
-    "recall": 0.7857142857142857,
-    "f1-score": 0.8461538461538461,
-    "support": 14,
-    "confused_with": {
-      "entered_grade": 2,
-      "inquire_about_grade_upgradation_eligibility": 1
-    }
-  },
-  "confirm_self_study_conditions": {
-    "precision": 0.9880952380952381,
-    "recall": 1.0,
-    "f1-score": 0.9940119760479043,
-    "support": 83,
-    "confused_with": {}
   },
   "ask_exam_evaluation_process": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 19,
+    "support": 36,
+    "confused_with": {}
+  },
+  "entered_subject": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "explain_grade_improvement_process": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "General_info_Auxiliary": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 40,
+    "confused_with": {}
+  },
+  "ask_fee_refund": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
     "confused_with": {}
   },
   "entered_grade": {
-    "precision": 0.6818181818181818,
-    "recall": 0.8823529411764706,
-    "f1-score": 0.7692307692307693,
-    "support": 17,
-    "confused_with": {
-      "inquire_about_grade_upgradation_eligibility": 2
-    }
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
   },
-  "accuracy": 0.9309623430962343,
+  "ask_subject_limitation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 40,
+    "confused_with": {}
+  },
+  "accuracy": 0.9896265560165975,
   "macro avg": {
-    "precision": 0.9211310164369716,
-    "recall": 0.852215057145853,
-    "f1-score": 0.8742479224286388,
-    "support": 478
+    "precision": 0.9929012345679011,
+    "recall": 0.9652777777777778,
+    "f1-score": 0.9710693895476504,
+    "support": 482
   },
   "weighted avg": {
-    "precision": 0.9326106138637712,
-    "recall": 0.9309623430962343,
-    "f1-score": 0.9267889050018574,
-    "support": 478
+    "precision": 0.9901682803135086,
+    "recall": 0.9896265560165975,
+    "f1-score": 0.9874083610778542,
+    "support": 482
   },
   "micro avg": {
-    "precision": 0.9309623430962343,
-    "recall": 0.9309623430962343,
-    "f1-score": 0.9309623430962343,
-    "support": 478
+    "precision": 0.9896265560165975,
+    "recall": 0.9896265560165975,
+    "f1-score": 0.9896265560165975,
+    "support": 482
   }
 }

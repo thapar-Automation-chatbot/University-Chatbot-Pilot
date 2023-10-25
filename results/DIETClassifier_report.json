@@ -1,85 +1,79 @@
 {
-  "study_mode": {
-    "precision": 0.7708333333333334,
-    "recall": 0.9135802469135802,
-    "f1-score": 0.8361581920903954,
-    "support": 81,
-    "confused_with": {}
-  },
   "grade": {
-    "precision": 0.7551020408163265,
-    "recall": 0.8809523809523809,
-    "f1-score": 0.8131868131868131,
-    "support": 42,
+    "precision": 0.9767441860465116,
+    "recall": 0.9545454545454546,
+    "f1-score": 0.9655172413793104,
+    "support": 44,
     "confused_with": {
-      "grade.current_grade": 4
+      "grade.current_grade": 1
     }
-  },
-  "subject": {
-    "precision": 1.0,
-    "recall": 0.84,
-    "f1-score": 0.9130434782608696,
-    "support": 25,
-    "confused_with": {
-      "subject.current_grade": 1
-    }
-  },
-  "purpose": {
-    "precision": 0.7619047619047619,
-    "recall": 0.7441860465116279,
-    "f1-score": 0.7529411764705882,
-    "support": 43,
-    "confused_with": {
-      "upgradation_mode": 2
-    }
-  },
-  "month": {
-    "precision": 0.8709677419354839,
-    "recall": 1.0,
-    "f1-score": 0.9310344827586207,
-    "support": 54,
-    "confused_with": {}
-  },
-  "grade.current_grade": {
-    "precision": 0.9020979020979021,
-    "recall": 0.9485294117647058,
-    "f1-score": 0.9247311827956989,
-    "support": 136,
-    "confused_with": {
-      "grade": 3
-    }
-  },
-  "upgradation_mode": {
-    "precision": 0.8366013071895425,
-    "recall": 0.9142857142857143,
-    "f1-score": 0.8737201365187712,
-    "support": 140,
-    "confused_with": {}
   },
   "fee_type": {
-    "precision": 0.9380530973451328,
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9680365296803652,
+    "f1-score": 1.0,
     "support": 106,
     "confused_with": {}
   },
+  "subject": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
+  },
+  "grade.current_grade": {
+    "precision": 0.9925373134328358,
+    "recall": 0.9925373134328358,
+    "f1-score": 0.9925373134328358,
+    "support": 134,
+    "confused_with": {}
+  },
+  "study_mode": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 36,
+    "confused_with": {}
+  },
+  "upgradation_mode": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 291,
+    "confused_with": {}
+  },
+  "purpose": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 26,
+    "confused_with": {}
+  },
+  "month": {
+    "precision": 0.9642857142857143,
+    "recall": 1.0,
+    "f1-score": 0.9818181818181818,
+    "support": 54,
+    "confused_with": {}
+  },
   "micro avg": {
-    "precision": 0.8556701030927835,
-    "recall": 0.9266347687400319,
-    "f1-score": 0.889739663093415,
-    "support": 627
+    "precision": 0.9943661971830986,
+    "recall": 0.995768688293371,
+    "f1-score": 0.9950669485553206,
+    "support": 709
   },
   "macro avg": {
-    "precision": 0.8544450230778105,
-    "recall": 0.9051917250535011,
-    "f1-score": 0.8766064989702653,
-    "support": 627
+    "precision": 0.9916959017206327,
+    "recall": 0.9933853459972863,
+    "f1-score": 0.992484092078791,
+    "support": 709
   },
   "weighted avg": {
-    "precision": 0.8583557807833196,
-    "recall": 0.9266347687400319,
-    "f1-score": 0.8900433994351713,
-    "support": 627
+    "precision": 0.9944261957087096,
+    "recall": 0.995768688293371,
+    "f1-score": 0.9950647961056015,
+    "support": 709
   },
-  "accuracy": 0.9704788978788541
+  "accuracy": 0.998766447368421
 }

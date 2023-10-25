@@ -113,7 +113,7 @@ class ActionGradeUpgradeEligibility(Action):
                         )
                     )
 
-        elif upgradation_mode == "auxiliary":
+        elif upgradation_mode == "auxiliary" or upgradation_mode == "auxilary":
             if current_grade in {"c", "b"}:
                 dispatcher.utter_message(
                     "Only students with E grade or lower can appear for Auxilary Examination"
@@ -185,9 +185,16 @@ class ActionSelfStudyCondition(Action):
             return [SlotSet("current_grade", None), SlotSet("subject", None)]
         subject = subject.lower()
         if subject in PROJECT_BASED_COURSES:
-            dispatcher.utter_message(
-                "The project based courses such as Engineering Design-1, Engineering Design-2, Capstone Project, etc. cannot be offered as self-study mode. And will only be offered in regular mode."
-            )
+            if current_grade in {"a"}:
+                dispatcher.utter_message(
+                    "Students With grades {} / {} cannot apply for Summer semester".format(
+                        current_grade.upper(), current_grade.upper()
+                    )
+                )
+            else:
+                dispatcher.utter_message(
+                    "The project based courses such as Engineering Design-1, Engineering Design-2, Capstone Project, etc. cannot be offered as self-study mode. And will only be offered in regular mode."
+                )
         else:
             if current_grade.lower() in {"c", "b"}:
                 dispatcher.utter_message(
@@ -256,7 +263,8 @@ class ActionProvideGeneralInfo(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         month = tracker.get_slot("month")
-
+        if month == None:
+            response = "The Auxiliary exams are conducted in January and July"
         # Your logic to handle different fee types goes here
         if month == "January":
             response = "The auxiliary examination in January follows a similar pattern to the July exam,reapperaing in auxi exam and clearing backlog with max of c grade ."
@@ -266,7 +274,7 @@ class ActionProvideGeneralInfo(Action):
             response = "No auxiliary examination during this month"
 
         dispatcher.utter_message(response)
-        return []
+        return [SlotSet("month", None)]
 
     # def run(
     #     self,
@@ -362,23 +370,24 @@ class ActionHandleSubjectReEnrollmentSummerNo(Action):
 class ActionExamEvaluationProcess(Action):
     def name(self) -> Text:
         return "action_exam_evaluation_process"
-    
+
     def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        exam_type = tracker.get_slot("exam_type")
+        upgradation_mode = tracker.get_slot("upgradation_mode")
 
         # Your logic to handle different month types goes here
-        if exam_type == "summer semester":
+        if upgradation_mode == "summer":
             response = "The evaluation process for MST/EST/Sessional exams typically involves a combination of factors, including written exams, assignments, and class participation. Grading is based on a scale from similar to normal sem [A] to [F], with [A] representing the highest grade. The specific evaluation criteria may vary depending on the course and instructor. If you need more detailed information, please reach out to your course instructor."
-        elif exam_type == "auxiliary exam":
+        elif upgradation_mode == "auxiliary":
             response = "The auxiliary exam is being re-conducted concurrently with the students taking the summer semester. The maximum attainable grade for this exam is 'C'."
 
         dispatcher.utter_message(response)
         return []
+
 
 # Himanshu
 class ActionHandleFeeDetails(Action):

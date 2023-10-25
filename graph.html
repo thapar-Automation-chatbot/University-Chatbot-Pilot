@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+2 [class="", fontsize=12, label=utter_ask_fee_type];
+3 [class="", fontsize=12, label=action_handle_fee_details];
+9 [class="", fontsize=12, label=utter_inquire_about_fee_refund_policy];
+10 [class="", fontsize=12, label=utter_inquire_about_fee_refund_policy];
+12 [class="", fontsize=12, label=action_handle_fee_details];
+21 [class="", fontsize=12, label=utter_explain_criteria];
+24 [class="", fontsize=12, label=utter_explain_criteria];
+28 [class="", fontsize=12, label=action_provide_general_info];
+30 [class="", fontsize=12, label=action_provide_exam_process];
+31 [class="", fontsize=12, label=action_handle_subject_re_enrollment_auxiliary_yes];
+32 [class="", fontsize=12, label=action_handle_subject_re_enrollment_summer_no];
+33 [class="", fontsize=12, label=utter_max_subject_limit];
+38 [class="", fontsize=12, label=action_exam_evaluation_process];
+43 [class="", fontsize=12, label=grade_eligibility_form];
+44 [class="", fontsize=12, label=action_grade_upgrade_eligiblity];
+46 [class="", fontsize=12, label=self_study_eligibility_form];
+48 [class="", fontsize=12, label=action_self_study_condition];
+57 [class="", fontsize=12, label=action_general_info];
+70 [class="", fontsize=12, label="..."];
+71 [class="", fontsize=12, label=utter_goodbye];
+72 [class="", fontsize=12, label=action_deactivate_loop];
+73 [class="", fontsize=12, label=utter_okay];
+74 [class="", fontsize=12, label=action_restart];
+76 [class="", fontsize=12, label=utter_greet];
+78 [class="", fontsize=12, label=grade_eligibility_form];
+83 [class="", fontsize=12, label=self_study_eligibility_form];
+88 [class="", fontsize=12, label=utter_explain_grade_improvement_process];
+95 [class=intent, fillcolor=lightblue, label="good afternoon", shape=rect, style=filled];
+96 [class=intent, fillcolor=lightblue, label="What is the pricing for backlog clearance ?", shape=rect, style=filled];
+97 [class=intent, fillcolor=lightblue, label="I have opted a course but changed my mind. Give my fees back", shape=rect, style=filled];
+98 [class=intent, fillcolor=lightblue, label="What is the cost for thesis submission ?", shape=rect, style=filled];
+99 [class=intent, fillcolor=lightblue, label="What's the process for becoming eligible for a medal, scholarship, or upgradation?", shape=rect, style=filled];
+100 [class=intent, fillcolor=lightblue, label="Tell me the prerequisites for obtaining a medal, scholarship, or upgradation.", shape=rect, style=filled];
+101 [class=intent, fillcolor=lightblue, label="Can I register for same courses in summersem after passing an auxiliary exam?", shape=rect, style=filled];
+102 [class=intent, fillcolor=lightblue, label="upon improving is it possible to retake the subject again", shape=rect, style=filled];
+103 [class=intent, fillcolor=lightblue, label="Can I exceed the subject limit in self-study and offline modes?", shape=rect, style=filled];
+104 [class=intent, fillcolor=lightblue, label="Are there any courses or workshops aimed at improving from I to B", shape=rect, style=filled];
+105 [class=intent, fillcolor=lightblue, label="Can you tell me the release date for the summer semester application?", shape=rect, style=filled];
+106 [class=intent, fillcolor=lightblue, label="Explain the evaluation criteria for MST/EST/Sessional exams in the auxiliary exam .", shape=rect, style=filled];
+107 [class=intent, fillcolor=lightblue, label="What is the total fee for backlog clearance ?", shape=rect, style=filled];
+108 [class=intent, fillcolor=lightblue, label="Which mode can i take if i have R.A grade?", shape=rect, style=filled];
+109 [class=intent, fillcolor=lightblue, label="What is the cost for thesis submission ?", shape=rect, style=filled];
+110 [class=intent, fillcolor=lightblue, label="What's the procedure for fee refunds?", shape=rect, style=filled];
+111 [class=intent, fillcolor=lightblue, label="Could you provide details on the July auxiliary examination?", shape=rect, style=filled];
+112 [class=intent, fillcolor=lightblue, label="I want to understand how to register for the July auxiliary examination.", shape=rect, style=filled];
+113 [class=intent, fillcolor=lightblue, label="Is self-study available for E grades if marks are less than 25?", shape=rect, style=filled];
+114 [class=intent, fillcolor=lightblue, label="How long is the summer term?", shape=rect, style=filled];
+115 [class=intent, fillcolor=lightblue, label="What percentage of the fee is refunded if I drop a course mid-semester?", shape=rect, style=filled];
+116 [class=intent, fillcolor=lightblue, label="How can I achieve a medal, scholarship, or upgradation?", shape=rect, style=filled];
+117 [class=intent, fillcolor=lightblue, label="What is the expense for auxiliary examination ?", shape=rect, style=filled];
+118 [class=intent, fillcolor=lightblue, label="What is the expense for grade improvement ?", shape=rect, style=filled];
+119 [class=intent, fillcolor=lightblue, label="Is there a grace period for fee refunds after the semester starts?", shape=rect, style=filled];
+120 [class=intent, fillcolor=lightblue, label="What is the expense for auxiliary examination ?", shape=rect, style=filled];
+121 [class=intent, fillcolor=lightblue, label="Fees?", shape=rect, style=filled];
+122 [class=intent, fillcolor=lightblue, label="What is the evaluation process for MST/EST/Sessional exams in the summer semester ?", shape=rect, style=filled];
+123 [class=intent, fillcolor=lightblue, label="What's the process for re-enrolling after clearing a backlog in auxiliary exam?", shape=rect, style=filled];
+124 [class=intent, fillcolor=lightblue, label="i had got I", shape=rect, style=filled];
+125 [class=intent, fillcolor=lightblue, label=A, shape=rect, style=filled];
+126 [class=intent, fillcolor=lightblue, label="can i take UTA016 in summer sem ?", shape=rect, style=filled];
+127 [class=intent, fillcolor=lightblue, label="cee you later", shape=rect, style=filled];
+128 [class=intent, fillcolor=lightblue, label="good morning", shape=rect, style=filled];
+129 [class=intent, fillcolor=lightblue, label="How can I work on improving to b from a F in auxiliary exams", shape=rect, style=filled];
+130 [class=intent, fillcolor=lightblue, label="How can E grade students improve their grades through self-study?", shape=rect, style=filled];
+131 [class=intent, fillcolor=lightblue, label="Can I change my X to an A during the summer semester?", shape=rect, style=filled];
+132 [class=intent, fillcolor=lightblue, label="Tell me the prerequisites for obtaining a medal, scholarship, or upgradation.", shape=rect, style=filled];
+133 [class=intent, fillcolor=lightblue, label="please abort", shape=rect, style=filled];
+0 -> 70  [class="", key=NONE, label=""];
+0 -> 95  [class="", key=0];
+0 -> 96  [class="", key=0];
+0 -> 97  [class="", key=0];
+0 -> 98  [class="", key=0];
+0 -> 99  [class="", key=0];
+0 -> 100  [class="", key=0];
+0 -> 101  [class="", key=0];
+0 -> 102  [class="", key=0];
+0 -> 103  [class="", key=0];
+0 -> 104  [class="", key=0];
+0 -> 105  [class="", key=0];
+0 -> 106  [class="", key=0];
+0 -> 107  [class="", key=0];
+0 -> 108  [class="", key=0];
+1 -> 109  [class="", key=0];
+1 -> 110  [class="", key=0];
+1 -> 111  [class="", key=0];
+1 -> 112  [class="", key=0];
+1 -> 113  [class="", key=0];
+1 -> 114  [class="", key=0];
+1 -> 115  [class="", key=0];
+1 -> 116  [class="", key=0];
+2 -> "-1"  [class="", key=NONE, label=""];
+2 -> 117  [class="", key=0];
+3 -> "-1"  [class="", key=NONE, label=""];
+9 -> "-1"  [class="", key=NONE, label=""];
+10 -> 118  [class="", key=0];
+12 -> 119  [class="", key=0];
+12 -> 120  [class="", key=0];
+21 -> "-1"  [class="", key=NONE, label=""];
+24 -> 121  [class="", key=0];
+28 -> "-1"  [class="", key=NONE, label=""];
+28 -> 122  [class="", key=0];
+30 -> "-1"  [class="", key=NONE, label=""];
+31 -> "-1"  [class="", key=NONE, label=""];
+32 -> "-1"  [class="", key=NONE, label=""];
+33 -> "-1"  [class="", key=NONE, label=""];
+33 -> 123  [class="", key=0];
+38 -> "-1"  [class="", key=NONE, label=""];
+43 -> 44  [class="", key=NONE, label=""];
+43 -> 124  [class="", key=0];
+44 -> "-1"  [class="", key=NONE, label=""];
+46 -> 48  [class="", key=NONE, label=""];
+46 -> 125  [class="", key=0];
+48 -> "-1"  [class="", key=NONE, label=""];
+57 -> "-1"  [class="", key=NONE, label=""];
+57 -> 126  [class="", key=0];
+70 -> 43  [class="", key=NONE, label=""];
+70 -> 46  [class="", key=NONE, label=""];
+70 -> 127  [class="", key=0];
+70 -> 128  [class="", key=0];
+70 -> 129  [class="", key=0];
+70 -> 130  [class="", key=0];
+70 -> 131  [class="", key=0];
+70 -> 132  [class="", key=0];
+70 -> 133  [class="", key=0];
+71 -> 72  [class="", key=NONE, label=""];
+72 -> 73  [class="", key=NONE, label=""];
+73 -> 74  [class="", key=NONE, label=""];
+74 -> "-1"  [class="", key=NONE, label=""];
+76 -> "-1"  [class="", key=NONE, label=""];
+78 -> "-1"  [class="", key=NONE, label=""];
+83 -> "-1"  [class="", key=NONE, label=""];
+88 -> "-1"  [class="", key=NONE, label=""];
+95 -> 1  [class="", key=0];
+96 -> 3  [class="", key=0];
+97 -> 10  [class="", key=0];
+98 -> 12  [class="", key=0];
+99 -> 21  [class="", key=0];
+100 -> 24  [class="", key=0];
+101 -> 31  [class="", key=0];
+102 -> 32  [class="", key=0];
+103 -> 33  [class="", key=0];
+104 -> 43  [class="", key=0];
+105 -> 57  [class="", key=0];
+106 -> 30  [class="", key=0];
+107 -> 2  [class="", key=0];
+108 -> 46  [class="", key=0];
+109 -> 2  [class="", key=0];
+110 -> 9  [class="", key=0];
+111 -> 28  [class="", key=0];
+112 -> 30  [class="", key=0];
+113 -> 46  [class="", key=0];
+114 -> 46  [class="", key=0];
+115 -> 10  [class="", key=0];
+116 -> 21  [class="", key=0];
+117 -> 2  [class="", key=0];
+118 -> 3  [class="", key=0];
+119 -> 9  [class="", key=0];
+120 -> 12  [class="", key=0];
+121 -> 12  [class="", key=0];
+122 -> 38  [class="", key=0];
+123 -> 31  [class="", key=0];
+124 -> 43  [class="", key=0];
+125 -> 46  [class="", key=0];
+126 -> 57  [class="", key=0];
+127 -> 71  [class="", key=0];
+128 -> 76  [class="", key=0];
+129 -> 78  [class="", key=0];
+130 -> 83  [class="", key=0];
+131 -> 88  [class="", key=0];
+132 -> 21  [class="", key=0];
+133 -> 72  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>
