@@ -105,7 +105,7 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_respond_affirm:
-  - text: Glad to hear
+  - text: Glad to help
   utter_ask_current_grade:
   - text: What grade do you currently have in the subject
   utter_ask_upgradation_mode:

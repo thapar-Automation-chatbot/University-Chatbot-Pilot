@@ -522,6 +522,14 @@ nlu:
     - Can you provide a summary of the [Auxi exams]{"entity": "upgradation_mode", "value": "auxiliary"} exam regulations?
     - give general info about  [Summer sem]{"entity": "upgradation_mode", "value": "summer"} exam?
     - give general info about [Auxi exams]{"entity": "upgradation_mode", "value": "auxiliary"} exam?
+    - what is [Summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    - what are [Auxiliary exams]{"entity": "upgradation_mode", "value": "auxiliary"}
+    - tell me about [Summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    - elaborate on [Summer sem]{"entity": "upgradation_mode", "value": "summer"} 
+    - give info about [Summer sem]{"entity": "upgradation_mode", "value": "summer"} 
+    - how can i know more about [Summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    - where can i find info about [Summer sem]{"entity": "upgradation_mode", "value": "summer"}
+    - where can i look for information about [Summer sem]{"entity": "upgradation_mode", "value": "summer"}
 - intent: ask_about_subject_re_enrollment
   examples: |
     - Can I re-enroll for same course after the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
@@ -546,6 +554,10 @@ nlu:
     - summer tenure
     - summer studies
     - summer time
+    - summer semster
+    - summer semeter
+    - summer semestr
+    
 - synonym: auxiliary
   examples: |
     - auxiliary exams

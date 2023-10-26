@@ -116,11 +116,11 @@ class ActionGradeUpgradeEligibility(Action):
         elif upgradation_mode == "auxiliary" or upgradation_mode == "auxilary":
             if current_grade in {"c", "b"}:
                 dispatcher.utter_message(
-                    "Only students with E grade or lower can appear for Auxilary Examination"
+                    "Only students with E grade or lower can appear for auxiliary Examination"
                 )
             else:
                 dispatcher.utter_message(
-                    "Students with E grade can appear for Auxilary Exams."
+                    "Students with E grade can appear for auxiliary Exams."
                 )
         else:
             dispatcher.utter_message("Backlog Case - solve later ")
@@ -359,8 +359,8 @@ class ActionProvideExamProcess(Action):
         upgradation_mode = tracker.get_slot("upgradation_mode")
 
         # Customize your responses based on the 'upgradation_mode'
-        if upgradation_mode == "auxilary":
-            response = "Here is how the examination process works for auxilary exams."
+        if upgradation_mode == "auxiliary":
+            response = "Here is how the examination process works for auxiliary exams."
         elif upgradation_mode == "summer":
             response = (
                 "Here is how the examination process works for the summer semester."
@@ -383,7 +383,7 @@ class ActionProvideAboutUpgradationModes(Action):
         upgradation_mode = tracker.get_slot("upgradation_mode")
 
         # Customize your responses based on the 'upgradation_mode'
-        if upgradation_mode == "auxilary":
+        if upgradation_mode == "auxiliary":
             response = "Here is general info about auxi exam:"
         elif upgradation_mode == "summer":
             response = "Here is general info about summer sem"
@@ -405,8 +405,8 @@ class ActionProvideAboutSubjectReEnrollment(Action):
         upgradation_mode = tracker.get_slot("upgradation_mode")
 
         # Customize your responses based on the 'upgradation_mode'
-        if upgradation_mode == "auxilary":
-            response = "yes,after auxilary you can opt for improvment for once during summer sem"
+        if upgradation_mode == "auxiliary":
+            response = "yes,after auxiliary you can opt for improvment for once during summer sem"
         elif upgradation_mode == "summer":
             response = "Once opted in summer sem same course can't be taken again for improvement next summer sem"
         else:
