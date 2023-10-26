@@ -153,6 +153,8 @@ nlu:
     - can we take [summer semester]{"entity": "upgradation_mode", "value": "summer"} for computer networks ?
     - can we take [summer semester]{"entity": "upgradation_mode", "value": "summer"} for any subject ?
     - can we take [summer semester]{"entity": "upgradation_mode", "value": "summer"} for subject we have [c]{"entity": "grade", "role": "current_grade", "value": "C"} grade?
+    - What are the specific criteria for students to be eligible for grade improvement in the [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
+    -
 - intent: entered_grade
   examples: |
     - [c]{"entity": "grade", "role": "current_grade"}
@@ -242,7 +244,7 @@ nlu:
     - What is  [regular mode]{"entity": "study_mode", "value": "regular"}?
     - What is [self study]{"entity": "study_mode", "value": "self"} mode?
     - How does [regular mode]{"entity": "study_mode", "value": "regular"} work?
-    - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and reugular study mode?
+    - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and [regular study]{"entity": "study_mode", "value": "regular"} mode ?
     - How is [self study]{"entity": "study_mode", "value": "self"} Mode different from [regular mode]{"entity": "study_mode", "value": "regular"}?
     - In what modes can i take subjects in summer sem ?
     - modes of study i can opt in summer term?
@@ -259,6 +261,20 @@ nlu:
     - can i take [uhu012](subject) in [self study]{"entity": "study_mode", "value": "self"} mode , i have grade [R.a]{"entity": "grade", "role": "current_grade", "value": "R.A"}
     - which mode can i take if i have [E]{"entity": "grade", "role": "current_grade"} grade
     - is it possible to take [uta016](subject) in [self study]{"entity": "study_mode", "value": "self"} mode
+    - Is it possible to round off marks obtained as 24.9?
+    - can we round marks so i can take [self study]{"entity": "study_mode", "value": "self"} mode ?
+    - am i  eligible if i get 23 marks for [self study]{"entity": "study_mode", "value": "self"} ?
+    - can my marks be rounded to be eligible for [self study]{"entity": "study_mode", "value": "self"} ?
+    - Are project-based courses like Engineering Design-1 and Capstone Project offered in [self study]{"entity": "study_mode", "value": "self"} mode, and if not, what mode are they offered in?
+    - how can i take project based course 
+    - In which modes can i tka eproject based courses ?
+    - Is [self study]{"entity": "study_mode", "value": "self"} mode available for Engineering Design-1 ?
+    - is Regular mode the only option for Project based course?
+    - I want to take project based courses in [self study]{"entity": "study_mode", "value": "self"} modde ?
+    - please guide me how can take Engineering Design-1 in [summer semester]{"entity": "upgradation_mode", "value": "summer"} 
+    - project based courses in summer sem ?
+    - What is the procedure for students who wish to participate in project-based courses like Engineering Design-1 and Capstone Project ?
+    - [self study]{"entity": "study_mode", "value": "self"} mode in project based courses in [summer sem]{"entity": "upgradation_mode", "value": "summer"} 
 - intent: entered_subject
   examples: |
     - [ucs012](subject)
@@ -292,11 +308,14 @@ nlu:
     - Can I upgrade my grade from [ra]{"entity": "grade", "role": "current_grade"} to [A]{"entity": "grade", "role": "upgraded_grade"}
     - Is it possible to get [A]{"entity": "grade", "role": "upgraded_grade"} in [Summer sem]{"entity": "upgradation_mode", "value": "summer"} ?
     - Maximum grade i can get in [summer sem]{"entity": "upgradation_mode", "value": "summer"} ?
+    - Maximum grade i can get in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} ?
     - i want to get [A]{"entity": "grade", "role": "upgraded_grade"} in [summer sem]{"entity": "upgradation_mode", "value": "summer"} , is it possible ?
     - is it possible to get a [a]{"entity": "grade", "role": "upgraded_grade"} if i have [c]{"entity": "grade", "role": "current_grade", "value": "C"}
     - Is it possible to upgrade a [B]{"entity": "grade", "role": "current_grade"} to an [A]{"entity": "grade", "role": "upgraded_grade"}
     - Can I retake specific courses to improve from [B]{"entity": "grade", "role": "current_grade"} to an [A]{"entity": "grade", "role": "upgraded_grade"}?
     - what is the maximum grade i can get ?
+    - Is there a limit on the maximum grade a student with an [E]{"entity": "grade", "role": "current_grade"} grade can achieve in the [auxiliary](upgradation_mode) examination, and what's the reason behind this change?
+    - What is the maximum grade a student with an [E]{"entity": "grade", "role": "current_grade"} grade can achieve in the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
 - intent: ask_fee_details
   examples: |
     - What is the fees for [backlog clearance](fee_type) ?
@@ -387,6 +406,13 @@ nlu:
     - I have opted a course but changed my mind. Give my fees back
     - I dont want to continue the course can i get my money back
     - if somone doesnt want to continue the course , can they opt out of it
+    - what is the policy for fee refund once the [summer semester]{"entity": "upgradation_mode", "value": "summer"} has started?
+    - if i drop out of [summer semester]{"entity": "upgradation_mode", "value": "summer"} , can i get my money back ?
+    - will i get my money back if i decline [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
+    - how to get money back if i dont want to do [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
+    - will it get refunded ?
+    - how to get refund ?
+    - is refund allowed ?
 - intent: inquire_about_medal_scholarship_upgradation_criteria
   examples: |
     - How can I qualify for a medal, scholarship, or upgradation?
@@ -421,46 +447,47 @@ nlu:
     - can i still get a scholarship if i upgrade my grade in summer sem ?
 - intent: ask_subject_limitation
   examples: |
-    - What is the maximum number of subjects allowed for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"} together?
-    - Is there a combined limit on the subjects I can study in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - How many subjects can I have in total for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Can I study more than [X] subjects in total for both [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Tell me about the subject limit for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s.
-    - What's the maximum number of subjects I can enroll in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Is there a cap on the total number of topics I can learn for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning combined?
-    - Tell me about any restrictions on the quantity of subjects I can choose for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning.
-    - What's the upper limit for subjects in both [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Can I exceed the subject limit in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Are there any restrictions on how many subjects I can study, either [self study][self study]{"entity": "study_mode", "value": "self"} or offline?
-    - What's the maximum workload for subjects when doing both [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Can I choose as many subjects as I want for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}, or is there a limit?
-    - Is there a difference in the subject limits between [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
+    - What is the maximum number of subjects allowed for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"} together?
+    - Is there a combined limit on the subjects I can study in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - How many subjects can I have in total for  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Can I study more than [X] subjects in total for both  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Tell me about the subject limit for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}.
+    - What's the maximum number of subjects I can enroll in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Is there a cap on the total number of topics I can learn for  [self study]{"entity": "study_mode", "value": "self"} and offline learning combined?
+    - Tell me about any restrictions on the quantity of subjects I can choose for  [self study]{"entity": "study_mode", "value": "self"} and offline learning.
+    - What's the upper limit for subjects in both  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Can I exceed the subject limit in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Are there any restrictions on how many subjects I can study, either  [self study]{"entity": "study_mode", "value": "self"} or offline?
+    - What's the maximum workload for subjects when doing both  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Can I choose as many subjects as I want for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}, or is there a limit?
+    - Is there a difference in the subject limits between  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
     - How does the subject limit work when I'm learning both online and offline?
-    - Do I have to adhere to a specific number of subjects for [self study][self study]{"entity": "study_mode", "value": "self"} and offline, or is it flexible?
-    - What's the policy for managing subjects for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
+    - Do I have to adhere to a specific number of subjects for  [self study]{"entity": "study_mode", "value": "self"} and offline, or is it flexible?
+    - What's the policy for managing subjects for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
     - Are there any constraints on the number of subjects I can access, whether I'm online or offline?
-    - Can I modify my subject choices for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning if I reach the limit?
-    - Tell me about the subject allowances for both [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s. Is there a total limit?
-    - What are the limitations on the number of subjects I can study in both [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Can you provide details about the maximum subject count for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning combined?
-    - Is there a set maximum number of subjects that I can take in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - How flexible is the subject limit for students studying in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Are there any specific guidelines regarding the total number of subjects allowed in [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Can I choose a different number of subjects for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s, or is the limit the same for both?
-    - What happens if I exceed the subject limit in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Can I request an extension on the subject limit for [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Is there a possibility of increasing the subject limit for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s under special circumstances?
-    - How is the subject limit calculated for students enrolled in both [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Can you explain the rationale behind the subject limit in [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Are there any penalties or consequences if I exceed the allowed subject count in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
+    - Can I modify my subject choices for  [self study]{"entity": "study_mode", "value": "self"} and offline learning if I reach the limit?
+    - Tell me about the subject allowances for both  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}. Is there a total limit?
+    - What are the limitations on the number of subjects I can study in both  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Can you provide details about the maximum subject count for  [self study]{"entity": "study_mode", "value": "self"} and offline learning combined?
+    - Is there a set maximum number of subjects that I can take in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - How flexible is the subject limit for students studying in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Are there any specific guidelines regarding the total number of subjects allowed in  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Can I choose a different number of subjects for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}, or is the limit the same for both?
+    - What happens if I exceed the subject limit in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Can I request an extension on the subject limit for  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Is there a possibility of increasing the subject limit for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"} under special circumstances?
+    - How is the subject limit calculated for students enrolled in both  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Can you explain the rationale behind the subject limit in  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Are there any penalties or consequences if I exceed the allowed subject count in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
     - Is the subject limit the same for all courses, or does it vary based on the program of study?
-    - Can students in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s apply for an exemption from the subject limit?
-    - What steps should I take if I need to study more subjects than the allowed limit in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Is there a possibility of changing the selected subjects after the limit has been reached in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - Are there any considerations for students with exceptional circumstances regarding the subject limit in [self study][self study]{"entity": "study_mode", "value": "self"} and offline learning?
-    - Can you provide information about the process of evaluating requests for exceeding the subject limit in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - What support or resources are available for students who wish to study additional subjects beyond the limit in [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
-    - How often is the subject limit reviewed, and are there plans to update it in the future for [self study][self study]{"entity": "study_mode", "value": "self"} and [offline mode][self study]{"entity": "study_mode", "value": "self"}s?
+    - Can students in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"} apply for an exemption from the subject limit?
+    - What steps should I take if I need to study more subjects than the allowed limit in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Is there a possibility of changing the selected subjects after the limit has been reached in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - Are there any considerations for students with exceptional circumstances regarding the subject limit in  [self study]{"entity": "study_mode", "value": "self"} and offline learning?
+    - Can you provide information about the process of evaluating requests for exceeding the subject limit in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - What support or resources are available for students who wish to study additional subjects beyond the limit in  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - How often is the subject limit reviewed, and are there plans to update it in the future for  [self study]{"entity": "study_mode", "value": "self"} and [offline mode]{"entity": "study_mode", "value": "regular"}?
+    - How many subjects can a student take in regular and [self study]{"entity": "study_mode", "value": "self"} modes, and are there any exceptions to the maximum cap?
 - intent: ask_about_registration
   examples: |
     - What are the registration details for [summer sem]{"entity": "upgradation_mode", "value": "summer"}?
@@ -479,6 +506,7 @@ nlu:
     - Is there a specific registration fee for [auxiliary](upgradation_mode)?
     - When does registration close for [auxi exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
     - when and where can i register for it
+    - How does a student apply for upgradation, and what is the process for consideration?
 - intent: ask_about_tenure
   examples: |
     - What is the duration of the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary"}?
@@ -585,15 +613,15 @@ nlu:
     - can i again opt for same course [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
     - tell me if i can again take same course in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
     - tell me if i can again take same course in [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
-    - can i take the same course again 
+    - can i take the same course again
     - i want to re enroll for the same course
     - is it possible to improve again in [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
     - can we take the subject again ?
     - how many times can i improve my grade ?
     - how many times can i improve my grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
     - can i take the course again to improve again if i dont score well ?
-    - which grade is considered if i dont improve in summer sem 
-
+    - which grade is considered if i dont improve in summer sem
+    - Can a student register for the same course for improvement after having already improved the grade?
 - synonym: summer
   examples: |
     - summer semester
@@ -649,11 +677,14 @@ nlu:
     - regular study
     - regular-study
     - offline
-    - offline mode 
+    - offline mode
     - normal
     - in person
     - in-person
     - one to one
+- synonym: R.A
+  examples: |
+    - R.a
 - synonym: fees
   examples: |
     - fees
@@ -695,9 +726,6 @@ nlu:
 - synonym: B
   examples: |
     - b
-- synonym: R.A
-  examples: |
-    - R.a
 - synonym: backlog clearance
   examples: |
     - backlog

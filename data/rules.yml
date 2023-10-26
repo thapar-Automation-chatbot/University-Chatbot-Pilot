@@ -50,7 +50,7 @@ rules:
   - rule: Respond to the grade improvement explanation intent
     steps:
       - intent: explain_grade_improvement_process
-      - action: utter_explain_grade_improvement_process
+      - action: action_explain_grade_improvement_process
 
   - rule: Break from forms
     steps:

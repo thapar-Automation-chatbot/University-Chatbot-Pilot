@@ -1,148 +1,5 @@
 [
   {
-    "text": "What resources are available to help me achieve a B from a C",
-    "entities": [
-      {
-        "start": 50,
-        "end": 51,
-        "value": "B",
-        "entity": "grade",
-        "role": "upgraded_grade"
-      },
-      {
-        "start": 59,
-        "end": 60,
-        "value": "C",
-        "entity": "grade",
-        "role": "current_grade"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "grade",
-        "start": 50,
-        "end": 51,
-        "confidence_entity": 0.9978320002555847,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9953521490097046,
-        "value": "B",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
-        "start": 59,
-        "end": 60,
-        "confidence_entity": 0.9881762266159058,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9074512124061584,
-        "value": "C",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Can you provide a timeline for upgrading from C to C  in auxiliary exams",
-    "entities": [
-      {
-        "start": 46,
-        "end": 47,
-        "value": "C",
-        "entity": "grade",
-        "role": "current_grade"
-      },
-      {
-        "start": 51,
-        "end": 52,
-        "value": "C",
-        "entity": "grade",
-        "role": "upgraded_grade"
-      },
-      {
-        "start": 57,
-        "end": 72,
-        "value": "auxiliary",
-        "entity": "upgradation_mode"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "grade",
-        "start": 46,
-        "end": 47,
-        "confidence_entity": 0.9979636669158936,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9809260368347168,
-        "value": "C",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
-        "start": 51,
-        "end": 52,
-        "confidence_entity": 0.997397780418396,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9974465370178223,
-        "value": "C",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "upgradation_mode",
-        "start": 57,
-        "end": 72,
-        "confidence_entity": 0.9970813393592834,
-        "value": "auxiliary",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "what is difference between self study mode and reugular study mode?",
-    "entities": [
-      {
-        "start": 27,
-        "end": 37,
-        "value": "self",
-        "entity": "study_mode"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "study_mode",
-        "start": 27,
-        "end": 37,
-        "confidence_entity": 0.9880471229553223,
-        "value": "self",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "study_mode",
-        "start": 56,
-        "end": 61,
-        "confidence_entity": 0.5514041185379028,
-        "value": "study",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
     "text": "How is self study Mode different from regular mode?",
     "entities": [
       {
@@ -163,7 +20,7 @@
         "entity": "study_mode",
         "start": 7,
         "end": 22,
-        "confidence_entity": 0.5148955583572388,
+        "confidence_entity": 0.9064793586730957,
         "value": "self study mode",
         "extractor": "DIETClassifier",
         "processors": [
@@ -174,7 +31,7 @@
         "entity": "study_mode",
         "start": 38,
         "end": 50,
-        "confidence_entity": 0.9528660774230957,
+        "confidence_entity": 0.9965590834617615,
         "value": "regular",
         "extractor": "DIETClassifier",
         "processors": [
@@ -204,11 +61,24 @@
     "predicted_entities": [
       {
         "entity": "grade",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.5217554569244385,
+        "role": "upgraded_grade",
+        "confidence_role": 0.8651130199432373,
+        "value": "a",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "grade",
         "start": 24,
         "end": 25,
-        "confidence_entity": 0.7425230145454407,
+        "confidence_entity": 0.8516133427619934,
         "role": "upgraded_grade",
-        "confidence_role": 0.9783893823623657,
+        "confidence_role": 0.9638069868087769,
         "value": "a",
         "extractor": "DIETClassifier",
         "processors": [
@@ -219,10 +89,42 @@
         "entity": "grade",
         "start": 36,
         "end": 37,
-        "confidence_entity": 0.7945175170898438,
-        "role": "upgraded_grade",
-        "confidence_role": 0.5206485390663147,
+        "confidence_entity": 0.9992565512657166,
+        "role": "current_grade",
+        "confidence_role": 0.9705855846405029,
         "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Are there any restrictions on how many subjects I can study, either  self study or offline?",
+    "entities": [
+      {
+        "start": 69,
+        "end": 79,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 54,
+        "end": 59,
+        "confidence_entity": 0.5882790684700012,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "study_mode",
+        "start": 69,
+        "end": 79,
+        "confidence_entity": 0.9687542915344238,
+        "value": "self",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"

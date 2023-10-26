@@ -17,7 +17,7 @@ FALLBACK_INTENT_RESPONSE_MAP = {
     "Did you mean 'deny'?": "Did you mean to deny ",
     "Did you mean 'entered_grade'?": "Did you mean to entered grade ",
     "Did you mean 'entered_subject'?": "Did you mean to entered subject ",
-    "Did you mean 'explain_grade_improvement_process'?": "Did you mean to explain grade improvement process ",
+    "Did you mean 'explain_grade_improvement_process'?": "Did you mean to ask about the grade improvement process ",
     "Did you mean 'goodbye'?": "Did you mean to goodbye ",
     "Did you mean 'greet'?": "Did you mean to greet ",
     "Did you mean 'inquire_about_grade_upgradation_eligibility'?": "Did you mean to inquire about grade upgradation eligibility ",
@@ -78,9 +78,10 @@ if "messages" not in st.session_state:
 RASA_BACKEND_URL = "http://localhost:5069/webhooks/rest/webhook"
 
 
-def handle_buttons(content):
-    title = btn["title"]
-    payload = btn["payload"]
+def handle_buttons(title,payload):
+    # title = btn["title"]
+    # payload = btn["payload"]
+    # print(title)
     st.session_state.messages.append({"role": "user", "content": title})
     rasa_response = get_rasa_response(payload)
     try:
@@ -139,8 +140,17 @@ if prompt := st.chat_input("What is up?"):
     with st.chat_message("assistant"):
         print_bot_response(assistant_response)
         if buttons:
+            titles ,payloads =[],[]
             for btn in buttons:
-                st.button(btn["title"], on_click=handle_buttons, args=[btn])
+                titles.append(btn['title'])
+                payloads.append(btn['payload'])
+            for btn in buttons:
+                st.button(btn["title"], on_click=handle_buttons, args=(btn["title"], btn["payload"]))
+            # with st.form("test_form",clear_on_submit=True):
+            #     selected = st.radio('Select one',titles,key=btn)
+            #     print(selected)
+            #     submit  = st.form_submit_button("submit",on_click=print(selected))
+
 
     # print(st.session_state)
     # Add assistant response to chat history

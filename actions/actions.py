@@ -416,3 +416,25 @@ class ActionProvideAboutSubjectReEnrollment(Action):
         dispatcher.utter_message(response)
 
         return []
+
+
+class ActionExplainGradeImprovementProcess(Action):
+    def name(self):
+        return "action_explain_grade_improvement_process"
+
+    def run(self, dispatcher, tracker, domain):
+        # Extract the 'upgradation_mode' entity from the tracker
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        # Customize your responses based on the 'upgradation_mode'
+        if upgradation_mode == "auxiliary":
+            response = "Max grade achievable is C grade"
+        elif upgradation_mode == "summer":
+            response = "Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students."
+        else:
+            response = "I cannot answer that right now"
+
+        # Send the response to the user
+        dispatcher.utter_message(response)
+
+        return []
