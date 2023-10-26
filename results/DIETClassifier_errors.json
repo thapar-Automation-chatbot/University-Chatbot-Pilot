@@ -22,9 +22,9 @@
         "entity": "grade",
         "start": 50,
         "end": 51,
-        "confidence_entity": 0.999233603477478,
+        "confidence_entity": 0.9978320002555847,
         "role": "upgraded_grade",
-        "confidence_role": 0.9621158242225647,
+        "confidence_role": 0.9953521490097046,
         "value": "B",
         "extractor": "DIETClassifier",
         "processors": [
@@ -35,9 +35,9 @@
         "entity": "grade",
         "start": 59,
         "end": 60,
-        "confidence_entity": 0.9869692325592041,
+        "confidence_entity": 0.9881762266159058,
         "role": "upgraded_grade",
-        "confidence_role": 0.6874744296073914,
+        "confidence_role": 0.9074512124061584,
         "value": "C",
         "extractor": "DIETClassifier",
         "processors": [
@@ -47,25 +47,38 @@
     ]
   },
   {
-    "text": "Is it possible to upgrade from a ra to a C ?",
+    "text": "Can you provide a timeline for upgrading from C to C  in auxiliary exams",
     "entities": [
       {
-        "start": 33,
-        "end": 35,
-        "value": "ra",
+        "start": 46,
+        "end": 47,
+        "value": "C",
         "entity": "grade",
         "role": "current_grade"
+      },
+      {
+        "start": 51,
+        "end": 52,
+        "value": "C",
+        "entity": "grade",
+        "role": "upgraded_grade"
+      },
+      {
+        "start": 57,
+        "end": 72,
+        "value": "auxiliary",
+        "entity": "upgradation_mode"
       }
     ],
     "predicted_entities": [
       {
         "entity": "grade",
-        "start": 33,
-        "end": 35,
-        "confidence_entity": 0.999431312084198,
-        "role": "current_grade",
-        "confidence_role": 0.9996389150619507,
-        "value": "RA",
+        "start": 46,
+        "end": 47,
+        "confidence_entity": 0.9979636669158936,
+        "role": "upgraded_grade",
+        "confidence_role": 0.9809260368347168,
+        "value": "C",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -73,12 +86,96 @@
       },
       {
         "entity": "grade",
-        "start": 41,
-        "end": 42,
-        "confidence_entity": 0.8775952458381653,
+        "start": 51,
+        "end": 52,
+        "confidence_entity": 0.997397780418396,
         "role": "upgraded_grade",
-        "confidence_role": 0.43558529019355774,
+        "confidence_role": 0.9974465370178223,
         "value": "C",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "upgradation_mode",
+        "start": 57,
+        "end": 72,
+        "confidence_entity": 0.9970813393592834,
+        "value": "auxiliary",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is difference between self study mode and reugular study mode?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 37,
+        "value": "self",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9880471229553223,
+        "value": "self",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 56,
+        "end": 61,
+        "confidence_entity": 0.5514041185379028,
+        "value": "study",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How is self study Mode different from regular mode?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "self",
+        "entity": "study_mode"
+      },
+      {
+        "start": 38,
+        "end": 50,
+        "value": "regular",
+        "entity": "study_mode"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "study_mode",
+        "start": 7,
+        "end": 22,
+        "confidence_entity": 0.5148955583572388,
+        "value": "self study mode",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "study_mode",
+        "start": 38,
+        "end": 50,
+        "confidence_entity": 0.9528660774230957,
+        "value": "regular",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -107,24 +204,11 @@
     "predicted_entities": [
       {
         "entity": "grade",
-        "start": 22,
-        "end": 23,
-        "confidence_entity": 0.8149014115333557,
-        "role": "upgraded_grade",
-        "confidence_role": 0.9355775117874146,
-        "value": "a",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "grade",
         "start": 24,
         "end": 25,
-        "confidence_entity": 0.837548017501831,
+        "confidence_entity": 0.7425230145454407,
         "role": "upgraded_grade",
-        "confidence_role": 0.9618772864341736,
+        "confidence_role": 0.9783893823623657,
         "value": "a",
         "extractor": "DIETClassifier",
         "processors": [
@@ -135,9 +219,9 @@
         "entity": "grade",
         "start": 36,
         "end": 37,
-        "confidence_entity": 0.9673827290534973,
-        "role": "current_grade",
-        "confidence_role": 0.822357714176178,
+        "confidence_entity": 0.7945175170898438,
+        "role": "upgraded_grade",
+        "confidence_role": 0.5206485390663147,
         "value": "C",
         "extractor": "DIETClassifier",
         "processors": [

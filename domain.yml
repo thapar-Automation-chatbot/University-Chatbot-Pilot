@@ -75,12 +75,12 @@ slots:
     - backlog clearance
     - auxiliary
     - thesis submission
-
 actions:
+- action_respond_to_timetable_inquiry
+- action_provide_about_upgradation_modes
 - action_provide_exam_process
 - utter_explain_criteria
 - utter_respond_affirm
-- action_respond_to_timetable_inquiry
 - action_handle_registration_inquiry
 - utter_ask_fee_type
 - action_handle_fee_details
@@ -91,7 +91,6 @@ actions:
 - validate_grade_eligibility_form
 - action_exam_evaluation_process
 - action_respond_to_tenure_inquiry
-- action_provide_about_upgradation_modes
 - action_provide_about_subject_re_enrollment
 responses:
   utter_default:
