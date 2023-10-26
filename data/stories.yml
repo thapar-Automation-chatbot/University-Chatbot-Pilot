@@ -245,7 +245,7 @@ stories:
           - current_grade: null
       - slot_was_set:
           - subject: null
-  - story: grade upgrade
+  - story: grade upgrade path
     steps:
       - intent: inquire_about_grade_upgradation_eligibility
         entities:
