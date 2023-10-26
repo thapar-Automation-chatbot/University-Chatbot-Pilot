@@ -483,62 +483,62 @@ nlu:
       - Tell me about the class timings for [summer courses]{"entity": "upgradation_mode", "value": "summer courses"}.
   - intent: ask_exam_process
     examples: |
-      - How does the examination process work for [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - Can you explain the examination process for [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - What's the procedure for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - Tell me about the exam process for [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}.
-      - Explain the steps for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}.
-      - What are the rules for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - Can you clarify the examination process for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - How does the examination process work for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - Can you explain the examination process for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - What's the procedure for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - Tell me about the exam process for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}.
-      - Explain the steps for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}.
-      - What are the rules for exams in [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - Can you clarify the examination process for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - what will be the general marking scheme for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}
-      - what will be the general marking scheme for [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - how will the exam take place for [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - how will the exam take place for [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - how the exam will be conducted in [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - how the exam will be conducted in [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - help me to know about exam process [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
-      - help me to know about exam process [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - plz tell me about exam during [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"}?
-      - plz tell me about exam during [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"}?
+      - How does the examination process work for [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can you explain the examination process for [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - What's the procedure for exams in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Tell me about the exam process for [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - Explain the steps for exams in [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
+      - What are the rules for exams in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - Can you clarify the examination process for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - How does the examination process work for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Can you explain the examination process for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - What's the procedure for exams in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Tell me about the exam process for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}.
+      - Explain the steps for exams in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}.
+      - What are the rules for exams in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - Can you clarify the examination process for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - what will be the general marking scheme for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}
+      - what will be the general marking scheme for [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - how will the exam take place for [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - how will the exam take place for [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - how the exam will be conducted in [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - how the exam will be conducted in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - help me to know about exam process [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
+      - help me to know about exam process [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - plz tell me about exam during [summer semester]{"entity": "upgradation_mode", "value": "summer"}?
+      - plz tell me about exam during [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"}?
 
   - intent: ask_about_upgradation_modes
     examples: |
-      - I need information regarding the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} rules for the upcoming semester.
-      - Can you tell me the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} rules for students in their final year?
-      - What are the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} rules for international students?
-      - Please provide details on the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} rules for postgraduate programs.
-      - I'd like to know the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} rules for undergraduate students.
-      - I need information regarding the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} rules for the upcoming semester.
-      - Can you tell me the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} rules for students in their final year?
-      - What are the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} rules for international students?
-      - Please provide details on the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} rules for postgraduate programs.
-      - I'd like to know the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} rules for undergraduate students.
-      - What's the latest information on the [upgradation mode]{"entity": "upgradation_mode", "value": "summer"} exam?
-      - What's the latest information on the [upgradation mode]{"entity": "upgradation_mode", "value": "summer"} exam?
-      - Can you provide a summary of the [upgradation mode]{"entity": "upgradation_mode", "value": "summer"} exam regulations?
-      - Can you provide a summary of the [upgradation mode]{"entity": "upgradation_mode", "value": "auxilary"} exam regulations?
-      - give general info about [upgradation mode]{"entity": "upgradation_mode", "value": "summer"} exam?
-      - give general info about [upgradation mode]{"entity": "upgradation_mode", "value": "auxilary"} exam?
+      - I need information regarding the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} rules for the upcoming semester.
+      - Can you tell me the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} rules for students in their final year?
+      - What are the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} rules for international students?
+      - Please provide details on the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} rules for postgraduate programs.
+      - I'd like to know the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} rules for undergraduate students.
+      - I need information regarding the [summer semester]{"entity": "upgradation_mode", "value": "summer"} rules for the upcoming semester.
+      - Can you tell me the [summer semester]{"entity": "upgradation_mode", "value": "summer"} rules for students in their final year?
+      - What are the [summer semester]{"entity": "upgradation_mode", "value": "summer"} rules for international students?
+      - Please provide details on the [summer semester]{"entity": "upgradation_mode", "value": "summer"} rules for postgraduate programs.
+      - I'd like to know the [summer semester]{"entity": "upgradation_mode", "value": "summer"} rules for undergraduate students.
+      - What's the latest information on the  [Summer sem]{"entity": "upgradation_mode", "value": "summer"} exam?
+      - What's the latest information on the  [Summer sem]{"entity": "upgradation_mode", "value": "summer"} exam?
+      - Can you provide a summary of the  [Summer sem]{"entity": "upgradation_mode", "value": "summer"} exam regulations?
+      - Can you provide a summary of the [Auxi exams]{"entity": "upgradation_mode", "value": "auxiliary"} exam regulations?
+      - give general info about  [Summer sem]{"entity": "upgradation_mode", "value": "summer"} exam?
+      - give general info about [Auxi exams]{"entity": "upgradation_mode", "value": "auxiliary"} exam?
 
   - intent: ask_about_subject_re_enrollment
     examples: |
-      - Can I re-enroll for same course after the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} semester?
-      - Is re-enrollment for same course possible after the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} session?
-      - Am I allowed to register for same courses again after the [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} semester?
-      - Can I re-enroll for same course after the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} semester?
-      - Is re-enrollment for same course possible after the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} session?
-      - Am I allowed to register for same courses again after the [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} semester?
-      - can i again opt for same course [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} semester?
-      - can i again opt for same course [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} semester?
-      - tell me if i can again take same course in [upgradation_mode]{"entity": "upgradation_mode", "value": "auxilary"} semester?
-      - tell me if i can again take same course in [upgradation_mode]{"entity": "upgradation_mode", "value": "summer"} semester?
+      - Can I re-enroll for same course after the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
+      - Is re-enrollment for same course possible after the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} session?
+      - Am I allowed to register for same courses again after the [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
+      - Can I re-enroll for same course after the [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
+      - Is re-enrollment for same course possible after the [summer semester]{"entity": "upgradation_mode", "value": "summer"} session?
+      - Am I allowed to register for same courses again after the [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
+      - can i again opt for same course [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
+      - can i again opt for same course [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
+      - tell me if i can again take same course in [auxiliary examination]{"entity": "upgradation_mode", "value": "auxiliary"} semester?
+      - tell me if i can again take same course in [summer semester]{"entity": "upgradation_mode", "value": "summer"} semester?
 
   - synonym: summer
     examples: |
