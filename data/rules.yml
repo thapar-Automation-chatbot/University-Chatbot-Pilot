@@ -85,3 +85,18 @@ rules:
     steps:
       - intent: ask_about_tenure
       - action: action_respond_to_tenure_inquiry
+
+  - rule: respond to exam process Inquiry
+    steps:
+      - intent: ask_exam_process
+      - action: action_provide_exam_process
+
+  - rule: reply to general info Inquiry
+    steps:
+      - intent: ask_about_upgradation_modes
+      - action: action_provide_about_upgradation_modes
+
+  - rule: reply to re enrollment Query
+    steps:
+      - intent: ask_about_subject_re_enrollment
+      - action: action_provide_about_subject_re_enrollment

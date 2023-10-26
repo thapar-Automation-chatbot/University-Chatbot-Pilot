@@ -348,3 +348,71 @@ class ActionRespondToTenureInquiry(Action):
         dispatcher.utter_message(response)
 
         return []
+
+
+class ActionProvideExamProcess(Action):
+    def name(self):
+        return "action_provide_exam_process"
+
+    def run(self, dispatcher, tracker, domain):
+        # Extract the 'upgradation_mode' entity from the tracker
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        # Customize your responses based on the 'upgradation_mode'
+        if upgradation_mode == "auxilary":
+            response = "Here is how the examination process works for auxilary exams."
+        elif upgradation_mode == "summer":
+            response = (
+                "Here is how the examination process works for the summer semester."
+            )
+        else:
+            response = "I'm not sure which examination process you're asking about."
+
+        # Send the response to the user
+        dispatcher.utter_message(response)
+
+        return []
+
+
+class ActionProvideAboutUpgradationModes(Action):
+    def name(self):
+        return "action_provide_about_upgradation_modes"
+
+    def run(self, dispatcher, tracker, domain):
+        # Extract the 'upgradation_mode' entity from the tracker
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        # Customize your responses based on the 'upgradation_mode'
+        if upgradation_mode == "auxilary":
+            response = "Here is general info about auxi exam:"
+        elif upgradation_mode == "summer":
+            response = "Here is general info about summer sem"
+        else:
+            response = "I'm not sure which examination info you're asking about."
+
+        # Send the response to the user
+        dispatcher.utter_message(response)
+
+        return []
+
+
+class ActionProvideAboutSubjectReEnrollment(Action):
+    def name(self):
+        return "action_provide_about_subject_re_enrollment"
+
+    def run(self, dispatcher, tracker, domain):
+        # Extract the 'upgradation_mode' entity from the tracker
+        upgradation_mode = tracker.get_slot("upgradation_mode")
+
+        # Customize your responses based on the 'upgradation_mode'
+        if upgradation_mode == "auxilary":
+            response = "yes,after auxilary you can opt for improvment for once during summer sem"
+        elif upgradation_mode == "summer":
+            response = "Once opted in summer sem same course can't be taken again for improvement next summer sem"
+        else:
+            response = "I'm not sure which examination info you're asking about."
+
+        # Send the response to the user
+        dispatcher.utter_message(response)
+
+        return []
