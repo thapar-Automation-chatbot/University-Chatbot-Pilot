@@ -5,6 +5,7 @@ intents:
 - ask_subject_limitation
 - confirm_self_study_conditions
 - deny
+- affirm
 - entered_grade
 - entered_subject
 - explain_grade_improvement_process

@@ -28,6 +28,44 @@ nlu:
       - see you around
       - bye bye
       - see you later
+  - intent: deny
+    examples: |
+      - no i dont want to continue
+      - no
+      - please abort
+      - exit
+      - i dont want to continue
+      - no i dont want to share more details
+      - nahi
+      - nope
+      - continue please
+      - skip
+      - That's not correct
+      - Absolutely not
+      - I disagree
+      - I'm afraid I can't agree with that
+      - You're mistaken
+      - I can't go along with that
+      - I'm not so sure about that
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - sure
+      - absolutely
+      - I confirm
+      - that's correct
+      - affirmative
+      - indeed
+      - of course
+      - right
+      - confirmed
+      - okay
+      - alright
+      - absolutely right
+      - correct
+      - sure thing
+
   - intent: inquire_about_grade_upgradation_eligibility
     examples: |
       - How can I upgrade my [C]{"entity": "grade", "role": "current_grade"} to an [A]{"entity": "grade", "role": "upgraded_grade"} grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
@@ -201,25 +239,6 @@ nlu:
       - i have the following subject [uhu123](subject)
       - this is my subject [UME023](subject)
       - my subject is [ULF010](subject)
-  - intent: deny
-    examples: |
-      - no i dont want to continue
-      - no
-      - please abort
-      - exit
-      - i dont want to continue
-      - no i dont want to share more details
-      - nahi
-      - nope
-      - continue please
-      - skip
-      - That's not correct
-      - Absolutely not
-      - I disagree
-      - I'm afraid I can't agree with that
-      - You're mistaken
-      - I can't go along with that
-      - I'm not so sure about that
   - intent: explain_grade_improvement_process
     examples: |
       - Explain the process for grade improvement in the [summer semester]{"entity": "upgradation_mode", "value": "summer"}.
