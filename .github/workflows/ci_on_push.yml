@@ -17,7 +17,6 @@ jobs:
           rasa_version: "3.6.8"
           data_validate: true
           rasa_train: true
-          cross_validation: true
           rasa_test: true
           test_type: all
           publish_summary: true
