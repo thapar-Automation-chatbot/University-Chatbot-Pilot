@@ -100,3 +100,8 @@ rules:
     steps:
       - intent: ask_about_subject_re_enrollment
       - action: action_provide_about_subject_re_enrollment
+
+  - rule: reply to ask_subject_limitation
+    steps:
+      - intent: ask_subject_limitation
+      - action: utter_max_subject_limit

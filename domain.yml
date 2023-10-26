@@ -1,163 +1,152 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - ask_fee_details
-  - ask_fee_refund
-  - ask_subject_limitation
-  - confirm_self_study_conditions
-  - deny
-  - affirm
-  - entered_grade
-  - entered_subject
-  - explain_grade_improvement_process
-  - goodbye
-  - greet
-  - inquire_about_grade_upgradation_eligibility
-  - inquire_about_medal_scholarship_upgradation_criteria
-  - ask_about_registration
-  - ask_about_tenure
-  - ask_about_timetable
-  - ask_exam_process
-  - ask_about_upgradation_modes
-  - ask_about_subject_re_enrollment
-
+- affirm
+- ask_about_registration
+- ask_about_subject_re_enrollment
+- ask_about_tenure
+- ask_about_timetable
+- ask_about_upgradation_modes
+- ask_exam_process
+- ask_fee_details
+- ask_fee_refund
+- ask_subject_limitation
+- confirm_self_study_conditions
+- deny
+- entered_grade
+- entered_subject
+- explain_grade_improvement_process
+- goodbye
+- greet
+- inquire_about_grade_upgradation_eligibility
+- inquire_about_medal_scholarship_upgradation_criteria
 entities:
-  - upgradation_mode
-  - grade:
-      roles:
-        - current_grade
-        - upgraded_grade
-  - fee_type
-  - study_mode
-  - subject
-  - month
+- fee_type
+- upgradation_mode
+- grade:
+    roles:
+    - current_grade
+    - upgraded_grade
+- study_mode
+- subject
 slots:
   current_grade:
     type: text
     mappings:
-      - type: from_entity
-        entity: grade
-        role: current_grade
+    - type: from_entity
+      entity: grade
+      role: current_grade
   upgraded_grade:
     type: text
     mappings:
-      - type: from_entity
-        entity: grade
-        role: upgraded_grade
+    - type: from_entity
+      entity: grade
+      role: upgraded_grade
   upgradation_mode:
     type: categorical
     values:
-      - auxilary
-      - summer
-      - backlog
+    - auxilary
+    - summer
+    - backlog
     initial_value: summer
     influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: upgradation_mode
+    - type: from_entity
+      entity: upgradation_mode
   subject:
     type: text
     mappings:
-      - type: from_entity
-        entity: subject
-  marks:
-    type: float
-    min_value: 0
-    max_value: 100
-    mappings:
-      - type: from_entity
-        entity: marks
+    - type: from_entity
+      entity: subject
   study_mode:
     type: categorical
     values:
-      - self
-      - regular
+    - self
+    - regular
     mappings:
-      - type: from_entity
-        entity: study_mode
+    - type: from_entity
+      entity: study_mode
   fee_type:
     type: categorical
     mappings:
-      - type: from_entity
-        entity: fee_type
+    - type: from_entity
+      entity: fee_type
     values:
-      - grade improvement
-      - backlog clearance
-      - auxiliary examination
-      - thesis submission
-  month:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: month
+    - grade improvement
+    - backlog clearance
+    - auxiliary
+    - thesis submission
+
 actions:
-  - action_grade_upgrade_eligiblity
-  - action_handle_fee_details
-  - utter_greet
-  - action_self_study_condition
-  - validate_self_study_eligibility_form
-  - validate_grade_eligibility_form
-  - action_exam_evaluation_process
-  - action_handle_registration_inquiry
-  - action_respond_to_timetable_inquiry
-  - action_respond_to_tenure_inquiry
-  - action_provide_exam_process
-  - action_provide_about_upgradation_modes
-  - action_provide_about_subject_re_enrollment
+- action_provide_exam_process
+- utter_explain_criteria
+- utter_respond_affirm
+- action_respond_to_timetable_inquiry
+- action_handle_registration_inquiry
+- utter_ask_fee_type
+- action_handle_fee_details
+- utter_greet
+- action_grade_upgrade_eligiblity
+- action_self_study_condition
+- validate_self_study_eligibility_form
+- validate_grade_eligibility_form
+- action_exam_evaluation_process
+- action_respond_to_tenure_inquiry
+- action_provide_about_upgradation_modes
+- action_provide_about_subject_re_enrollment
 responses:
   utter_default:
-    - text: Sorry i didn't get that.
+  - text: Sorry i didn't get that.
   utter_ask_rephrase:
-    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_greet:
-    - text: Hey! How can i help you today ?
+  - text: Hey! How can i help you today ?
   utter_okay:
-    - text: Ok, Is there anything else you need help with
+  - text: Ok, Is there anything else you need help with
   utter_goodbye:
-    - text: Bye
+  - text: Bye
   utter_respond_affirm:
-    - text: "Glad to hear"
+  - text: Glad to hear
   utter_ask_current_grade:
-    - text: What grade do you currently have in the subject
+  - text: What grade do you currently have in the subject
   utter_ask_upgradation_mode:
-    - text: Select one auxilary exams / Summer Semester / Backlogs
+  - text: Select one auxilary exams / Summer Semester / Backlogs
   utter_ask_self_study_eligibility_form_subject:
-    - text: There are 2 modes of study in summer semester 1. Self study mode and  2. Regular study mode , To help you better please provide me the course code for the subject you are seeking to take up in summer semester.
+  - text: There are 2 modes of study in summer semester 1. Self study mode and  2. Regular study mode , To help you better please provide me the course code for the subject you are seeking to take up in summer semester.
   utter_ask_self_study_eligibility_form_current_grade:
-    - text: Please provide the grade you have in the {subject}
+  - text: Please provide the grade you have in the {subject}
   utter_explain_grade_improvement_process:
-    - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
+  - text: Students are allowed to go for upgradation in the summer semester. However, the maximum grade that can be rewarded depends on the strength of students.
   utter_ask_fee_type:
-    - text: "Sure, could you please specify the type of fee you are inquiring about? "
-      buttons:
-        - title: "Grade Improvement"
-          payload: '/ask_fee_details{{"fee_type" : "grade improvement"}}'
-        - title: "backlog clearance"
-          payload: '/ask_fee_details{{"fee_type" : "backlog clearance"}}'
-        - title: "thesis submission"
-          payload: '/ask_fee_details{{"fee_type" : "thesis submission"}}'
-        - title: "auxiliary Examination"
-          payload: '/ask_fee_details{{"fee_type" : "auxiliary"}}'
-
+  - text: 'Sure, could you please specify the type of fee you are inquiring about? '
+    buttons:
+    - title: Grade Improvement
+      payload: '/ask_fee_details{{"fee_type" : "grade improvement"}}'
+    - title: backlog clearance
+      payload: '/ask_fee_details{{"fee_type" : "backlog clearance"}}'
+    - title: thesis submission
+      payload: '/ask_fee_details{{"fee_type" : "thesis submission"}}'
+    - title: auxiliary Examination
+      payload: '/ask_fee_details{{"fee_type" : "auxiliary"}}'
   utter_inquire_about_fee_refund_policy:
-    - text: Fee is non-refundable once summer semester has started.
-    - text: Please note that fees cannot be refunded once the summer semester has begun.
-    - text: Refunds for fees are not possible once the summer semester is in progress.
-    - text: Keep in mind that once the summer semester has started, fees are non-refundable.
+  - text: Fee is non-refundable once summer semester has started.
+  - text: Please note that fees cannot be refunded once the summer semester has begun.
+  - text: Refunds for fees are not possible once the summer semester is in progress.
+  - text: Keep in mind that once the summer semester has started, fees are non-refundable.
   utter_fee_type_not_found:
-    - text: Fee type not found.
+  - text: Fee type not found.
   utter_explain_criteria:
-    - text: Student who has improved his/her grades during summer semester will not be considered for medal / scholarship / upgradation on the basis of improved grades. Marks / grades obtained only in/during 1st attempt of the course will only be considered for medal / scholarship / upgradation.
+  - text: Student who has improved his/her grades during summer semester will not be considered for medal / scholarship / upgradation on the basis of improved grades. Marks / grades obtained only in/during 1st attempt of the course will only be considered for medal / scholarship / upgradation.
   utter_max_subject_limit:
-    - text: students can take a maximum of 3 subjects in Self mode(Provided they are eligible) and 3 in regular mode
+  - text: students can take a maximum of 3 subjects in Self mode(Provided they are eligible) and 3 in regular mode
 forms:
   grade_eligibility_form:
     required_slots:
-      - current_grade
-      - upgradation_mode
+    - current_grade
+    - upgradation_mode
   self_study_eligibility_form:
     required_slots:
-      - subject
-      - current_grade
+    - subject
+    - current_grade
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
   - story: Greet and Ask Fee Type
     steps:
       - intent: greet
@@ -125,8 +124,6 @@ stories:
       - intent: ask_fee_refund
       - action: utter_inquire_about_fee_refund_policy
 
-
-
   - story: interactive_story_1
     steps:
       - intent: ask_fee_details
@@ -134,8 +131,6 @@ stories:
       - intent: ask_fee_refund
       - intent: ask_fee_details
       - action: utter_ask_fee_type
-
-  
 
   - story: self study condition
     steps:
@@ -263,4 +258,39 @@ stories:
       - active_loop: null
       - action: action_grade_upgrade_eligiblity
 
+  - story: fees and affirm
+    steps:
+      - action: utter_greet
+      - intent: ask_fee_details
+        entities:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - action: utter_ask_fee_type
+      - intent: ask_fee_details
+        entities:
+          - fee_type: auxiliary
+      - slot_was_set:
+          - fee_type: auxiliary
+      - action: action_handle_fee_details
+      - slot_was_set:
+          - fee_type: null
+      - intent: affirm
+      - action: utter_respond_affirm
 
+  - story: exam process, registration,afirm
+    steps:
+      - intent: ask_exam_process
+        entities:
+          - upgradation_mode: summer
+      - slot_was_set:
+          - upgradation_mode: summer
+      - action: action_provide_exam_process
+      - intent: ask_about_registration
+      - action: action_handle_registration_inquiry
+      - intent: ask_about_timetable
+      - action: action_respond_to_timetable_inquiry
+      - intent: affirm
+      - action: utter_respond_affirm
+
+  
