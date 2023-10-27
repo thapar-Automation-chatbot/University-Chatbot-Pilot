@@ -75,15 +75,16 @@ if "messages" not in st.session_state:
     ]
 
 # Rasa backend URL
-RASA_BACKEND_URL = "http://localhost:5069/webhooks/rest/webhook"
+RASA_BACKEND_URL = "http://localhost:5015/webhooks/rest/webhook"
 
 
 def handle_buttons(title,payload):
     # title = btn["title"]
     # payload = btn["payload"]
-    # print(title)
+    print(title)
     st.session_state.messages.append({"role": "user", "content": title})
     rasa_response = get_rasa_response(payload)
+    print(rasa_response)
     try:
         assistant_response = rasa_response[0]["text"]
     except:
@@ -140,16 +141,17 @@ if prompt := st.chat_input("What is up?"):
     with st.chat_message("assistant"):
         print_bot_response(assistant_response)
         if buttons:
-            titles ,payloads =[],[]
-            for btn in buttons:
-                titles.append(btn['title'])
-                payloads.append(btn['payload'])
-            for btn in buttons:
-                st.button(btn["title"], on_click=handle_buttons, args=(btn["title"], btn["payload"]))
-            # with st.form("test_form",clear_on_submit=True):
-            #     selected = st.radio('Select one',titles,key=btn)
-            #     print(selected)
-            #     submit  = st.form_submit_button("submit",on_click=print(selected))
+            with st.container():
+                titles ,payloads =[],[]
+                for btn in buttons:
+                    titles.append(btn['title'])
+                    payloads.append(btn['payload'])
+                for btn in buttons:
+                    st.button(btn["title"], on_click=handle_buttons, args=(btn["title"], btn["payload"]))
+                # with st.form("test_form",clear_on_submit=True):
+                #     selected = st.radio('Select one',titles,key=btn)
+                #     print(selected)
+                #     submit  = st.form_submit_button("submit",on_click=print(selected))
 
 
     # print(st.session_state)

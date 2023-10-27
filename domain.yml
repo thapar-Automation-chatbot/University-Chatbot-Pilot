@@ -67,14 +67,14 @@ slots:
       entity: study_mode
   fee_type:
     type: categorical
-    mappings:
-    - type: from_entity
-      entity: fee_type
     values:
     - grade improvement
     - backlog clearance
     - auxiliary
     - thesis submission
+    mappings:
+    - type: from_entity
+      entity: fee_type
 actions:
 - action_explain_grade_improvement_process
 - action_respond_to_timetable_inquiry
@@ -145,6 +145,9 @@ forms:
     required_slots:
     - subject
     - current_grade
+  fee_type_form:
+    required_slots:
+    - fee_type
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

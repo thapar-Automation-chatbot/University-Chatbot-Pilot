@@ -47,6 +47,22 @@ rules:
           - requested_slot: null
       - action: action_self_study_condition
 
+  - rule: activate fee_type_form
+    steps:
+      - intent: ask_fee_details
+      - action: fee_type_form
+      - active_loop: fee_type_form
+
+  - rule: submit fee_type_form
+    condition:
+      - active_loop: fee_type_form
+    steps:
+      - action: fee_type_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_handle_fee_details
+
   - rule: Respond to the grade improvement explanation intent
     steps:
       - intent: explain_grade_improvement_process

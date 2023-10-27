@@ -90,7 +90,7 @@ if "messages" not in st.session_state:
     ]
 
 # Rasa backend URL
-RASA_BACKEND_URL = "http://localhost:5069/webhooks/rest/webhook"
+RASA_BACKEND_URL = "http://localhost:5015/webhooks/rest/webhook"
 
 
 def handle_buttons(title, payload):

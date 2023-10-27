@@ -93,38 +93,42 @@ class ActionGradeUpgradeEligibility(Action):
     ) -> List[Dict[Text, Any]]:
         current_grade = tracker.get_slot("current_grade")
         upgradation_mode = tracker.get_slot("upgradation_mode")
-
+        print(current_grade)
+        buttons = [
+            {
+                "title": "What is the max Grade i can get ?",
+                "payload": "/explain_grade_improvement_process",
+            },
+            {
+                "title": "How many times can i take the subject to improve ?",
+                "payload": "/ask_about_subject_re_enrollment",
+            },
+        ]
         if upgradation_mode == "summer":
             if current_grade == "a":
-                dispatcher.utter_message(
-                    "you cannot improve A/A- grades in summer semester"
-                )
+                response = "you cannot improve A/A- grades in summer semester"
             else:
                 if current_grade == {"b", "c"}:
-                    dispatcher.utter_message(
-                        "Students with {} / {}- grades are eligible for grade upgrades in summer semester.".format(
-                            current_grade.upper(), current_grade.upper()
-                        )
+                    response = "Students with {} / {}- grades are eligible for grade upgrades in summer semester.".format(
+                        current_grade.upper(), current_grade.upper()
                     )
+
                 else:
-                    dispatcher.utter_message(
-                        "Students with {} grades are eligible for grade upgrades in summer semester.".format(
-                            current_grade.upper()
-                        )
+                    response = "Students with {} grades are eligible for grade upgrades in summer semester.".format(
+                        current_grade.upper()
                     )
 
         elif upgradation_mode == "auxiliary" or upgradation_mode == "auxilary":
             if current_grade in {"c", "b"}:
-                dispatcher.utter_message(
-                    "Only students with E grade or lower can appear for auxiliary Examination"
-                )
-            else:
-                dispatcher.utter_message(
-                    "Students with E grade can appear for auxiliary Exams."
-                )
-        else:
-            dispatcher.utter_message("Backlog Case - solve later ")
+                response = "Only students with E grade or lower can appear for auxiliary Examination"
 
+            else:
+                response = "Students with E grade can appear for auxiliary Exams."
+
+        else:
+            response = "Backlog Case - solve later "
+
+        dispatcher.utter_message(text=response, buttons=buttons)
         [SlotSet("current_grade", None)]
 
 
@@ -319,7 +323,7 @@ class ActionRespondToTimetableInquiry(Action):
         if upgradation_mode == "auxiliary":
             response = "Time table for Auxiliary Exams can be found here "
         elif upgradation_mode == "summer":
-            response = "The timetable for the summer semester can be found [here](https://thapar.edu/pages/event/time-table-of-summer-semester-2023)"
+            response = "The timetable for the summer semester can be found here: \n (https://thapar.edu/pages/event/time-table-of-summer-semester-2023)"
         else:
             response = "I'm not sure about the timetable for that program. Please specify if you're asking about auxiliary or summer semester."
 
@@ -339,9 +343,11 @@ class ActionRespondToTenureInquiry(Action):
             upgradation_mode = "summer"
 
         if upgradation_mode == "auxiliary":
-            response = "The tenure for the auxiliary program varies depending on the specific course. "
+            response = (
+                " Dates for Auxiliary examinations will be announced by DOAA office "
+            )
         elif upgradation_mode == "summer":
-            response = "The duration of the summer semester typically lasts for [X weeks/months]."
+            response = "You can begin registering for the summer term in late May, and the registration period will continue for 10 days. To complete your registration, please click on the following link to access the registration form: \n https://thapar.edu/search"
         else:
             response = "I'm not sure about the tenure for that program."
 
@@ -381,17 +387,45 @@ class ActionProvideAboutUpgradationModes(Action):
     def run(self, dispatcher, tracker, domain):
         # Extract the 'upgradation_mode' entity from the tracker
         upgradation_mode = tracker.get_slot("upgradation_mode")
-
+        buttons = None
         # Customize your responses based on the 'upgradation_mode'
         if upgradation_mode == "auxiliary":
             response = "Here is general info about auxi exam:"
         elif upgradation_mode == "summer":
-            response = "Here is general info about summer sem"
+            response = "The summer Semester provides students with the opportunity to improve grades in by taking subjects in self study or regular study mode ."
         else:
             response = "I'm not sure which examination info you're asking about."
 
-        # Send the response to the user
-        dispatcher.utter_message(response)
+        if upgradation_mode == "summer":
+            buttons = [
+                {
+                    "title": "How to take self study mode ?",
+                    "payload": "/confirm_self_study_conditions",
+                },
+                {
+                    "title": "Fee details",
+                    "payload": "/ask_fee_details{'fee_type': 'grade improvement'}",
+                },
+                {
+                    "title": "Maximum Subjects i can take ?",
+                    "payload": "/ask_subject_limitation",
+                },
+                {
+                    "title": "Which Grades are eligible ?",
+                    "payload": "/inquire_about_grade_upgradation_eligibility",
+                },
+                {
+                    "title": "Max Grade I can get",
+                    "payload": "/explain_grade_improvement_process",
+                },
+                {
+                    "title": "Which Courses can I take",
+                    "payload": "/confirm_self_study_conditions",
+                },
+            ]
+            dispatcher.utter_message(text=response, buttons=buttons)
+        else:
+            dispatcher.utter_message(response)
 
         return []
 
@@ -406,9 +440,9 @@ class ActionProvideAboutSubjectReEnrollment(Action):
 
         # Customize your responses based on the 'upgradation_mode'
         if upgradation_mode == "auxiliary":
-            response = "yes,after auxiliary you can opt for improvment for once during summer sem"
+            response = "yes, after auxiliary you can opt for improvement in summer sem"
         elif upgradation_mode == "summer":
-            response = "Once opted in summer sem same course can't be taken again for improvement next summer sem"
+            response = "Once opted in summer sem same course can't be taken again for improvement next summer sem , Except if backlogs are not cleared"
         else:
             response = "I'm not sure which examination info you're asking about."
 
