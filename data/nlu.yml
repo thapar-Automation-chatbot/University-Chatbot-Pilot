@@ -507,6 +507,8 @@ nlu:
     - When does registration close for [auxi exam]{"entity": "upgradation_mode", "value": "auxiliary"}?
     - when and where can i register for it
     - How does a student apply for upgradation, and what is the process for consideration?
+    - how can i apply for the subject [ucs013](subject) in [summer semester]{"entity": "upgradation_mode", "value": "summer"} ?
+    - where can i register for the subject ?
 - intent: ask_about_tenure
   examples: |
     - What is the duration of the [auxiliary program]{"entity": "upgradation_mode", "value": "auxiliary"}?
