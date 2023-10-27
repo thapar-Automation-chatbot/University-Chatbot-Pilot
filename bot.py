@@ -141,17 +141,16 @@ if prompt := st.chat_input("What is up?"):
     with st.chat_message("assistant"):
         print_bot_response(assistant_response)
         if buttons:
-            with st.container():
-                titles ,payloads =[],[]
-                for btn in buttons:
-                    titles.append(btn['title'])
-                    payloads.append(btn['payload'])
-                for btn in buttons:
-                    st.button(btn["title"], on_click=handle_buttons, args=(btn["title"], btn["payload"]))
-                # with st.form("test_form",clear_on_submit=True):
-                #     selected = st.radio('Select one',titles,key=btn)
-                #     print(selected)
-                #     submit  = st.form_submit_button("submit",on_click=print(selected))
+            titles ,payloads =[],[]
+            for btn in buttons:
+                titles.append(btn['title'])
+                payloads.append(btn['payload'])
+            for btn in buttons:
+                st.button(btn["title"], on_click=handle_buttons, args=(btn["title"], btn["payload"]))
+            # with st.form("test_form",clear_on_submit=True):
+            #     selected = st.radio('Select one',titles,key=btn)
+            #     print(selected)
+            #     submit  = st.form_submit_button("submit",on_click=print(selected))
 
 
     # print(st.session_state)

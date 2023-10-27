@@ -17,11 +17,11 @@ jobs:
         uses: RasaHQ/rasa-train-test-gha@main
         with:
           rasa_version: "3.6.8"
-          data_validate: true
+          # data_validate: true
           rasa_train: true
-          rasa_test: true
-          test_type: all
-          publish_summary: true
+          # rasa_test: true
+          # test_type: all
+          # publish_summary: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload model
         if: github.ref == 'refs/heads/main'

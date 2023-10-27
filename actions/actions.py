@@ -404,7 +404,7 @@ class ActionProvideAboutUpgradationModes(Action):
                 },
                 {
                     "title": "Fee details",
-                    "payload": "/ask_fee_details{'fee_type': 'grade improvement'}",
+                    "payload": '/ask_fee_details{"fee_type": "grade improvement"}',
                 },
                 {
                     "title": "Maximum Subjects i can take ?",
