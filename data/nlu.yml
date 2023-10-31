@@ -69,18 +69,28 @@ nlu:
 - intent: inquire_about_grade_upgradation_eligibility
   examples: |
     - How can I upgrade my [C]{"entity": "grade", "role": "current_grade"} to an [A]{"entity": "grade", "role": "upgraded_grade"} grade in [summer semester]{"entity": "upgradation_mode", "value": "summer"}
-    - Is there a way to improve my [RA]{"entity": "grade", "role": "current_grade"} grade to an [B]{"entity": "grade", "role": "upgraded_grade"}
+    - Is there a way to improve to a  [B]{"entity": "grade", "role": "upgraded_grade"} from my [RA]{"entity": "grade", "role": "current_grade"} grade 
     - I'm aiming to raise my grade from [E]{"entity": "grade", "role": "current_grade"} to [C]{"entity": "grade", "role": "upgraded_grade"}. Any suggestions
-    - Are there any courses or programs available to boost my [I]{"entity": "grade", "role": "current_grade"} to an [B]{"entity": "grade", "role": "upgraded_grade"}
+    - Are there any courses or programs available to boost my grade to  [B]{"entity": "grade", "role": "upgraded_grade"} from [I]{"entity": "grade", "role": "current_grade"} 
     - Can you provide guidance on upgrading from [F]{"entity": "grade", "role": "current_grade"} to an [C]{"entity": "grade", "role": "upgraded_grade"}
     - What are the steps to take to upgrade from [I]{"entity": "grade", "role": "current_grade"} to [C]{"entity": "grade", "role": "upgraded_grade"}
     - Can I retake specific courses to improve from [C]{"entity": "grade", "role": "current_grade"} to an [b]{"entity": "grade", "role": "upgraded_grade"}
     - Are there scholarships or incentives for students who improve their grades from [B]{"entity": "grade", "role": "current_grade"} to [A]{"entity": "grade", "role": "upgraded_grade"}
-    - Is it possible to upgrade my [I]{"entity": "grade", "role": "current_grade"} to [B]{"entity": "grade", "role": "upgraded_grade"} this term
-    - How can I work on improving my [i]{"entity": "grade", "role": "current_grade"} to a [C]{"entity": "grade", "role": "upgraded_grade"}
-    - Can you suggest strategies for upgrading from [E]{"entity": "grade", "role": "current_grade"} to [B]{"entity": "grade", "role": "upgraded_grade"}
-    - Are there any courses or workshops aimed at improving from [I]{"entity": "grade", "role": "current_grade"} to [B]{"entity": "grade", "role": "upgraded_grade"}
-    - Can I retake exams or assignments to upgrade from [e]{"entity": "grade", "role": "current_grade"} to [B]{"entity": "grade", "role": "upgraded_grade"}
+    - To achieve an [A]{"entity": "grade", "role": "upgraded_grade"}, can I improve from my [C]{"entity": "grade", "role": "current_grade"}.
+    - Is it possible to raise my [B]{"entity": "grade", "role": "upgraded_grade"} by the end of the semester from my [X]{"entity": "grade", "role": "current_grade"}?
+    - What steps should I take to go from my [E]{"entity": "grade", "role": "current_grade"} to an [A]{"entity": "grade", "role": "upgraded_grade"}?
+    - Can you provide advice on upgrading to [C]{"entity": "grade", "role": "upgraded_grade"} from my [I]{"entity": "grade", "role": "current_grade"}?
+    - I want to upgrade my [B]{"entity": "grade", "role": "upgraded_grade"} in math, but my [E]{"entity": "grade", "role": "current_grade"} is a concern.
+    - Are there any specific resources for improving from an [C]{"entity": "grade", "role": "current_grade"} to a [A]{"entity": "grade", "role": "upgraded_grade"}?
+    - I aim to get an [A]{"entity": "grade", "role": "upgraded_grade"} and need help with my [G]{"entity": "grade", "role": "current_grade"}.
+    - Is retaking the exam an option for achieving an [A]{"entity": "grade", "role": "upgraded_grade"} from my [I]{"entity": "grade", "role": "current_grade"}?
+    - How can I go from my [I]{"entity": "grade", "role": "current_grade"} to a [B]{"entity": "grade", "role": "upgraded_grade"} in chemistry?
+    - I aspire to achieve an [A]{"entity": "grade", "role": "upgraded_grade"} but currently have a [RA]{"entity": "grade", "role": "current_grade"} in cyber security
+    - Is it possible to upgrade to [B]{"entity": "grade", "role": "upgraded_grade"} from my [I]{"entity": "grade", "role": "current_grade"} this term?
+    - How can I work on improving my [C]{"entity": "grade", "role": "upgraded_grade"} from my [i]{"entity": "grade", "role": "current_grade"}?
+    - Can you suggest strategies for upgrading from [B]{"entity": "grade", "role": "upgraded_grade"} to [E]{"entity": "grade", "role": "current_grade"}?
+    - Are there any courses or workshops aimed at improving from [B]{"entity": "grade", "role": "upgraded_grade"} to [I]{"entity": "grade", "role": "current_grade"}?
+    - Can I retake exams or assignments to upgrade to [B]{"entity": "grade", "role": "upgraded_grade"} from [e]{"entity": "grade", "role": "current_grade"}?
     - What resources are available to help me achieve a [B]{"entity": "grade", "role": "upgraded_grade"} from a [C]{"entity": "grade", "role": "current_grade"}
     - Can I upgrade my [X]{"entity": "grade", "role": "current_grade"} to a passing grade this semester
     - Is there a way to change my [E]{"entity": "grade", "role": "current_grade"} to a passing grade

@@ -122,6 +122,7 @@ def print_bot_response(assistant_response):
 # Function to send message to Rasa backend
 def get_rasa_response(message):
     payload = {"sender": "user", "message": message}
+    print(payload)
     response = requests.post(RASA_BACKEND_URL, json=payload)
     return response.json()
 

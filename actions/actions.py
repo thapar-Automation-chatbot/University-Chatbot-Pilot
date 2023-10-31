@@ -91,6 +91,8 @@ class ActionGradeUpgradeEligibility(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
+        # print(tracker.sender_id)
+
         current_grade = tracker.get_slot("current_grade")
         upgradation_mode = tracker.get_slot("upgradation_mode")
         print(current_grade)

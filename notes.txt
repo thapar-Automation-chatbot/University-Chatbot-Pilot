@@ -25,43 +25,6 @@ General Info
     # - give me [time table]{"entity": "purpose", "value": "time_table"} of [summer sem]{"entity": "upgradation_mode", "value": "summer"}
     # - when can i [register]{"entity": "purpose", "value": "registration"} for [summer term]{"entity": "upgradation_mode", "value": "summer"}
 
-confirm_self_study_conditions
-    # - Can you explain the eligibility criteria for regular-study mode?
-    # - can I apply for {"entity": "regular study", "value": "regular"} mode?
-    # - Can I improve my grades during the summer semester in {"entity": "regular study", "value": "regular"} mode?
-    # - How can I check my eligibility for {"entity": "regular study", "value": "regular"} mode?
-    # - What are the requirements for students to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    # - What are the conditions that students need to meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    # - What are the factors that determine whether a student is eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    # - What are the criteria that are used to assess a student's eligibility for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    # - What are the standards that a student must meet in order to be eligible for the [regular mode]{"entity": "study_mode", "value": "regular"} of study?
-    # - What is the mode of study that is available to me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    # - What are my options for mode of study if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    # - What are the different modes of study that I can choose from if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    # - How do I choose the right mode of study for me if I have an [X]{"entity": "grade", "role": "current_grade"} grade?
-    # - Can I apply for {"entity": "regular study", "value": "regular"} mode?
-    # - which mode can i take with grade RA
-    # - am i eligible for [regular mode]{"entity": "study_mode", "value": "regular"} if having [X]{"entity": "grade", "role": "current_grade"} grade?
-    # - Can you explain the difference between {"entity": "study_mode", "value": "self"} and {"entity": "regular study", "value": "regular"} modes?
-    # - Can I receive academic assistance while in {"entity": "study_mode", "value": "self"} mode?
-    # - How does [self study]{"entity": "study_mode", "value": "self"} mode work?
-    # - What is  [regular mode]{"entity": "study_mode", "value": "regular"}?
-    # - What is [self study]{"entity": "study_mode", "value": "self"} mode?
-    # - How does [regular mode]{"entity": "study_mode", "value": "regular"} work?
-    # - what is difference between [self study]{"entity": "study_mode", "value": "self"} mode and reugular study mode?
-    # - How is [self study]{"entity": "study_mode", "value": "self"} Mode different from [regular mode]{"entity": "study_mode", "value": "regular"}?
-    # - In what modes can i take subjects in summer sem ?
-    # - modes of study i can opt in summer term?
-    # - what is [regular mode]{"entity": "study_mode", "value": "regular"}?
-    # - what is [self study]{"entity": "study_mode", "value": "self"} mode?
-    # - can i take [UCS410](subject) in [self study]{"entity": "study_mode", "value": "self"} mode ?
-    # - is it possible to take [operating systems](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer semester]{"entity": "upgradation_mode", "value": "summer"} if have [F]{"entity": "grade", "role": "current_grade"} grade ?
-    # - can i take [self study mode](study_mode) in [ucs012](subject)
-    # - what are the mode of study in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    # - can i take [ucs210](subject) in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    # - can i take [ucs219](subject) in [self study]{"entity": "study_mode", "value": "self"} mode in [summer sem]{"entity": "upgradation_mode", "value": "summer"}
-    # - can i take [ucs016](subject) in [self mode]{"entity": "study_mode", "value": "self"}
-    # - can i take [uhu012](subject) with grade [R.A]{"entity": "grade", "role": "current_grade"} in [self study]{"entity": "study_mode", "value": "self"} mode ?
-    # - can i take [uhu012](subject) in [self study]{"entity": "study_mode", "value": "self"} mode , i have grade [R.a]{"entity": "grade", "role": "current_grade", "value": "R.A"}
-    # - which mode can i take if i have [E]{"entity": "grade", "role": "current_grade"} grade
-    # - is it possible to take [uta016](subject) in [self study]{"entity": "study_mode", "value": "self"} mode
+
+
+
