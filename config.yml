@@ -23,6 +23,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
+    use_gpu: true
     epochs: 80
     constrain_similarities: true
   - name: EntitySynonymMapper
@@ -30,8 +31,8 @@ pipeline:
     epochs: 100
     constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.6
-    ambiguity_threshold: 0.2
+    threshold: 0.4 
+    ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
