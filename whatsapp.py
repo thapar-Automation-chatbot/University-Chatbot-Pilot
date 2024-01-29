@@ -166,6 +166,7 @@ class WhatsAppInput(InputChannel):
 
         @whatsapp_webhook.route("/webhook", methods=["POST"])
         async def message(request: Request) -> HTTPResponse:
+            print(request.json)
             sender = self.client.get_mobile(request.json)
             logger.debug(request.json)
             # text = self.client.get_message(request.json) #TODO This will not work for image caption and buttons
