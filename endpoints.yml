@@ -7,6 +7,9 @@
 #  url: http://my-server.com/models/default_core@latest
 #  wait_time_between_pulls:  10   # [optional](default: 100)
 
+custom_whatsapp_connector.CustomWhatsAppInput:
+  webhook_url: "http://localhost:5056/webhook"
+
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
