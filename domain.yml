@@ -10,13 +10,13 @@ intents:
   - ask_fee_details
   - ask_fee_refund
   - ask_subject_limitation
-  - confirm_self_study_conditions
+  - confirm_self_study_conditions 
   - deny
   - entered_grade
   - entered_subject
   - explain_grade_improvement_process
   - goodbye
-  - greet
+  - greet 
   - inquire_about_grade_upgradation_eligibility
   - inquire_about_medal_scholarship_upgradation_criteria
 entities:

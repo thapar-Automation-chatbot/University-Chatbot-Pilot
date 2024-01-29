@@ -8,4 +8,6 @@ __pycache__/
 .cache/
 *.log
 *.db
+#Ignore env file
+/chatbot
 

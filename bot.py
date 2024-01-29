@@ -25,7 +25,7 @@ FALLBACK_INTENT_RESPONSE_MAP = {
 }
 
 # Define custom CSS styles
-custom_css = """
+custom_css = """ 
 <style>
 .chat-container {
     max-width: 600px;
