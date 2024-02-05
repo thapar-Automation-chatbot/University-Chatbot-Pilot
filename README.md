@@ -31,6 +31,6 @@
 - subject (subject code )
 - study_mode (self / regular)
 - marks (not used anywhere right now)
-- purpose (registration / tenure_of_summer_term / time_table)
+- purpose (registration/tenure_of_summer_term / time_table)
 - month
 - fee \_type
