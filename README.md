@@ -33,4 +33,4 @@
 - marks (not used anywhere right now)
 - purpose (registration/tenure_of_summer_term / time_table)
 - month
-- fee \_type
+- fee \type
